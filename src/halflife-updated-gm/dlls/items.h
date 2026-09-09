@@ -1,0 +1,36 @@
+/***
+*
+*	Copyright (c) 1996-2001, Valve LLC. All rights reserved.
+*	
+*	This product contains software technology licensed from Id 
+*	Software, Inc. ("Id Technology").  Id Technology (c) 1996 Id Software, Inc. 
+*	All Rights Reserved.
+*
+*   Use, distribution, and modification of this source code and/or resulting
+*   object code is restricted to non-commercial enhancements to products from
+*   Valve LLC.  All other use, distribution, or modification is prohibited
+*   without written permission from Valve LLC.
+*
+****/
+
+#pragma once
+
+class CItem : public CBaseEntity
+{
+public:
+	bool KeyValue(KeyValueData* pkvd) override;
+	void Spawn() override;
+	CBaseEntity* Respawn() override;
+	void EXPORT GlowThink();
+	void EXPORT ItemTouch(CBaseEntity* pOther);
+	void EXPORT Materialize();
+	virtual bool MyTouch(CBasePlayer* pPlayer) { return false; }
+
+protected:
+	bool ShouldPlayPickupSound() const { return m_iNoPickupSound == 0; }
+
+private:
+	// Gunman retail addition: parsed from the map's nopickupsound key.
+	// The retail CItem does not add this field to its save table.
+	int m_iNoPickupSound = 0;
+};
