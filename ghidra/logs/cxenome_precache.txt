@@ -1,0 +1,15 @@
+======================================================================
+FUNC @ 0x100cace0 (FUN_100cace0)
+
+void __fastcall FUN_100cace0(int *param_1)
+
+{
+  (*DAT_10132320)(s_models_xenome_mdl_1012ec18);
+  FUN_10060720(0x1012ec04);
+  DAT_10142d04 = (*DAT_10132320)(s_sprites_gibxeno_spr_1012d9c8);
+  DAT_10142d00 = (*DAT_10132320)(s_sprites_gorexeno_spr_1012d9b0);
+  FUN_10027a70(param_1);
+  return;
+}
+
+

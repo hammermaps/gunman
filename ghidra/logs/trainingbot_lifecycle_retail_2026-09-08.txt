@@ -1,0 +1,530 @@
+======================================================================
+FUNC @ 0x100cf390 (?FloatThink@CDummyBot@@QAEXXZ)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall _FloatThink_CDummyBot__QAEXXZ(int param_1)
+
+{
+  int iVar1;
+  undefined4 uVar2;
+  int iVar3;
+  float unaff_EBX;
+  float unaff_ESI;
+  float10 fVar4;
+  float fVar5;
+  float fVar6;
+  float fVar7;
+  float *pfVar8;
+  float fVar9;
+  float fStack_48;
+  float fStack_44;
+  float fStack_40;
+  float fStack_3c;
+  float fStack_38;
+  float fStack_34;
+  float fStack_30;
+  float fStack_2c;
+  
+                    /* 0xcf390  145  ?FloatThink@CDummyBot@@QAEXXZ */
+  if ((*(float *)(param_1 + 0x298) != _UNK_100e9384) &&
+     (*(float *)(param_1 + 0x298) < *pfRam10132554)) {
+    fVar9 = *(float *)(param_1 + 0x294) * _UNK_100e9388;
+    *(undefined4 *)(param_1 + 0x298) = 0;
+    *(float *)(param_1 + 0x294) = fVar9;
+  }
+  fVar9 = 0.0;
+  func_0x10001a30();
+  func_0x100d0a20();
+  if (*(int *)(param_1 + 0x270) == 0) {
+    uVar2 = func_0x1005e910(0,*(int *)(*(int *)(param_1 + 4) + 0x1c8) + (int)pfRam10132554[0x26]);
+    *(undefined4 *)(param_1 + 0x270) = uVar2;
+  }
+  iVar3 = *(int *)(param_1 + 0x270);
+  if (iVar3 != 0) {
+    iVar1 = *(int *)(iVar3 + 4);
+    *(float *)(param_1 + 0x274) = *(float *)(iVar1 + 8);
+    *(undefined4 *)(param_1 + 0x278) = *(undefined4 *)(iVar1 + 0xc);
+    *(undefined4 *)(param_1 + 0x27c) = *(undefined4 *)(iVar1 + 0x10);
+    func_0x1005ea20(*(int *)(iVar3 + 4) + 0x50);
+    iVar3 = *(int *)(param_1 + 4);
+    fStack_40 = *(float *)(param_1 + 0x274) - *(float *)(iVar3 + 8);
+    fStack_3c = *(float *)(param_1 + 0x278) - *(float *)(iVar3 + 0xc);
+    fStack_38 = *(float *)(param_1 + 0x27c) - *(float *)(iVar3 + 0x10);
+    pfVar8 = &fStack_40;
+    func_0x10001370();
+    fVar5 = SQRT(unaff_EBX * unaff_EBX + unaff_ESI * unaff_ESI + fStack_48 * fStack_48);
+    if (fVar5 == _UNK_100e9384) {
+      fVar7 = 1.0;
+      fVar6 = 0.0;
+      fVar5 = 0.0;
+    }
+    else {
+      fVar5 = _UNK_100e9390 / fVar5;
+      fVar7 = fStack_48 * fVar5;
+      fVar6 = unaff_ESI * fVar5;
+      fVar5 = fVar5 * unaff_EBX;
+    }
+    uVar2 = func_0x10001350(fVar5,fVar6,fVar7);
+    func_0x10001370(uVar2);
+    unaff_EBX = (float)pfVar8 * *(float *)(param_1 + 0x294);
+    unaff_ESI = fVar9 * *(float *)(param_1 + 0x294);
+    func_0x10001370(&stack0xffffffac);
+    iVar3 = *(int *)(param_1 + 4);
+    *(float *)(iVar3 + 0x20) = fStack_34;
+    *(float *)(iVar3 + 0x24) = fStack_30;
+    *(float *)(iVar3 + 0x28) = fStack_2c;
+  }
+  iVar3 = *(int *)(param_1 + 4);
+  pfVar8 = (float *)(param_1 + 0x274);
+  fStack_34 = *(float *)(iVar3 + 8) - *pfVar8;
+  fStack_30 = *(float *)(iVar3 + 0xc) - *(float *)(param_1 + 0x278);
+  fStack_2c = *(float *)(iVar3 + 0x10) - *(float *)(param_1 + 0x27c);
+  func_0x10001370(&fStack_34);
+  if ((*(int *)(param_1 + 0x270) != 0) &&
+     (SQRT(unaff_EBX * unaff_EBX + unaff_ESI * unaff_ESI + fStack_48 * fStack_48) < _UNK_100ebf20))
+  {
+    iVar3 = func_0x1005e910(0,*(int *)(*(int *)(*(int *)(param_1 + 0x270) + 4) + 0x1c8) +
+                              (int)pfRam10132554[0x26]);
+    *(int *)(param_1 + 0x270) = iVar3;
+    if (iVar3 != 0) {
+      iVar1 = *(int *)(iVar3 + 4);
+      *pfVar8 = *(float *)(iVar1 + 8);
+      *(undefined4 *)(param_1 + 0x278) = *(undefined4 *)(iVar1 + 0xc);
+      *(undefined4 *)(param_1 + 0x27c) = *(undefined4 *)(iVar1 + 0x10);
+      func_0x1005ea20(*(int *)(iVar3 + 4) + 0x50);
+      iVar3 = *(int *)(param_1 + 4);
+      fStack_38 = *pfVar8 - *(float *)(iVar3 + 8);
+      fStack_34 = *(float *)(param_1 + 0x278) - *(float *)(iVar3 + 0xc);
+      fStack_30 = *(float *)(param_1 + 0x27c) - *(float *)(iVar3 + 0x10);
+      func_0x10001370(&fStack_38);
+      fVar5 = fStack_40;
+      fVar4 = (float10)FUN_10008290();
+      if (fVar4 == (float10)_UNK_100e9384) {
+        fVar5 = 1.0;
+        fVar7 = 0.0;
+        fVar6 = 0.0;
+      }
+      else {
+        fVar4 = (float10)_UNK_100e9390 / fVar4;
+        fVar5 = (float)((float10)fVar5 * fVar4);
+        fVar7 = (float)((float10)fStack_44 * fVar4);
+        fVar6 = (float)(fVar4 * (float10)fStack_48);
+      }
+      uVar2 = func_0x10001350(fVar6,fVar7,fVar5);
+      func_0x10001370(uVar2);
+      fVar5 = *(float *)(param_1 + 0x294);
+      uVar2 = func_0x10001350(fVar9 * fVar5,fStack_48 * fVar5,fStack_44 * fVar5);
+      func_0x10001370(uVar2);
+      iVar3 = *(int *)(param_1 + 4);
+      *(float *)(iVar3 + 0x20) = fStack_38;
+      *(float *)(iVar3 + 0x24) = fStack_34;
+      *(float *)(iVar3 + 0x28) = fStack_30;
+    }
+  }
+  if ((*(float *)(param_1 + 0x29c) < *pfRam10132554) &&
+     ((*(uint *)(*(int *)(param_1 + 4) + 0x1a0) & 0x400) == 0)) {
+    (*pcRam1013250c)(0,*(undefined4 *)(*(int *)(param_1 + 4) + 0x208),
+                     *(undefined2 *)(param_1 + 0x2a0),0,0x101322f0,0x101322f0,0,0,0,0,0,0);
+    *(float *)(param_1 + 0x29c) = *pfRam10132554 + (float)_UNK_100e99a0;
+  }
+  *(float *)(*(int *)(param_1 + 4) + 0x104) = *pfRam10132554 + (float)_UNK_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100cf960 (?BotSparkThink@CDummyBot@@QAEXXZ)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall _BotSparkThink_CDummyBot__QAEXXZ(int param_1)
+
+{
+  float *pfVar1;
+  int iVar2;
+  float *pfVar3;
+  undefined4 uVar4;
+  float unaff_ESI;
+  float unaff_EDI;
+  float10 fVar5;
+  float **ppfVar6;
+  float *pfVar7;
+  float *pfVar8;
+  float *pfVar9;
+  float *pfVar10;
+  float *pfVar11;
+  float **ppfVar12;
+  float *pfVar13;
+  float *pfVar14;
+  float *pfVar15;
+  float *pfStack_c0;
+  float *pfStack_bc;
+  float *pfStack_b8;
+  float *pfStack_b4;
+  float *pfStack_b0;
+  float *pfStack_ac;
+  float *pfStack_a8;
+  float *pfStack_a4;
+  float *pfStack_a0;
+  float *pfStack_9c;
+  float fStack_90;
+  float fStack_8c;
+  float fStack_88;
+  float fStack_84;
+  float fStack_80;
+  float fStack_7c;
+  float fStack_78;
+  float fStack_74;
+  float fStack_70;
+  float fStack_6c;
+  float fStack_68;
+  float fStack_64;
+  float fStack_60;
+  float fStack_5c;
+  float fStack_58;
+  float fStack_54;
+  float fStack_50;
+  float fStack_4c;
+  float fStack_48;
+  float fStack_44;
+  float fStack_40;
+  float fStack_3c;
+  float fStack_38;
+  float fStack_34;
+  float fStack_30;
+  float fStack_1c;
+  float fStack_18;
+  float fStack_14;
+  float fStack_c;
+  float fStack_8;
+  float fStack_4;
+  
+                    /* 0xcf960  50  ?BotSparkThink@CDummyBot@@QAEXXZ */
+  *(undefined **)(param_1 + 0x14) = &_BotExplodeTouch_CDummyBot__QAEXPAVCBaseEntity___Z;
+  if (*(int *)(param_1 + 0x28c) != 0) {
+    iVar2 = *(int *)(*(int *)(param_1 + 0x28c) + 4);
+    *(float *)(iVar2 + 0x144) = *(float *)(iVar2 + 0x144) + (float)_UNK_100e99a0;
+  }
+  pfStack_9c = (float *)(*(int *)(param_1 + 4) + 0x50);
+  pfStack_a0 = (float *)&UNK_100cf99c;
+  func_0x1005ea10();
+  pfStack_a0 = (float *)0xc1400000;
+  pfStack_a4 = (float *)0xc1d80000;
+  pfStack_a8 = (float *)&UNK_100cf9ac;
+  fVar5 = (float10)(*pcRam1013248c)();
+  pfStack_9c = &fStack_c;
+  fStack_c = (float)(fVar5 * (float10)pfRam10132554[0x10]);
+  fStack_8 = (float)(fVar5 * (float10)pfRam10132554[0x11]);
+  fStack_4 = (float)(fVar5 * (float10)pfRam10132554[0x12]);
+  pfStack_a0 = (float *)&UNK_100cf9e7;
+  func_0x10001370();
+  pfVar15 = pfRam10132554;
+  pfStack_a0 = (float *)0x41d80000;
+  pfStack_a4 = (float *)0x41400000;
+  pfVar1 = pfRam10132554 + 0xd;
+  pfStack_a8 = (float *)&UNK_100cfa00;
+  fVar5 = (float10)(*pcRam1013248c)();
+  pfStack_a0 = &fStack_1c;
+  fStack_1c = (float)(fVar5 * (float10)*pfVar1);
+  fStack_18 = (float)(fVar5 * (float10)pfVar15[0xe]);
+  fStack_14 = (float)(fVar5 * (float10)pfVar15[0xf]);
+  pfStack_a4 = (float *)&UNK_100cfa35;
+  func_0x10001370();
+  pfVar15 = pfRam10132554;
+  pfStack_a4 = (float *)0x41f00000;
+  pfStack_a8 = (float *)0xc1f00000;
+  pfVar1 = pfRam10132554 + 10;
+  pfStack_ac = (float *)&UNK_100cfa4e;
+  fVar5 = (float10)(*pcRam1013248c)();
+  pfStack_a4 = &fStack_80;
+  fStack_80 = (float)(fVar5 * (float10)*pfVar1);
+  fStack_7c = (float)(fVar5 * (float10)pfVar15[0xb]);
+  fStack_78 = (float)(fVar5 * (float10)pfVar15[0xc]);
+  pfStack_a8 = (float *)&UNK_100cfa77;
+  func_0x10001370();
+  iVar2 = *(int *)(param_1 + 4);
+  fStack_3c = fStack_6c + *(float *)(iVar2 + 8);
+  fStack_38 = fStack_68 + *(float *)(iVar2 + 0xc);
+  fStack_34 = fStack_64 + *(float *)(iVar2 + 0x10);
+  pfStack_a8 = &fStack_3c;
+  pfStack_ac = (float *)&UNK_100cfaac;
+  func_0x10001370();
+  fStack_7c = (float)pfStack_a0 + unaff_ESI;
+  pfStack_ac = &fStack_7c;
+  fStack_78 = (float)pfStack_9c + fStack_90;
+  fStack_74 = unaff_EDI + fStack_8c;
+  pfStack_b0 = (float *)&UNK_100cfade;
+  func_0x10001370();
+  fStack_38 = fStack_68 + fStack_50;
+  pfStack_b0 = &fStack_38;
+  fStack_34 = fStack_64 + fStack_4c;
+  fStack_30 = fStack_60 + fStack_48;
+  pfStack_b4 = (float *)&UNK_100cfb13;
+  func_0x10001370();
+  pfStack_b4 = (float *)0x0;
+  pfStack_b8 = (float *)(*(int *)(param_1 + 4) + 8);
+  pfStack_bc = (float *)0x17;
+  pfStack_c0 = (float *)0x4;
+  (*pcRam101323d8)();
+  (*pcRam101323e0)(0);
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 8));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0xc));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x10));
+  (*pcRam101323f4)(fStack_60);
+  (*pcRam101323f4)(fStack_5c);
+  (*pcRam101323f4)(fStack_58);
+  (*pcRam101323e8)(*(undefined4 *)(param_1 + 0x2a8));
+  (*pcRam101323e0)(0);
+  (*pcRam101323e0)(0);
+  (*pcRam101323e0)(1);
+  (*pcRam101323e0)(0xc);
+  pfStack_b4 = (float *)0x32;
+  pfStack_b8 = (float *)&UNK_100cfbb1;
+  (*pcRam101323e0)();
+  pfStack_b8 = (float *)0x50;
+  pfStack_bc = (float *)&UNK_100cfbb9;
+  (*pcRam101323e0)();
+  pfStack_bc = (float *)0xff;
+  pfStack_c0 = (float *)&UNK_100cfbc4;
+  (*pcRam101323e0)();
+  pfStack_c0 = (float *)0x78;
+  (*pcRam101323e0)();
+  (*pcRam101323e0)(100);
+  (*pcRam101323e0)(5);
+  (*pcRam101323dc)();
+  fVar5 = (float10)(*pcRam1013248c)(0x41400000,0x41d80000);
+  pfStack_b4 = &fStack_60;
+  fStack_60 = (float)(fVar5 * (float10)pfRam10132554[0x10]);
+  fStack_5c = (float)(fVar5 * (float10)pfRam10132554[0x11]);
+  fStack_58 = (float)(fVar5 * (float10)pfRam10132554[0x12]);
+  pfStack_b8 = (float *)&UNK_100cfc21;
+  func_0x10001370();
+  pfVar15 = pfRam10132554;
+  pfStack_b8 = (float *)0x41d80000;
+  pfStack_bc = (float *)0x41400000;
+  pfVar1 = pfRam10132554 + 0xd;
+  pfStack_c0 = (float *)&UNK_100cfc39;
+  fVar5 = (float10)(*pcRam1013248c)();
+  pfStack_b8 = &fStack_40;
+  fStack_40 = (float)(fVar5 * (float10)*pfVar1);
+  fStack_3c = (float)(fVar5 * (float10)pfVar15[0xe]);
+  fStack_38 = (float)(fVar5 * (float10)pfVar15[0xf]);
+  pfStack_bc = (float *)&UNK_100cfc65;
+  func_0x10001370();
+  pfVar15 = pfRam10132554;
+  pfStack_bc = (float *)0x41f00000;
+  pfStack_c0 = (float *)0xc1f00000;
+  pfVar1 = pfRam10132554 + 10;
+  fVar5 = (float10)(*pcRam1013248c)();
+  pfStack_bc = &fStack_5c;
+  fStack_5c = (float)(fVar5 * (float10)*pfVar1);
+  fStack_58 = (float)(fVar5 * (float10)pfVar15[0xb]);
+  fStack_54 = (float)(fVar5 * (float10)pfVar15[0xc]);
+  pfStack_c0 = (float *)&UNK_100cfca7;
+  func_0x10001370();
+  iVar2 = *(int *)(param_1 + 4);
+  fStack_90 = fStack_78 + *(float *)(iVar2 + 8);
+  fStack_8c = fStack_74 + *(float *)(iVar2 + 0xc);
+  fStack_88 = fStack_70 + *(float *)(iVar2 + 0x10);
+  pfStack_c0 = &fStack_90;
+  func_0x10001370();
+  fStack_58 = (float)pfStack_ac + (float)pfStack_b8;
+  pfVar15 = &fStack_58;
+  fStack_54 = (float)pfStack_a8 + (float)pfStack_b4;
+  fStack_50 = (float)pfStack_a4 + (float)pfStack_b0;
+  func_0x10001370();
+  fStack_44 = fStack_8c + (float)pfStack_a4;
+  pfVar14 = &fStack_44;
+  fStack_40 = fStack_88 + (float)pfStack_a0;
+  fStack_3c = fStack_84 + (float)pfStack_9c;
+  func_0x10001370();
+  (*pcRam101323d8)(4,0x17,*(int *)(param_1 + 4) + 8,0);
+  (*pcRam101323e0)(0);
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 8));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0xc));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x10));
+  (*pcRam101323f4)(fStack_3c);
+  (*pcRam101323f4)(fStack_38);
+  (*pcRam101323f4)(fStack_34);
+  (*pcRam101323e8)(*(undefined4 *)(param_1 + 0x2a8));
+  (*pcRam101323e0)(0);
+  (*pcRam101323e0)(0);
+  (*pcRam101323e0)(1);
+  (*pcRam101323e0)(0xc);
+  (*pcRam101323e0)(0x32);
+  (*pcRam101323e0)(0x50);
+  (*pcRam101323e0)(0xff);
+  (*pcRam101323e0)(0x78);
+  (*pcRam101323e0)(100);
+  (*pcRam101323e0)(5);
+  (*pcRam101323dc)();
+  fVar5 = (float10)(*pcRam1013248c)(0x41400000,0x41d80000);
+  fStack_78 = (float)(fVar5 * (float10)pfRam10132554[0x10]);
+  fStack_74 = (float)(fVar5 * (float10)pfRam10132554[0x11]);
+  pfVar9 = &fStack_78;
+  fStack_70 = (float)(fVar5 * (float10)pfRam10132554[0x12]);
+  func_0x10001370(pfVar9);
+  pfVar13 = pfRam10132554;
+  pfVar1 = pfRam10132554 + 0xd;
+  fVar5 = (float10)(*pcRam1013248c)(0xc1d80000,0xc1400000);
+  pfVar11 = &fStack_58;
+  fStack_58 = (float)(fVar5 * (float10)*pfVar1);
+  fStack_54 = (float)(fVar5 * (float10)pfVar13[0xe]);
+  fStack_50 = (float)(fVar5 * (float10)pfVar13[0xf]);
+  func_0x10001370(pfVar11);
+  pfVar8 = pfRam10132554;
+  pfVar1 = pfRam10132554 + 10;
+  fVar5 = (float10)(*pcRam1013248c)(0xc1f00000,0x41f00000);
+  pfVar13 = &fStack_74;
+  fStack_74 = (float)(fVar5 * (float10)*pfVar1);
+  fStack_70 = (float)(fVar5 * (float10)pfVar8[0xb]);
+  fStack_6c = (float)(fVar5 * (float10)pfVar8[0xc]);
+  func_0x10001370(pfVar13);
+  iVar2 = *(int *)(param_1 + 4);
+  pfStack_a8 = (float *)(fStack_90 + *(float *)(iVar2 + 8));
+  pfStack_a4 = (float *)(fStack_8c + *(float *)(iVar2 + 0xc));
+  ppfVar12 = &pfStack_a8;
+  pfStack_a0 = (float *)(fStack_88 + *(float *)(iVar2 + 0x10));
+  func_0x10001370(ppfVar12);
+  fStack_70 = (float)pfVar15 + (float)pfVar11;
+  pfVar11 = &fStack_70;
+  fStack_6c = (float)pfStack_c0 + (float)pfVar9;
+  fStack_68 = (float)pfStack_bc + (float)pfVar14;
+  func_0x10001370(pfVar11);
+  fStack_5c = (float)pfStack_a4 + (float)pfStack_bc;
+  pfVar10 = &fStack_5c;
+  fStack_58 = (float)pfStack_a0 + (float)pfStack_b8;
+  fStack_54 = (float)pfStack_9c + (float)pfStack_b4;
+  func_0x10001370(pfVar10);
+  (*pcRam101323d8)(4,0x17,*(int *)(param_1 + 4) + 8,0);
+  (*pcRam101323e0)(0);
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 8));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0xc));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x10));
+  (*pcRam101323f4)(fStack_54);
+  (*pcRam101323f4)(fStack_50);
+  (*pcRam101323f4)(fStack_4c);
+  (*pcRam101323e8)(*(undefined4 *)(param_1 + 0x2a8));
+  (*pcRam101323e0)(0);
+  (*pcRam101323e0)(0);
+  (*pcRam101323e0)(1);
+  (*pcRam101323e0)(0xc);
+  (*pcRam101323e0)(0x32);
+  (*pcRam101323e0)(0x50);
+  (*pcRam101323e0)(0xff);
+  (*pcRam101323e0)(0x78);
+  (*pcRam101323e0)(100);
+  (*pcRam101323e0)(5);
+  (*pcRam101323dc)();
+  fVar5 = (float10)(*pcRam1013248c)(0xc1d80000,0xc1400000);
+  pfVar9 = &fStack_90;
+  fStack_90 = (float)(fVar5 * (float10)pfRam10132554[0x10]);
+  fStack_8c = (float)(fVar5 * (float10)pfRam10132554[0x11]);
+  fStack_88 = (float)(fVar5 * (float10)pfRam10132554[0x12]);
+  func_0x10001370(pfVar9);
+  pfVar7 = pfRam10132554;
+  pfVar1 = pfRam10132554 + 0xd;
+  fVar5 = (float10)(*pcRam1013248c)(0xc1d80000,0xc1400000);
+  pfVar8 = &fStack_70;
+  fStack_70 = (float)(fVar5 * (float10)*pfVar1);
+  fStack_6c = (float)(fVar5 * (float10)pfVar7[0xe]);
+  fStack_68 = (float)(fVar5 * (float10)pfVar7[0xf]);
+  func_0x10001370();
+  pfVar3 = pfRam10132554;
+  pfVar1 = pfRam10132554 + 10;
+  fVar5 = (float10)(*pcRam1013248c)(0xc1f00000,0x41f00000);
+  pfVar7 = &fStack_8c;
+  fStack_8c = (float)(fVar5 * (float10)*pfVar1);
+  fStack_88 = (float)(fVar5 * (float10)pfVar3[0xb]);
+  fStack_84 = (float)(fVar5 * (float10)pfVar3[0xc]);
+  func_0x10001370();
+  iVar2 = *(int *)(param_1 + 4);
+  pfStack_c0 = (float *)((float)pfStack_a8 + *(float *)(iVar2 + 8));
+  pfStack_bc = (float *)((float)pfStack_a4 + *(float *)(iVar2 + 0xc));
+  pfStack_b8 = (float *)((float)pfStack_a0 + *(float *)(iVar2 + 0x10));
+  ppfVar6 = &pfStack_c0;
+  func_0x10001370();
+  uVar4 = func_0x10001350((float)pfVar11 + (float)pfVar8,(float)ppfVar12 + (float)pfVar9,
+                          (float)pfVar13 + (float)pfVar10);
+  func_0x10001370(uVar4);
+  uVar4 = func_0x10001350(unaff_EDI + (float)pfVar14,unaff_ESI + (float)pfVar15,
+                          fStack_90 + (float)pfStack_c0);
+  func_0x10001370(uVar4);
+  (*pcRam101323d8)(4,0x17,*(int *)(param_1 + 4) + 8,0);
+  (*pcRam101323e0)(0);
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 8));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0xc));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x10));
+  (*pcRam101323f4)(ppfVar6);
+  (*pcRam101323f4)(pfVar7);
+  (*pcRam101323f4)(pfVar8);
+  (*pcRam101323e8)(*(undefined4 *)(param_1 + 0x2a8));
+  (*pcRam101323e0)(0);
+  (*pcRam101323e0)(0);
+  (*pcRam101323e0)(1);
+  (*pcRam101323e0)(0xc);
+  (*pcRam101323e0)(0x32);
+  (*pcRam101323e0)(0x50);
+  (*pcRam101323e0)(0xff);
+  (*pcRam101323e0)(0x78);
+  (*pcRam101323e0)(100);
+  (*pcRam101323e0)(5);
+  (*pcRam101323dc)();
+  *(float *)(*(int *)(param_1 + 4) + 0x104) = *pfRam10132554 + (float)_UNK_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d02d0 (?SmokeFallThink@CDummyBot@@QAEXXZ)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall _SmokeFallThink_CDummyBot__QAEXXZ(int param_1)
+
+{
+                    /* 0xd02d0  317  ?SmokeFallThink@CDummyBot@@QAEXXZ */
+  *(undefined **)(param_1 + 0x14) = &_BotExplodeTouch_CDummyBot__QAEXPAVCBaseEntity___Z;
+  (*pcRam101323d8)(4,0x17,*(int *)(param_1 + 4) + 8,0);
+  (*pcRam101323e0)(0x6e);
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 8));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0xc));
+  (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x10));
+  (*pcRam101323f4)(0);
+  (*pcRam101323f4)(0);
+  (*pcRam101323f4)(0x3f800000);
+  (*pcRam101323e8)(*(undefined4 *)(param_1 + 0x2a4));
+  (*pcRam101323e0)(1);
+  (*pcRam101323e0)(100);
+  (*pcRam101323e0)(0x14);
+  (*pcRam101323dc)();
+  *(float *)(*(int *)(param_1 + 4) + 0x104) = *pfRam10132554 + (float)_UNK_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d0380 (?BotExplodeTouch@CDummyBot@@QAEXPAVCBaseEntity@@@Z)
+
+void __fastcall _BotExplodeTouch_CDummyBot__QAEXPAVCBaseEntity___Z(int param_1)
+
+{
+  int iVar1;
+  
+                    /* 0xd0380  49  ?BotExplodeTouch@CDummyBot@@QAEXPAVCBaseEntity@@@Z */
+  func_0x100d03d0();
+  iVar1 = *(int *)(*(int *)(param_1 + 4) + 0x198);
+  if (iVar1 == 0) {
+    iVar1 = (*pcRam10132434)(0);
+    if (iVar1 == 0) goto code_r0x100d03b5;
+  }
+  if (*(int **)(iVar1 + 0x7c) != (int *)0x0) {
+    (**(code **)(**(int **)(iVar1 + 0x7c) + 0x24))(*(undefined4 *)(param_1 + 4));
+  }
+code_r0x100d03b5:
+  func_0x100606b0(param_1);
+  return;
+}
+
+

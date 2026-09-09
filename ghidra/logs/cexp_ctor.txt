@@ -1,0 +1,34 @@
+======================================================================
+FUNC @ 0x10081a70 (FUN_10081a70)
+
+undefined4 * FUN_10081a70(void)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  
+  iVar2 = (*DAT_10132374)();
+  if (iVar2 == 0) {
+    iVar2 = 0;
+  }
+  else {
+    iVar2 = iVar2 + 0x80;
+  }
+  iVar1 = *(int *)(iVar2 + 0x208);
+  if ((iVar1 == 0) || (puVar3 = *(undefined4 **)(iVar1 + 0x7c), puVar3 == (undefined4 *)0x0)) {
+    puVar3 = (undefined4 *)(*DAT_1013241c)(iVar1,0x290);
+    if (puVar3 == (undefined4 *)0x0) {
+      puVar3 = (undefined4 *)0x0;
+    }
+    else {
+      *puVar3 = &PTR_FUN_100facb0;
+    }
+    puVar3[1] = iVar2;
+  }
+  *(int *)puVar3[1] = (int)s_dml_cluster_101275c8 - *(int *)(DAT_10132554 + 0x98);
+  (**(code **)*puVar3)();
+  return puVar3;
+}
+
+

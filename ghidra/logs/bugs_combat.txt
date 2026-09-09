@@ -1,0 +1,574 @@
+======================================================================
+FUNC @ 0x1006e5c0 (FUN_1006e5c0)
+
+void __fastcall FUN_1006e5c0(int *param_1)
+
+{
+  int iVar1;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  (**(code **)(*param_1 + 4))();
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_cricket_mdl_10124f88);
+  uStack_18 = 0x41400000;
+  uStack_14 = 0x41400000;
+  uStack_10 = 0x41c00000;
+  uStack_c = 0xc1400000;
+  uStack_8 = 0xc1400000;
+  uStack_4 = 0;
+  FUN_1005f5d0(param_1[1],&uStack_c,&uStack_18);
+  uStack_18 = 0;
+  uStack_14 = 0;
+  uStack_10 = 0x41a00000;
+  *(undefined4 *)(param_1[1] + 0x10c) = 3;
+  *(undefined4 *)(param_1[1] + 0x160) = 0x3f800000;
+  iVar1 = param_1[1];
+  *(undefined4 *)(iVar1 + 0x174) = 0;
+  *(undefined4 *)(iVar1 + 0x178) = 0;
+  *(undefined4 *)(iVar1 + 0x17c) = 0x41a00000;
+  param_1[0x88] = param_1[0x88] | 0x2000;
+  param_1[0x9c] = *DAT_10132554;
+  param_1[0x9d] = 1;
+  (**(code **)(*param_1 + 0x10c))();
+  param_1[5] = (int)CCricket::SquashTouch;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006e5a0 (FUN_1006e5a0)
+
+void __fastcall FUN_1006e5a0(int *param_1)
+
+{
+  (*DAT_10132320)(s_models_cricket_mdl_10124f88);
+  FUN_10027a70(param_1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006e2b0 (FUN_1006e2b0)
+
+undefined4 FUN_1006e2b0(void)
+
+{
+  return 0x11;
+}
+
+
+======================================================================
+FUNC @ 0x1006e580 (FUN_1006e580)
+
+void __thiscall FUN_1006e580(void *param_1,int param_2,int param_3,float param_4)
+
+{
+  FUN_1000d820(param_1,param_2,param_3,param_4,0x2000);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006e530 (FUN_1006e530)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_1006e530(int param_1,undefined4 *param_2)
+
+{
+  undefined4 uVar1;
+  int iVar2;
+  float fVar3;
+  
+  iVar2 = *(int *)(param_1 + 4);
+  uVar1 = *(undefined4 *)(iVar2 + 0xc);
+  fVar3 = *(float *)(iVar2 + 0x10) + _DAT_100e99c4;
+  *param_2 = *(undefined4 *)(iVar2 + 8);
+  param_2[1] = uVar1;
+  param_2[2] = fVar3;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006e2c0 (FUN_1006e2c0)
+
+undefined4 FUN_1006e2c0(void)
+
+{
+  return 5;
+}
+
+
+======================================================================
+FUNC @ 0x1006e300 (FUN_1006e300)
+
+void FUN_1006e300(void)
+
+{
+  undefined **ppuVar1;
+  
+  ppuVar1 = &PTR_s_cricket_cricket_angry_wav_10124dc4;
+  do {
+    (*DAT_10132324)(*ppuVar1);
+    ppuVar1 = ppuVar1 + 1;
+  } while ((int)ppuVar1 < 0x10124df8);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006e6c0 (FUN_1006e6c0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_1006e6c0(CBaseEntity *param_1)
+
+{
+  int iVar1;
+  bool bVar2;
+  int iVar3;
+  int iVar4;
+  undefined4 *puVar5;
+  undefined3 extraout_var;
+  undefined1 *puVar6;
+  float fVar7;
+  float fVar8;
+  float fVar9;
+  float fStack_30;
+  float fStack_2c;
+  float fStack_28;
+  float fStack_24;
+  float fStack_20;
+  float fStack_1c;
+  undefined1 auStack_18 [12];
+  undefined1 auStack_c [12];
+  
+  FUN_1002dda0(param_1);
+  if (*DAT_10132554 < *(float *)(param_1 + 0x270)) {
+    return;
+  }
+  iVar3 = (*DAT_10132440)(1);
+  if (iVar3 == 0) {
+    return;
+  }
+  iVar4 = (*DAT_10132438)(iVar3);
+  if (iVar4 == 0) {
+    return;
+  }
+  iVar3 = *(int *)(iVar3 + 0x7c);
+  if (iVar3 != 0) {
+    iVar4 = *(int *)(param_1 + 4);
+    iVar1 = *(int *)(iVar3 + 4);
+    fStack_30 = *(float *)(iVar4 + 8) - *(float *)(iVar1 + 8);
+    fStack_2c = *(float *)(iVar4 + 0xc) - *(float *)(iVar1 + 0xc);
+    fStack_28 = *(float *)(iVar4 + 0x10) - *(float *)(iVar1 + 0x10);
+    FUN_10001370(&fStack_24,&fStack_30);
+    if (SQRT(fStack_24 * fStack_24 + fStack_20 * fStack_20 + fStack_1c * fStack_1c) <= _DAT_100eb5a0
+       ) {
+      iVar4 = *(int *)(iVar3 + 4);
+      iVar1 = *(int *)(param_1 + 4);
+      fStack_30 = *(float *)(iVar4 + 8) - *(float *)(iVar1 + 8);
+      fStack_2c = *(float *)(iVar4 + 0xc) - *(float *)(iVar1 + 0xc);
+      fStack_28 = *(float *)(iVar4 + 0x10) - *(float *)(iVar1 + 0x10);
+      FUN_10001370(&fStack_24,&fStack_30);
+      FUN_1005ea20((float *)(*(int *)(iVar3 + 4) + 0x50));
+      fStack_30 = DAT_10132554[10];
+      fStack_2c = DAT_10132554[0xb];
+      fStack_28 = DAT_10132554[0xc];
+      fVar7 = SQRT(fStack_24 * fStack_24 + fStack_20 * fStack_20 + fStack_1c * fStack_1c);
+      if (fVar7 == _DAT_100e9384) {
+        fVar9 = 1.0;
+        fVar8 = 0.0;
+        fVar7 = 0.0;
+        puVar6 = auStack_18;
+      }
+      else {
+        fVar7 = _DAT_100e9390 / fVar7;
+        fVar9 = fStack_1c * fVar7;
+        fVar8 = fStack_20 * fVar7;
+        puVar6 = auStack_c;
+        fVar7 = fVar7 * fStack_24;
+      }
+      puVar5 = (undefined4 *)FUN_10001350(puVar6,fVar7,fVar8,fVar9);
+      FUN_10001370(&fStack_24,puVar5);
+      fVar7 = SQRT(fStack_30 * fStack_30 + fStack_2c * fStack_2c + fStack_28 * fStack_28);
+      if (fVar7 == _DAT_100e9384) {
+        fVar9 = 1.0;
+        fVar8 = 0.0;
+        fVar7 = 0.0;
+        puVar6 = auStack_c;
+      }
+      else {
+        fVar7 = _DAT_100e9390 / fVar7;
+        fVar9 = fStack_28 * fVar7;
+        fVar8 = fStack_2c * fVar7;
+        puVar6 = auStack_18;
+        fVar7 = fVar7 * fStack_30;
+      }
+      puVar5 = (undefined4 *)FUN_10001350(puVar6,fVar7,fVar8,fVar9);
+      FUN_10001370(&fStack_24,puVar5);
+      fStack_30 = fStack_24 * _DAT_100e99b8;
+      fStack_2c = fStack_20 * _DAT_100e99b8;
+      fStack_28 = fStack_1c * _DAT_100e99b8;
+      FUN_10001370(auStack_c,&fStack_30);
+      if ((*(int *)(param_1 + 0x274) == 0) ||
+         (bVar2 = FUN_100608b0(0x1e), CONCAT31(extraout_var,bVar2) == 0)) {
+        iVar3 = (**(code **)(*(int *)param_1 + 0x15c))(0x2e);
+      }
+      else {
+        iVar3 = (**(code **)(*(int *)param_1 + 0x15c))(0x29);
+        *(undefined4 *)(param_1 + 0x274) = 0;
+      }
+      iVar4 = (*DAT_10132488)(4,6);
+      *(float *)(param_1 + 0x270) = (float)iVar4 + *DAT_10132554;
+      if (iVar3 != 0) {
+        FUN_1004a560(param_1,iVar3);
+      }
+      return;
+    }
+    return;
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006ec40 (FUN_1006ec40)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 __thiscall FUN_1006ec40(int param_1,float param_2,float param_3)
+
+{
+  if ((((*(uint *)(*(int *)(param_1 + 4) + 0x1a4) & 0x200) != 0) && (param_3 <= _DAT_100e93c0)) &&
+     ((float)_DAT_100f7a30 <= param_2)) {
+    return 1;
+  }
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x1006e2d0 (FUN_1006e2d0)
+
+void __thiscall FUN_1006e2d0(void *param_1,byte *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_1000ff60(param_1,param_2,(int *)&PTR_PTR_10124dbc,2);
+  if (iVar1 == 0) {
+    FUN_1000ff40(param_1,param_2);
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006e9f0 (FUN_1006e9f0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_1006e9f0(void *param_1,int *param_2)
+
+{
+  int iVar1;
+  void *extraout_ECX;
+  void *extraout_ECX_00;
+  void *pvVar2;
+  void *pvVar3;
+  char *pcVar4;
+  undefined4 uStack_30;
+  float fStack_2c;
+  float fStack_28;
+  float fStack_24;
+  float fStack_20;
+  float fStack_1c;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined1 auStack_c [12];
+  
+  *(undefined4 *)((int)param_1 + 0x148) = 1;
+  if ((*param_2 < 0x24) || (0x25 < *param_2)) {
+    FUN_1004b030(param_1,param_2);
+    return;
+  }
+  iVar1 = (*DAT_10132488)(0,2);
+  if (iVar1 == 0) {
+    pvVar2 = *(void **)((int)param_1 + 4);
+    pvVar3 = *(void **)((int)pvVar2 + 0x208);
+    pcVar4 = s_cricket_cricket_jump1_wav_10124e84;
+LAB_1006ea91:
+    FUN_10050a80(pvVar2,pvVar3,1,pcVar4,0x3f800000,0x40000000,0,100);
+  }
+  else {
+    if (iVar1 == 1) {
+      pvVar3 = *(void **)(*(int *)((int)param_1 + 4) + 0x208);
+      pcVar4 = s_cricket_cricket_jump2_wav_10124e68;
+      pvVar2 = extraout_ECX;
+      goto LAB_1006ea91;
+    }
+    if (iVar1 == 2) {
+      pvVar2 = *(void **)(*(int *)((int)param_1 + 4) + 0x208);
+      pcVar4 = s_cricket_cricket_jump3_wav_10124e4c;
+      pvVar3 = pvVar2;
+      goto LAB_1006ea91;
+    }
+  }
+  *(undefined4 *)((int)param_1 + 0x134) = 8;
+  *(uint *)(*(int *)((int)param_1 + 4) + 0x1a4) =
+       *(uint *)(*(int *)((int)param_1 + 4) + 0x1a4) & 0xfffffdff;
+  iVar1 = *(int *)((int)param_1 + 4);
+  uStack_30 = *(undefined4 *)(iVar1 + 8);
+  fStack_2c = *(float *)(iVar1 + 0xc);
+  fStack_28 = *(float *)(iVar1 + 0x10) + _DAT_100e9390;
+  FUN_10001370(auStack_c,&uStack_30);
+  FUN_1005f600(*(int *)((int)param_1 + 4),auStack_c);
+  FUN_1005ea10(*(int *)((int)param_1 + 4) + 0x50);
+  fStack_2c = DAT_10132554[0xb];
+  fStack_28 = DAT_10132554[0xf];
+  fStack_24 = DAT_10132554[10] * _DAT_100f2094;
+  fStack_20 = fStack_2c * _DAT_100f2094;
+  fStack_1c = fStack_28 * _DAT_100f2094;
+  FUN_10001370(&uStack_18,&fStack_24);
+  uStack_30 = uStack_18;
+  fStack_2c = (float)uStack_14;
+  fStack_28 = (float)uStack_10;
+  iVar1 = (*DAT_10132488)(0,2);
+  if (iVar1 != 0) {
+    iVar1 = (*DAT_10132488)(0,2);
+    if (iVar1 == 0) {
+      pvVar2 = *(void **)(*(int *)((int)param_1 + 4) + 0x208);
+      pcVar4 = s_cricket_cricket_jump1_wav_10124e84;
+      pvVar3 = pvVar2;
+    }
+    else if (iVar1 == 1) {
+      pvVar2 = *(void **)((int)param_1 + 4);
+      pcVar4 = s_cricket_cricket_jump2_wav_10124e68;
+      pvVar3 = *(void **)((int)pvVar2 + 0x208);
+    }
+    else {
+      if (iVar1 != 2) goto LAB_1006ebf8;
+      pcVar4 = s_cricket_cricket_jump3_wav_10124e4c;
+      pvVar2 = extraout_ECX_00;
+      pvVar3 = *(void **)(*(int *)((int)param_1 + 4) + 0x208);
+    }
+    FUN_10050a80(pvVar2,pvVar3,1,pcVar4,0x3f800000,0x40000000,0,100);
+  }
+LAB_1006ebf8:
+  iVar1 = *(int *)((int)param_1 + 4);
+  *(undefined4 *)(iVar1 + 0x20) = uStack_30;
+  *(float *)(iVar1 + 0x24) = fStack_2c;
+  *(float *)(iVar1 + 0x28) = fStack_28;
+  *(float *)((int)param_1 + 0x224) = *DAT_10132554 + _DAT_100e9d74;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006e970 (FUN_1006e970)
+
+void __thiscall FUN_1006e970(void *param_1,int *param_2)
+
+{
+  if (*param_2 != 0x24) {
+    FUN_1004a8b0(param_1,param_2);
+    return;
+  }
+  if (*(int *)((int)param_1 + 0x34) != 0) {
+    if ((*(uint *)((int)param_1 + 0xbc) & 0x40000000) == 0) {
+      *(undefined4 *)((int)param_1 + 0x148) = 4;
+    }
+    *(undefined4 *)((int)param_1 + 0x134) = 1;
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006ecc0 (FUN_1006ecc0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined ** __thiscall FUN_1006ecc0(void *param_1,int param_2)
+
+{
+  undefined **ppuVar1;
+  int iVar2;
+  int iVar3;
+  float *pfVar4;
+  float10 fVar5;
+  float afStack_c [3];
+  
+  if (param_2 == 0x16) {
+    return &PTR_DAT_10124d68;
+  }
+  if (param_2 != 0x29) {
+    if (param_2 == 0x2e) {
+      iVar2 = (*DAT_10132488)(0,0x168);
+      *(float *)(*(int *)((int)param_1 + 4) + 0xac) = (float)iVar2;
+      return &PTR_DAT_10124da8;
+    }
+    ppuVar1 = FUN_1000fff0(param_1,param_2);
+    return ppuVar1;
+  }
+  iVar2 = (*DAT_10132440)(1);
+  if ((iVar2 == 0) || (iVar3 = (*DAT_10132438)(iVar2), iVar3 == 0)) {
+    ppuVar1 = FUN_1000fff0(param_1,0x29);
+    return ppuVar1;
+  }
+  if (*(int *)(iVar2 + 0x7c) == 0) {
+    ppuVar1 = FUN_1000fff0(param_1,0x29);
+    return ppuVar1;
+  }
+  pfVar4 = (float *)FUN_1000e400((void *)(*(int *)(*(int *)(iVar2 + 0x7c) + 4) + 8),afStack_c,
+                                 (float *)(*(int *)((int)param_1 + 4) + 8));
+  fVar5 = FUN_1002be10((int)param_1,*pfVar4,pfVar4[1],pfVar4[2]);
+  iVar2 = *(int *)((int)param_1 + 4);
+  fVar5 = fVar5 - (float10)*(float *)(iVar2 + 0x54);
+  if ((float10)_DAT_100f0a5c < fVar5) {
+    fVar5 = fVar5 - (float10)_DAT_100e9400;
+  }
+  if (fVar5 < (float10)_DAT_100f0a58) {
+    fVar5 = fVar5 + (float10)_DAT_100e9400;
+  }
+  if ((float10)_DAT_100e9384 <= fVar5) {
+    fVar5 = fVar5 + (float10)_DAT_100e937c;
+    if ((float10)_DAT_100e9384 < fVar5) goto LAB_1006edfe;
+  }
+  else {
+    fVar5 = fVar5 - (float10)_DAT_100e937c;
+    if (fVar5 < (float10)_DAT_100e9384) goto LAB_1006edfe;
+  }
+  fVar5 = (float10)_DAT_100e9384;
+LAB_1006edfe:
+  *(float *)(iVar2 + 0xac) = (float)(fVar5 + (float10)*(float *)(iVar2 + 0x54));
+  return &PTR_DAT_10124da8;
+}
+
+
+======================================================================
+FUNC @ 0x1006eee0 (FUN_1006eee0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_1006eee0(int *param_1)
+
+{
+  undefined4 uVar1;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  (**(code **)(*param_1 + 4))();
+  *(undefined4 *)(param_1[1] + 0x170) = 0;
+  *(undefined4 *)(param_1[1] + 0x10c) = 0;
+  *(undefined4 *)(param_1[1] + 0x108) = 5;
+  *(undefined4 *)(param_1[1] + 0x16c) = 0;
+  *(undefined4 *)(param_1[1] + 0x160) = 0x3f800000;
+  *(int *)param_1[1] = (int)s_monster_dragonfly_101251b4 - (int)DAT_10132554[0x26];
+  uVar1 = (*DAT_10132488)(0,2);
+  *(undefined4 *)(param_1[1] + 0x110) = uVar1;
+  *(uint *)(param_1[1] + 0x1a0) = *(uint *)(param_1[1] + 0x1a0) | 4;
+  param_1[0x49] = 0x3e4ccccd;
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_dragonfly_mdl_1012519c);
+  uStack_18 = 0x40a00000;
+  uStack_14 = 0x40a00000;
+  uStack_10 = 0x40000000;
+  uStack_c = 0xc0a00000;
+  uStack_8 = 0xc0a00000;
+  uStack_4 = 0;
+  FUN_1005f5d0(param_1[1],&uStack_c,&uStack_18);
+  *(undefined4 *)(param_1[1] + 0x130) = 0;
+  *(float *)(param_1[1] + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  param_1[4] = (int)CDragonfly::IdleThink;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006eff0 (FUN_1006eff0)
+
+void FUN_1006eff0(void)
+
+{
+  (*DAT_10132320)(s_models_dragonfly_mdl_1012519c);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006ee80 (FUN_1006ee80)
+
+void __thiscall FUN_1006ee80(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_100279d0(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CDragonfly_10125190,(int)param_1,0x10124fa0,5);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006eeb0 (FUN_1006eeb0)
+
+void __thiscall FUN_1006eeb0(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10027a00(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CDragonfly_10125190,(int)param_1,&DAT_10124fa0,5);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006f000 (FUN_1006f000)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_1006f000(int param_1)
+
+{
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_18 = 0;
+  uStack_14 = 0;
+  uStack_10 = 0;
+  uStack_c = 0;
+  uStack_8 = 0;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x170) = 2;
+  uStack_4 = 0;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x138) = 0;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x118) = 0x20;
+  FUN_1005f5d0(*(int *)(param_1 + 4),&uStack_c,&uStack_18);
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x108) = 6;
+  *(code **)(param_1 + 0x10) = CDragonfly::FallHack;
+  *(float *)(*(int *)(param_1 + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  return;
+}
+
+

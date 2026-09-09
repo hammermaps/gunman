@@ -1,0 +1,41 @@
+======================================================================
+FUNC @ 0x10008250 (FUN_10008250)
+
+void __thiscall FUN_10008250(float *param_1,float *param_2,float param_3)
+
+{
+  float fVar1;
+  float fVar2;
+  
+  fVar1 = param_1[1];
+  fVar2 = param_1[2];
+  *param_2 = param_3 * *param_1;
+  param_2[1] = param_3 * fVar1;
+  param_2[2] = param_3 * fVar2;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10008290 (FUN_10008290)
+
+float10 __fastcall FUN_10008290(float *param_1)
+
+{
+  return SQRT((float10)param_1[2] * (float10)param_1[2] +
+              (float10)param_1[1] * (float10)param_1[1] + (float10)*param_1 * (float10)*param_1);
+}
+
+
+======================================================================
+FUNC @ 0x100d9378 (FUN_100d9378)
+
+longlong FUN_100d9378(void)
+
+{
+  float10 in_ST0;
+  
+  return (longlong)ROUND(in_ST0);
+}
+
+

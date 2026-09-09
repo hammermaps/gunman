@@ -1,0 +1,314 @@
+======================================================================
+FUNC @ 0x100a2b20 (FUN_100a2b20)
+
+void __fastcall FUN_100a2b20(int *param_1)
+
+{
+  int iVar1;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  (**(code **)(*param_1 + 4))();
+  *(int *)param_1[1] = (int)s_env_clusterExplosion_1012967c - *(int *)(DAT_10132554 + 0x98);
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_null_mdl_10124674);
+  uStack_18 = 0;
+  uStack_14 = 0;
+  *(undefined4 *)(param_1[1] + 0x10c) = 0;
+  uStack_10 = 0;
+  uStack_c = 0;
+  *(undefined4 *)(param_1[1] + 0x108) = 5;
+  uStack_8 = 0;
+  uStack_4 = 0;
+  *(undefined4 *)(param_1[1] + 0x16c) = 0;
+  *(undefined4 *)(param_1[1] + 0x118) = 0;
+  *(undefined4 *)(param_1[1] + 0x160) = 0x42700000;
+  iVar1 = param_1[1];
+  *(undefined4 *)(iVar1 + 0x20) = DAT_101322f0;
+  *(undefined4 *)(iVar1 + 0x24) = DAT_101322f4;
+  *(undefined4 *)(iVar1 + 0x28) = DAT_101322f8;
+  FUN_1005f5d0(param_1[1],&uStack_c,&uStack_18);
+  param_1[5] = 0;
+  param_1[4] = 0;
+  param_1[6] = (int)CClusterExplosion::ClusterExplode;
+  FUN_1005f600(param_1[1],param_1[1] + 8);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a2c00 (FUN_100a2c00)
+
+void FUN_100a2c00(void)
+
+{
+  (*DAT_10132320)(s_models_null_mdl_10124674);
+  FUN_10060720(0x101275c8);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a2a60 (FUN_100a2a60)
+
+void __thiscall FUN_100a2a60(void *this,int param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  undefined4 uVar4;
+  void *this_00;
+  void *extraout_ECX;
+  char *pcVar6;
+  bool bVar7;
+  undefined3 uVar5;
+  
+  pcVar6 = s_clusterDamage_1012966c;
+  pbVar2 = *(byte **)(param_1 + 4);
+  this_00 = this;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100a2a95:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100a2a9a;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100a2a95;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100a2a9a:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x270) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_numGrenades_10129660;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100a2ae3:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100a2ae8;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100a2ae3;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100a2ae8:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x274) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    return;
+  }
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a2a00 (FUN_100a2a00)
+
+void __thiscall FUN_100a2a00(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_100279d0(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CClusterExplosion_1012964c,(int)param_1,0x10129610,2);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a2a30 (FUN_100a2a30)
+
+void __thiscall FUN_100a2a30(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10027a00(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CClusterExplosion_1012964c,(int)param_1,&DAT_10129610,2);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a2c20 (CClusterExplosion::ClusterExplode)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CClusterExplosion::ClusterExplode(class CBaseEntity *,class CBaseEntity
+   *,enum USE_TYPE,float) */
+
+void __thiscall
+CClusterExplosion::ClusterExplode
+          (CClusterExplosion *this,CBaseEntity *param_1,CBaseEntity *param_2,USE_TYPE param_3,
+          float param_4)
+
+{
+  float fVar1;
+  float *pfVar2;
+  undefined4 *puVar3;
+  int iVar4;
+  undefined4 *puVar5;
+  void *this_00;
+  int iVar6;
+  float10 fVar7;
+  float *pfVar8;
+  float fStack_d4;
+  float fStack_d0;
+  float fStack_cc;
+  float fStack_c8;
+  float fStack_c4;
+  float fStack_c0;
+  float fStack_bc;
+  float fStack_b8;
+  float fStack_b4;
+  float fStack_b0;
+  float fStack_ac;
+  float fStack_a8;
+  undefined4 uStack_a4;
+  undefined4 uStack_a0;
+  undefined4 uStack_9c;
+  float afStack_98 [3];
+  float afStack_8c [3];
+  undefined1 auStack_80 [12];
+  undefined1 auStack_74 [12];
+  float afStack_68 [3];
+  undefined1 auStack_5c [12];
+  float afStack_50 [3];
+  undefined1 auStack_44 [12];
+  undefined1 auStack_38 [16];
+  float fStack_28;
+  undefined1 auStack_14 [12];
+  int iStack_8;
+  
+                    /* 0xa2c20  78
+                       ?ClusterExplode@CClusterExplosion@@QAEXPAVCBaseEntity@@0W4USE_TYPE@@M@Z */
+  fVar7 = (float10)(*DAT_1013248c)(0xc2b40000,0xc28c0000);
+  *(float *)(*(int *)(this + 4) + 0x50) = (float)fVar7;
+  fVar7 = (float10)(*DAT_1013248c)(0xc2b40000,0x42b40000);
+  iVar6 = 0;
+  *(float *)(*(int *)(this + 4) + 0x54) = (float)fVar7;
+  *(undefined4 *)(*(int *)(this + 4) + 0x58) = 0;
+  FUN_1005ea10(*(int *)(this + 4) + 0x50);
+  fStack_d4 = *(float *)(DAT_10132554 + 0x28);
+  fStack_bc = fStack_d4 * _DAT_100ebf48;
+  fStack_d0 = *(float *)(DAT_10132554 + 0x2c);
+  fStack_b8 = fStack_d0 * _DAT_100ebf48;
+  fStack_cc = *(float *)(DAT_10132554 + 0x30);
+  fStack_b4 = fStack_cc * _DAT_100ebf48;
+  FUN_10001370(&fStack_b0,&fStack_bc);
+  iVar4 = *(int *)(this + 4);
+  fStack_c8 = fStack_b0 + *(float *)(iVar4 + 8);
+  fStack_c4 = fStack_ac + *(float *)(iVar4 + 0xc);
+  fStack_c0 = fStack_a8 + *(float *)(iVar4 + 0x10);
+  FUN_10001370(afStack_98,&fStack_c8);
+  fStack_c8 = fStack_d4 * _DAT_100eb5a0;
+  fStack_c4 = fStack_d0 * _DAT_100eb5a0;
+  fStack_c0 = fStack_cc * _DAT_100eb5a0;
+  FUN_10001370(&fStack_b0,&fStack_c8);
+  iVar4 = *(int *)(this + 4);
+  fStack_bc = fStack_b0 + *(float *)(iVar4 + 8);
+  fStack_b8 = fStack_ac + *(float *)(iVar4 + 0xc);
+  fStack_b4 = fStack_a8 + *(float *)(iVar4 + 0x10);
+  FUN_10001370(&uStack_a4,&fStack_bc);
+  FUN_1005f470(*(int *)(this + 4) + 8,&uStack_a4,0,*(undefined4 *)(*(int *)(this + 4) + 0x198),
+               auStack_38);
+  if (((fStack_28 < (float)_DAT_100e93e0) &&
+      (((iStack_8 != 0 || (iStack_8 = (*DAT_10132434)(0), iStack_8 != 0)) &&
+       (*(int *)(iStack_8 + 0x7c) != 0)))) &&
+     ((*(byte *)(*(int *)(*(int *)(iStack_8 + 0x7c) + 4) + 0x1a4) & 4) == 0)) {
+    pfVar2 = (float *)FUN_1005e560(afStack_98,auStack_14);
+    fStack_c8 = *pfVar2;
+    fStack_c4 = pfVar2[1];
+    fStack_c0 = pfVar2[2];
+    FUN_1005ea10(&fStack_c8);
+    fStack_d4 = *(float *)(DAT_10132554 + 0x28);
+    fStack_d0 = *(float *)(DAT_10132554 + 0x2c);
+    fStack_cc = *(float *)(DAT_10132554 + 0x30);
+  }
+  if (0 < *(int *)(this + 0x274)) {
+    do {
+      puVar3 = FUN_10081a70();
+      *(undefined4 *)(puVar3[1] + 0x198) = *(undefined4 *)(*(int *)(this + 4) + 0x198);
+      iVar4 = (*DAT_10132488)(0xffffff38,200);
+      fStack_c0 = (float)iVar4;
+      fStack_c8 = fStack_c0 * *(float *)(DAT_10132554 + 0x40);
+      fStack_c4 = fStack_c0 * *(float *)(DAT_10132554 + 0x44);
+      fStack_c0 = fStack_c0 * *(float *)(DAT_10132554 + 0x48);
+      FUN_10001370(&fStack_b0,&fStack_c8);
+      iVar4 = (*DAT_10132488)(0x32,0xfa);
+      fVar1 = (float)iVar4;
+      puVar5 = (undefined4 *)
+               FUN_10001350(auStack_5c,fVar1 * fStack_d4,fStack_d0 * fVar1,fStack_cc * fVar1);
+      FUN_10001370(&fStack_bc,puVar5);
+      puVar5 = (undefined4 *)
+               FUN_10001350(auStack_44,fStack_b0 + fStack_bc,fStack_ac + fStack_b8,
+                            fStack_a8 + fStack_b4);
+      FUN_10001370(&uStack_a4,puVar5);
+      iVar4 = puVar3[1];
+      *(undefined4 *)(iVar4 + 0x20) = uStack_a4;
+      *(undefined4 *)(iVar4 + 0x24) = uStack_a0;
+      *(undefined4 *)(iVar4 + 0x28) = uStack_9c;
+      iVar4 = (*DAT_10132488)(0xfffffff1,0xf);
+      fVar1 = (float)iVar4;
+      puVar5 = (undefined4 *)
+               FUN_10001350(auStack_80,fVar1 * *(float *)(DAT_10132554 + 0x40),
+                            fVar1 * *(float *)(DAT_10132554 + 0x44),
+                            fVar1 * *(float *)(DAT_10132554 + 0x48));
+      FUN_10001370(afStack_8c,puVar5);
+      iVar4 = (*DAT_10132488)(5,0x14);
+      fVar1 = (float)iVar4;
+      puVar5 = (undefined4 *)
+               FUN_10001350(auStack_74,fVar1 * fStack_d4,fStack_d0 * fVar1,fStack_cc * fVar1);
+      FUN_10001370(afStack_98,puVar5);
+      pfVar2 = afStack_8c;
+      pfVar8 = afStack_68;
+      this_00 = (void *)FUN_10008210((void *)(*(int *)(this + 4) + 8),afStack_50,afStack_98);
+      puVar5 = (undefined4 *)FUN_10008210(this_00,pfVar8,pfVar2);
+      iVar4 = puVar3[1];
+      iVar6 = iVar6 + 1;
+      *(undefined4 *)(iVar4 + 8) = *puVar5;
+      *(undefined4 *)(iVar4 + 0xc) = puVar5[1];
+      *(undefined4 *)(iVar4 + 0x10) = puVar5[2];
+      *(float *)(puVar3[1] + 0x1e0) = (float)*(int *)(this + 0x270);
+    } while (iVar6 < *(int *)(this + 0x274));
+  }
+  if ((*(byte *)(*(int *)(this + 4) + 0x1a0) & 2) == 0) {
+    FUN_100606b0((int)this);
+  }
+  return;
+}
+
+

@@ -1,0 +1,216 @@
+======================================================================
+FUNC @ 0x1009fbf0 (CVehicleTriggerTank::TouchTank)
+
+/* public: void __thiscall CVehicleTriggerTank::TouchTank(class CBaseEntity *) */
+
+void __thiscall CVehicleTriggerTank::TouchTank(CVehicleTriggerTank *this,CBaseEntity *param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  undefined3 extraout_var;
+  char *pcVar4;
+  bool bVar5;
+  
+                    /* 0x9fbf0  377  ?TouchTank@CVehicleTriggerTank@@QAEXPAVCBaseEntity@@@Z */
+  pcVar4 = s_vehicle_tank_1011480c;
+  pbVar2 = (byte *)(**(int **)(param_1 + 4) + *(int *)(DAT_10132554 + 0x98));
+  do {
+    bVar1 = *pbVar2;
+    bVar5 = bVar1 < (byte)*pcVar4;
+    if (bVar1 != *pcVar4) {
+LAB_1009fc3a:
+      iVar3 = (1 - (uint)bVar5) - (uint)(bVar5 != 0);
+      goto LAB_1009fc3f;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    bVar5 = bVar1 < (byte)pcVar4[1];
+    if (bVar1 != pcVar4[1]) goto LAB_1009fc3a;
+    pbVar2 = pbVar2 + 2;
+    pcVar4 = pcVar4 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_1009fc3f:
+  if ((iVar3 == 0) && (*(CBaseEntity **)(param_1 + 0x270) != (CBaseEntity *)0x0)) {
+    param_1 = *(CBaseEntity **)(param_1 + 0x270);
+  }
+  iVar3 = (**(code **)(*(int *)param_1 + 0x20))();
+  if (iVar3 == 2) {
+    bVar5 = FUN_10007dd0((uint *)(param_1 + 0x270));
+    if (CONCAT31(extraout_var,bVar5) != 0) {
+      FUN_100531f0(*(int *)(*(int *)(this + 4) + 0x1c8) + *(int *)(DAT_10132554 + 0x98),this,this,3,
+                   0);
+      FUN_100606b0((int)this);
+    }
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1009fda0 (CVehicleTriggerTankGas::TouchTank)
+
+/* public: void __thiscall CVehicleTriggerTankGas::TouchTank(class CBaseEntity *) */
+
+void __thiscall CVehicleTriggerTankGas::TouchTank(CVehicleTriggerTankGas *this,CBaseEntity *param_1)
+
+{
+  CBaseEntity *pCVar1;
+  byte bVar2;
+  byte *pbVar3;
+  int iVar4;
+  undefined3 extraout_var;
+  void *pvVar5;
+  char *pcVar6;
+  bool bVar7;
+  
+                    /* 0x9fda0  378  ?TouchTank@CVehicleTriggerTankGas@@QAEXPAVCBaseEntity@@@Z */
+  pcVar6 = s_vehicle_tank_1011480c;
+  pbVar3 = (byte *)(**(int **)(param_1 + 4) + *(int *)(DAT_10132554 + 0x98));
+  do {
+    bVar2 = *pbVar3;
+    bVar7 = bVar2 < (byte)*pcVar6;
+    if (bVar2 != *pcVar6) {
+LAB_1009fde6:
+      iVar4 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_1009fdeb;
+    }
+    if (bVar2 == 0) break;
+    bVar2 = pbVar3[1];
+    bVar7 = bVar2 < (byte)pcVar6[1];
+    if (bVar2 != pcVar6[1]) goto LAB_1009fde6;
+    pbVar3 = pbVar3 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar2 != 0);
+  iVar4 = 0;
+LAB_1009fdeb:
+  if ((iVar4 == 0) && (*(CBaseEntity **)(param_1 + 0x270) != (CBaseEntity *)0x0)) {
+    param_1 = *(CBaseEntity **)(param_1 + 0x270);
+  }
+  iVar4 = (**(code **)(*(int *)param_1 + 0x20))();
+  if (iVar4 == 2) {
+    pCVar1 = param_1 + 0x270;
+    bVar7 = FUN_10007dd0((uint *)pCVar1);
+    if (CONCAT31(extraout_var,bVar7) != 0) {
+      pvVar5 = (void *)FUN_10007d90((uint *)pCVar1);
+      *(undefined4 *)((int)pvVar5 + 0x2ec) = 0;
+      (*DAT_101323d8)(1,DAT_10134dc4,0,*(undefined4 *)(*(int *)(param_1 + 4) + 0x208));
+      (*DAT_101323e8)(2);
+      (*DAT_101323dc)();
+      FUN_10099d40(pvVar5,0);
+      iVar4 = FUN_10007de0((uint *)pCVar1);
+      pvVar5 = *(void **)(*(int *)(iVar4 + 4) + 0x208);
+      FUN_10050a80(pvVar5,pvVar5,6,s_tank_outofgas_wav_10129350,0x3f800000,0x3f4ccccd,0,100);
+      FUN_100531f0(*(int *)(*(int *)(this + 4) + 0x1c8) + *(int *)(DAT_10132554 + 0x98),this,this,3,
+                   0);
+      FUN_100606b0((int)this);
+    }
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1009f9e0 (CVehicleTriggerTankShell::TouchShell)
+
+/* public: void __thiscall CVehicleTriggerTankShell::TouchShell(class CBaseEntity *) */
+
+void __thiscall
+CVehicleTriggerTankShell::TouchShell(CVehicleTriggerTankShell *this,CBaseEntity *param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  char *pcVar4;
+  bool bVar5;
+  
+                    /* 0x9f9e0  375  ?TouchShell@CVehicleTriggerTankShell@@QAEXPAVCBaseEntity@@@Z */
+  pcVar4 = s_vehicle_tank_shell_10121ad4;
+  pbVar2 = (byte *)(*(int *)(DAT_10132554 + 0x98) + **(int **)(param_1 + 4));
+  do {
+    bVar1 = *pbVar2;
+    bVar5 = bVar1 < (byte)*pcVar4;
+    if (bVar1 != *pcVar4) {
+LAB_1009fa28:
+      iVar3 = (1 - (uint)bVar5) - (uint)(bVar5 != 0);
+      goto LAB_1009fa2d;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    bVar5 = bVar1 < (byte)pcVar4[1];
+    if (bVar1 != pcVar4[1]) goto LAB_1009fa28;
+    pbVar2 = pbVar2 + 2;
+    pcVar4 = pcVar4 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_1009fa2d:
+  if (iVar3 == 0) {
+    CVehicleTankShell::ShellTouch((CVehicleTankShell *)param_1,(CBaseEntity *)this);
+    FUN_100531f0(*(int *)(*(int *)(this + 4) + 0x1c8) + *(int *)(DAT_10132554 + 0x98),this,this,3,0)
+    ;
+    FUN_100606b0((int)this);
+  }
+  pcVar4 = s_vehicle_tank_rocket_10121ae8;
+  pbVar2 = (byte *)(*(int *)(DAT_10132554 + 0x98) + **(int **)(param_1 + 4));
+  do {
+    bVar1 = *pbVar2;
+    bVar5 = bVar1 < (byte)*pcVar4;
+    if (bVar1 != *pcVar4) {
+LAB_1009faa5:
+      iVar3 = (1 - (uint)bVar5) - (uint)(bVar5 != 0);
+      goto LAB_1009faaa;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    bVar5 = bVar1 < (byte)pcVar4[1];
+    if (bVar1 != pcVar4[1]) goto LAB_1009faa5;
+    pbVar2 = pbVar2 + 2;
+    pcVar4 = pcVar4 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_1009faaa:
+  if (iVar3 == 0) {
+    CVehicleTankRocket::RocketTouch((CVehicleTankRocket *)param_1,(CBaseEntity *)this);
+    FUN_100531f0(*(int *)(*(int *)(this + 4) + 0x1c8) + *(int *)(DAT_10132554 + 0x98),this,this,3,0)
+    ;
+    FUN_100606b0((int)this);
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100531f0 (FUN_100531f0)
+
+void __cdecl
+FUN_100531f0(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5
+            )
+
+{
+  int *piVar1;
+  int iVar2;
+  int iVar3;
+  
+  iVar3 = 0;
+  if (param_1 != 0) {
+    (*DAT_10132414)(2,s_Firing____s__10120774,param_1);
+    while (iVar3 = (*DAT_10132358)(iVar3,s_targetname_101141ac,param_1), iVar3 != 0) {
+      iVar2 = (*DAT_10132438)(iVar3);
+      if (iVar2 == 0) {
+        return;
+      }
+      piVar1 = *(int **)(iVar3 + 0x7c);
+      if ((piVar1 != (int *)0x0) && ((((int *)piVar1[1])[0x69] & 0x40000000U) == 0)) {
+        (*DAT_10132414)(2,s_Found___s__firing___s__1012075c,
+                        *(int *)(DAT_10132554 + 0x98) + *(int *)piVar1[1],param_1);
+        (**(code **)(*piVar1 + 0xb8))(param_2,param_3,param_4,param_5);
+      }
+    }
+  }
+  return;
+}
+
+

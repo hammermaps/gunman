@@ -1,0 +1,247 @@
+======================================================================
+FUNC @ 0x100a4690 (FUN_100a4690)
+
+void __fastcall FUN_100a4690(int param_1)
+
+{
+  undefined4 uVar1;
+  
+  (*DAT_10132320)(s_models_dmlrocket_mdl_10127f50);
+  uVar1 = (*DAT_10132320)(s_sprites_firebeam_spr_10126af0);
+  *(undefined4 *)(param_1 + 0x274) = uVar1;
+  uVar1 = (*DAT_10132320)(s_sprites_white2_spr_10126adc);
+  *(undefined4 *)(param_1 + 0x27c) = uVar1;
+  (*DAT_10132324)(s_ambience_flameburst1_wav_101295f4);
+  (*DAT_10132324)(s_weapons_explode4_wav_101294cc);
+  (*DAT_10132320)(s_sprites_part2_spr_10127b40);
+  uVar1 = (*DAT_10132320)(s_sprites_explosion4_spr_10122c50);
+  *(undefined4 *)(param_1 + 0x278) = uVar1;
+  (*DAT_10132324)(s_tank_firering_wav_101295e0);
+  (*DAT_10132320)(s_sprites_smokering_spr_101275ec);
+  (*DAT_10132320)(s_sprites_flame_spr_10126a5c);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a4720 (FUN_100a4720)
+
+undefined4 * FUN_100a4720(void)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  undefined4 in_stack_00000010;
+  undefined4 in_stack_00000014;
+  undefined4 in_stack_00000018;
+  int in_stack_0000001c;
+  int in_stack_00000020;
+  undefined4 in_stack_00000024;
+  
+  iVar2 = (*DAT_10132374)();
+  if (iVar2 == 0) {
+    iVar2 = 0;
+  }
+  else {
+    iVar2 = iVar2 + 0x80;
+  }
+  iVar1 = *(int *)(iVar2 + 0x208);
+  if ((iVar1 == 0) || (puVar3 = *(undefined4 **)(iVar1 + 0x7c), puVar3 == (undefined4 *)0x0)) {
+    puVar3 = (undefined4 *)(*DAT_1013241c)(iVar1,0x288);
+    if (puVar3 == (undefined4 *)0x0) {
+      puVar3 = (undefined4 *)0x0;
+    }
+    else {
+      *puVar3 = &PTR_FUN_100ff944;
+    }
+    puVar3[1] = iVar2;
+  }
+  FUN_1005f600(puVar3[1],&stack0x00000004);
+  iVar2 = puVar3[1];
+  *(undefined4 *)(iVar2 + 0x50) = in_stack_00000010;
+  *(undefined4 *)(iVar2 + 0x54) = in_stack_00000014;
+  *(undefined4 *)(iVar2 + 0x58) = in_stack_00000018;
+  FUN_10007da0(puVar3 + 0x31,in_stack_00000020);
+  (**(code **)*puVar3)();
+  puVar3[5] = CMonsterTankRocket::RocketTouch;
+  if (in_stack_0000001c != 0) {
+    *(undefined4 *)(puVar3[1] + 0x198) = *(undefined4 *)(*(int *)(in_stack_0000001c + 4) + 0x208);
+  }
+  *(undefined4 *)(puVar3[1] + 0x1e0) = in_stack_00000024;
+  return puVar3;
+}
+
+
+======================================================================
+FUNC @ 0x100a47e0 (FUN_100a47e0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_100a47e0(int *param_1)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 uVar3;
+  undefined4 *puVar4;
+  float fStack_48;
+  float fStack_44;
+  float fStack_40;
+  float fStack_3c;
+  float fStack_38;
+  float fStack_34;
+  float fStack_30;
+  float fStack_2c;
+  float fStack_28;
+  float fStack_24;
+  float fStack_20;
+  float fStack_1c;
+  float fStack_18;
+  float fStack_14;
+  float fStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  (**(code **)(*param_1 + 4))();
+  param_1[0x49] = -0x40800000;
+  *(undefined4 *)(param_1[1] + 0x16c) = 0;
+  *(undefined4 *)(param_1[1] + 0x108) = 6;
+  *(undefined4 *)(param_1[1] + 0x10c) = 2;
+  *(undefined4 *)(param_1[1] + 0x11c) = 0x3f400000;
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_dmlrocket_mdl_10127f50);
+  fStack_48 = 0.0;
+  fStack_44 = 0.0;
+  fStack_40 = 0.0;
+  fStack_3c = 0.0;
+  fStack_38 = 0.0;
+  fStack_34 = 0.0;
+  FUN_1005f5d0(param_1[1],&fStack_3c,&fStack_48);
+  *(int *)param_1[1] = (int)s_monster_tank_rocket_101298b8 - (int)DAT_10132554[0x26];
+  FUN_1005eae0(*(undefined4 *)(param_1[1] + 0x208),(undefined4 *)(param_1[1] + 8),
+               s_tank_firering_wav_101295e0,0x3f800000,0x3f4ccccd,8,100);
+  FUN_1005ea10(param_1[1] + 0x50);
+  fStack_3c = DAT_10132554[0xd] * _DAT_100ea8ac;
+  fStack_38 = DAT_10132554[0xe] * _DAT_100ea8ac;
+  fStack_34 = DAT_10132554[0xf] * _DAT_100ea8ac;
+  FUN_10001370(&fStack_30,&fStack_3c);
+  fStack_48 = DAT_10132554[10] * _DAT_100ea154;
+  fStack_44 = DAT_10132554[0xb] * _DAT_100ea154;
+  fStack_40 = DAT_10132554[0xc] * _DAT_100ea154;
+  FUN_10001370(&fStack_24,&fStack_48);
+  fStack_18 = fStack_30 + fStack_24;
+  fStack_14 = fStack_2c + fStack_20;
+  fStack_10 = fStack_28 + fStack_1c;
+  FUN_10001370(&uStack_c,&fStack_18);
+  iVar1 = param_1[1];
+  *(undefined4 *)(iVar1 + 0x20) = uStack_c;
+  *(undefined4 *)(iVar1 + 0x24) = uStack_8;
+  *(undefined4 *)(iVar1 + 0x28) = uStack_4;
+  FUN_1005f600(param_1[1],param_1[1] + 8);
+  (*DAT_101323d8)(0,0x17,0,0);
+  (*DAT_101323e0)(0x16);
+  uVar3 = (*DAT_1013243c)(*(undefined4 *)(param_1[1] + 0x208));
+  (*DAT_101323e8)(uVar3);
+  (*DAT_101323e8)(param_1[0x9d]);
+  (*DAT_101323e0)(0x14);
+  (*DAT_101323e0)(5);
+  (*DAT_101323e0)(0xe0);
+  (*DAT_101323e0)(0xe0);
+  (*DAT_101323e0)(100);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323dc)();
+  (*DAT_101323d8)(0,0x17,0,0);
+  (*DAT_101323e0)(0x16);
+  uVar3 = (*DAT_1013243c)(*(undefined4 *)(param_1[1] + 0x208));
+  (*DAT_101323e8)(uVar3);
+  (*DAT_101323e8)(param_1[0x9f]);
+  (*DAT_101323e0)(9);
+  (*DAT_101323e0)(1);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323e0)(0x96);
+  (*DAT_101323dc)();
+  puVar4 = FUN_10015400(0x10126a5c,(undefined4 *)(param_1[1] + 8),1);
+  param_1[0xa0] = (int)puVar4;
+  *(undefined4 *)(puVar4[1] + 0x148) = 5;
+  *(undefined4 *)(puVar4[1] + 0x150) = 0x437f0000;
+  *(undefined4 *)(puVar4[1] + 0x154) = 0x437f0000;
+  *(undefined4 *)(puVar4[1] + 0x158) = 0x437f0000;
+  *(undefined4 *)(puVar4[1] + 0x14c) = 0x437f0000;
+  *(undefined4 *)(puVar4[1] + 0x15c) = 0xe;
+  *(uint *)(*(int *)(param_1[0xa0] + 4) + 0x1a0) =
+       *(uint *)(*(int *)(param_1[0xa0] + 4) + 0x1a0) | 0x8000;
+  iVar1 = param_1[0xa0];
+  iVar2 = *(int *)(param_1[1] + 0x208);
+  if (iVar2 != 0) {
+    uVar3 = (*DAT_1013243c)(iVar2);
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x110) = uVar3;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x114) = 0;
+    *(int *)(*(int *)(iVar1 + 4) + 0x194) = iVar2;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x108) = 0xc;
+  }
+  *(undefined4 *)(*(int *)(param_1[0xa0] + 4) + 0x144) = 0x3f800000;
+  *(undefined4 *)(*(int *)(param_1[0xa0] + 4) + 0x138) = 0x41700000;
+  *(undefined4 *)(*(int *)(param_1[0xa0] + 4) + 0x130) = 0;
+  FUN_10015680(param_1[0xa0]);
+  *(undefined4 *)(param_1[1] + 0x108) = 5;
+  FUN_10050a80(*(void **)(param_1[1] + 0x208),*(void **)(param_1[1] + 0x208),2,
+               s_ambience_flameburst1_wav_101295f4,0x3f800000,0x3f000000,0,100);
+  param_1[4] = (int)CMonsterTankRocket::RocketThink;
+  *(float *)(param_1[1] + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a5c80 (FUN_100a5c80)
+
+void __thiscall FUN_100a5c80(void *param_1,int *param_2)
+
+{
+  if (*param_2 == 1) {
+    FUN_100a5cb0((int)param_1);
+    return;
+  }
+  if (*param_2 != 2) {
+    FUN_1002bf10(param_1,param_2);
+    return;
+  }
+  FUN_100a5cb0((int)param_1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a5cb0 (FUN_100a5cb0)
+
+void __fastcall FUN_100a5cb0(int param_1)
+
+{
+  int iVar1;
+  undefined4 uStack_3c;
+  undefined4 uStack_38;
+  undefined4 uStack_30;
+  undefined4 local_c [3];
+  
+  uStack_30 = 0x100a5cd8;
+  FUN_1005eb80((float *)(*(int *)(param_1 + 4) + 8),25.0,0x43160000,0x3f400000,2000.0);
+  uStack_30 = 0;
+  uStack_3c = *(undefined4 *)(*(int *)(param_1 + 4) + 0x208);
+  uStack_38 = 1;
+  (*DAT_10132474)();
+  iVar1 = (*DAT_10132358)(0,s_targetname_101141ac,
+                          *(int *)(DAT_10132554 + 0x98) + *(int *)(*(int *)(param_1 + 4) + 0x1c8));
+  if (iVar1 != 0) {
+    (*DAT_10132438)();
+  }
+  uStack_38 = 0x100a5d49;
+  FUN_10001370(&uStack_30,(undefined4 *)(*(int *)(param_1 + 4) + 0x50));
+  FUN_10001370(&uStack_3c,local_c);
+  FUN_100a4720();
+  return;
+}
+
+

@@ -1,0 +1,199 @@
+======================================================================
+FUNC @ 0x10069ff0 (FUN_10069ff0)
+
+void __fastcall FUN_10069ff0(int *param_1)
+
+{
+  (**(code **)(*param_1 + 4))();
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_pteradon2_mdl_10124a54);
+  FUN_100689a0(param_1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1006a040 (FUN_1006a040)
+
+void FUN_1006a040(void)
+
+{
+  (*DAT_10132320)(s_models_pteradon2_mdl_10124a54);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10069d90 (FUN_10069d90)
+
+void __fastcall FUN_10069d90(int *param_1)
+
+{
+  (**(code **)(*param_1 + 4))();
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_eagle_mdl_101249b0);
+  FUN_100689a0(param_1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10069f00 (FUN_10069f00)
+
+void FUN_10069f00(void)
+
+{
+  (*DAT_10132320)(s_models_eagle_mdl_101249b0);
+  (*DAT_10132324)(s_eagle_eagle_cry1_wav_10124a0c);
+  (*DAT_10132324)(s_eagle_eagle_cry2_wav_10124a24);
+  (*DAT_10132324)(s_eagle_eagle_cry3_wav_10124a3c);
+  (*DAT_10132324)(s_eagle_eagle_flap1_wav_101249c4);
+  (*DAT_10132324)(s_eagle_eagle_flap2_wav_101249dc);
+  (*DAT_10132324)(s_eagle_eagle_flap3_wav_101249f4);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068940 (FUN_10068940)
+
+void __thiscall FUN_10068940(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_100279d0(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CBaseBird_10124980,(int)param_1,0x10124870,9);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068970 (FUN_10068970)
+
+void __thiscall FUN_10068970(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10027a00(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CBaseBird_10124980,(int)param_1,&DAT_10124870,9);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10069d70 (FUN_10069d70)
+
+undefined4 FUN_10069d70(void)
+
+{
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x10069ca0 (FUN_10069ca0)
+
+undefined4 __thiscall FUN_10069ca0(void *param_1,int param_2,float param_3,float param_4)
+
+{
+  undefined4 uVar1;
+  
+  if (*(int *)(param_2 + 0x198) == *(int *)(*(int *)((int)param_1 + 4) + 0x208)) {
+    return 0;
+  }
+  uVar1 = FUN_10007e60(param_1,param_2,param_3,param_4);
+  return uVar1;
+}
+
+
+======================================================================
+FUNC @ 0x10068b30 (FUN_10068b30)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_10068b30(void *param_1)
+
+{
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x108) = 6;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x11c) = 0x3f000000;
+  FUN_10029770(param_1,(byte *)s_falling_1012498c);
+  *(code **)((int)param_1 + 0x10) = CBaseBird::DyingThink;
+  *(code **)((int)param_1 + 0x14) = CBaseBird::CrashTouch;
+  uStack_18 = 0x41800000;
+  uStack_14 = 0x41800000;
+  uStack_10 = 0x41800000;
+  uStack_c = 0xc1800000;
+  uStack_8 = 0xc1800000;
+  uStack_4 = 0;
+  *(float *)(*(int *)((int)param_1 + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x160) = 0;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x16c) = 0;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x10c) = 1;
+  FUN_1005f5d0(*(int *)((int)param_1 + 4),&uStack_c,&uStack_18);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10069d80 (FUN_10069d80)
+
+undefined4 FUN_10069d80(void)
+
+{
+  return 0xffffffff;
+}
+
+
+======================================================================
+FUNC @ 0x100cdf60 (FUN_100cdf60)
+
+void __fastcall FUN_100cdf60(int *param_1)
+
+{
+  *(int *)(param_1[1] + 0xb8) = (int)s_models_sack_mdl_1012f2cc - *(int *)(DAT_10132554 + 0x98);
+  *(int *)param_1[1] = (int)s_decore_sack_1012f2dc - *(int *)(DAT_10132554 + 0x98);
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_sack_mdl_1012f2cc);
+  *(undefined4 *)(param_1[1] + 0x10c) = 0;
+  *(undefined4 *)(param_1[1] + 0x108) = 8;
+  *(undefined4 *)(param_1[1] + 0x118) = 0;
+  *(undefined4 *)(param_1[1] + 0x16c) = 0;
+  *(uint *)(param_1[1] + 0x1a0) = *(uint *)(param_1[1] + 0x1a0) | 0x80000000;
+  (**(code **)(*param_1 + 0x10c))();
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100cdf40 (FUN_100cdf40)
+
+void FUN_100cdf40(void)
+
+{
+  (*DAT_10132320)(s_models_sack_mdl_1012f2cc);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100cdf50 (FUN_100cdf50)
+
+undefined4 FUN_100cdf50(void)
+
+{
+  return 0xd;
+}
+
+

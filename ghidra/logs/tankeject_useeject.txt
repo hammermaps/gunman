@@ -1,0 +1,61 @@
+======================================================================
+FUNC @ 0x1005b5b0 (CVehicleTriggerEject::UseEject)
+
+/* public: void __thiscall CVehicleTriggerEject::UseEject(class CBaseEntity *,class CBaseEntity
+   *,enum USE_TYPE,float) */
+
+void __thiscall
+CVehicleTriggerEject::UseEject
+          (CVehicleTriggerEject *this,CBaseEntity *param_1,CBaseEntity *param_2,USE_TYPE param_3,
+          float param_4)
+
+{
+  byte bVar1;
+  int iVar2;
+  byte *pbVar3;
+  int iVar4;
+  int *piVar5;
+  char *pcVar6;
+  bool bVar7;
+  
+                    /* 0x5b5b0  402
+                       ?UseEject@CVehicleTriggerEject@@QAEXPAVCBaseEntity@@0W4USE_TYPE@@M@Z */
+  iVar2 = (*DAT_10132358)(0,s_targetname_101141ac,
+                          *(int *)(*(int *)(this + 4) + 0x1c8) + *(int *)(DAT_10132554 + 0x98));
+  if (iVar2 == 0) {
+    piVar5 = (int *)0x0;
+  }
+  else {
+    piVar5 = (int *)(iVar2 + 0x80);
+  }
+  pcVar6 = s_vehicle_tank_1011480c;
+  pbVar3 = (byte *)(*(int *)(DAT_10132554 + 0x98) + *piVar5);
+  do {
+    bVar1 = *pbVar3;
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_1005b627:
+      iVar4 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_1005b62c;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar3[1];
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_1005b627;
+    pbVar3 = pbVar3 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar4 = 0;
+LAB_1005b62c:
+  if (iVar4 != 0) {
+    return;
+  }
+  if ((iVar2 == 0) && (iVar2 = (*DAT_10132434)(0), iVar2 == 0)) {
+    FUN_1009e950((void *)0x0);
+    return;
+  }
+  FUN_1009e950(*(void **)(iVar2 + 0x7c));
+  return;
+}
+
+

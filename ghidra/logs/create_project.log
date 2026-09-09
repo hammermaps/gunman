@@ -1,0 +1,208 @@
+openjdk version "23.0.2" 2025-01-21
+OpenJDK Runtime Environment Zulu23.32+11-CA (build 23.0.2+7)
+OpenJDK 64-Bit Server VM Zulu23.32+11-CA (build 23.0.2+7, mixed mode)
+INFO  Using log config file: jar:file:/home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/masterbee/.config/ghidra/ghidra_12.1.3_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/masterbee/.config/ghidra/ghidra_12.1.3_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1333 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (3414 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 59 extension points (20 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /home/masterbee/ghidra-projects/GunmanChronicles (HeadlessAnalyzer)  
+INFO  Creating project: /home/masterbee/ghidra-projects/GunmanChronicles (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /home/masterbee/ghidra-projects/GunmanChronicles (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/masterbee/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Half-Life/gunman/Half Life Gunman Chronicles/Gunman-ENG-GER/rewolf/dlls/gunman.dll (HeadlessAnalyzer)  
+INFO  Using Loader: Portable Executable (PE) (ProgramLoader)  
+INFO  Using Language/Compiler: x86:LE:32:default:windows (ProgramLoader)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (ProgramLoader)  
+INFO  Additional info:
+Loading file:///home/masterbee/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Half-Life/gunman/Half Life Gunman Chronicles/Gunman-ENG-GER/rewolf/dlls/gunman.dll?MD5=61f6ba33d133d16c800aedeb9fd01802...
+------------------------------------------------
+
+Searching 8 paths for library KERNEL32.DLL...
+Library not found.
+------------------------------------------------
+
+Linking the External Programs of 'gunman.dll' to imported libraries...
+  [KERNEL32.DLL] -> not found in project
+------------------------------------------------
+
+ (ProgramLoader)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/masterbee/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Half-Life/gunman/Half Life Gunman Chronicles/Gunman-ENG-GER/rewolf/dlls/gunman.dll (HeadlessAnalyzer)  
+WARN  Ignoring leading '_' chars on no-return name '___raise_securityfailure' specified in file: /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn (NoReturnFunctionAnalyzer)  
+WARN  Ignoring leading '_' chars on no-return name '___report_rangecheckfailure' specified in file: /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn (NoReturnFunctionAnalyzer)  
+INFO  Skipping PDB processing: failed to locate PDB file in configured locations (PdbUniversalAnalyzer)  
+INFO  Use a script to set the PDB file location. I.e.,
+    PdbAnalyzer.setPdbFileOption(currentProgram, new File("/path/to/pdb/file.pdb")); or
+    PdbUniversalAnalyzer.setPdbFileOption(currentProgram, new File("/path/to/pdb/file.pdb"));
+Or set the symbol server search configuration using:    PdbPlugin.saveSymbolServerServiceConfig(...);
+ This must be done using a pre-script (prior to analysis). (PdbUniversalAnalyzer)  
+INFO  Packed database cache: /var/tmp/masterbee-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: windows_vs12_32 (ApplyDataArchiveAnalyzer)  
+INFO  Applied data type archive: windows_vs12_32 (ApplyDataArchiveAnalyzer)  
+INFO  -----------------------------------------------------
+    ASCII Strings                              0.654 secs
+    Apply Data Archives                        1.079 secs
+    Call Convention ID                         0.020 secs
+    Call-Fixup Installer                       0.090 secs
+    Create Address Tables                      0.672 secs
+    Create Address Tables - One Time           2.718 secs
+    Create Function                            0.773 secs
+    Data Reference                             1.833 secs
+    Decompiler Parameter ID                   15.528 secs
+    Decompiler Switch Analysis                16.216 secs
+    Demangler Microsoft                        0.959 secs
+    Disassemble                                1.871 secs
+    Disassemble Entry Points                   4.802 secs
+    Disassemble Entry Points - One Time        0.006 secs
+    Embedded Media                             0.050 secs
+    External Entry References                  0.011 secs
+    Function ID                                2.568 secs
+    Function Start Pre Search                  0.042 secs
+    Function Start Search                      0.193 secs
+    Function Start Search After Code           0.147 secs
+    Function Start Search After Data           0.104 secs
+    Function Start Search delayed - One Time   0.017 secs
+    Non-Returning Functions - Discovered       1.108 secs
+    Non-Returning Functions - Known            0.013 secs
+    PDB Universal                              0.025 secs
+    Reference                                  3.149 secs
+    Scalar Operand References                  2.378 secs
+    Shared Return Calls                        0.577 secs
+    Stack                                      7.424 secs
+    Subroutine References                      2.189 secs
+    Subroutine References - One Time           0.009 secs
+    Windows x86 PE Exception Handling          0.013 secs
+    Windows x86 PE RTTI Analyzer               0.053 secs
+    Windows x86 Thread Environment Block (TEB) Analyzer     0.024 secs
+    WindowsResourceReference                   0.339 secs
+    X86 Function Callee Purge                  0.537 secs
+    x86 Constant Reference Analyzer           10.183 secs
+-----------------------------------------------------
+     Total Time   78 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///home/masterbee/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Half-Life/gunman/Half Life Gunman Chronicles/Gunman-ENG-GER/rewolf/dlls/gunman.dll (HeadlessAnalyzer)  
+INFO  /gunman.dll: file created (masterbee) (LocalFileSystem)  
+INFO  REPORT: Save succeeded for: /gunman.dll (GunmanChronicles:/gunman.dll) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///home/masterbee/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Half-Life/gunman/Half Life Gunman Chronicles/Gunman-ENG-GER/rewolf/cl_dlls/client.dll (HeadlessAnalyzer)  
+INFO  Using Loader: Portable Executable (PE) (ProgramLoader)  
+INFO  Using Language/Compiler: x86:LE:32:default:windows (ProgramLoader)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (ProgramLoader)  
+INFO  Additional info:
+Loading file:///home/masterbee/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Half-Life/gunman/Half Life Gunman Chronicles/Gunman-ENG-GER/rewolf/cl_dlls/client.dll?MD5=dad536e8764f6925cdffacad35923e31...
+------------------------------------------------
+
+Searching 8 paths for library KERNEL32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library USER32.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library VGUI.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WINMM.DLL...
+Library not found.
+------------------------------------------------
+
+Searching 8 paths for library WSOCK32.DLL...
+Library not found.
+------------------------------------------------
+
+Linking the External Programs of 'client.dll' to imported libraries...
+  [WINMM.DLL] -> not found in project
+  [VGUI.DLL] -> not found in project
+  [WSOCK32.DLL] -> not found in project
+  [USER32.DLL] -> not found in project
+  [KERNEL32.DLL] -> not found in project
+------------------------------------------------
+
+ (ProgramLoader)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///home/masterbee/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Half-Life/gunman/Half Life Gunman Chronicles/Gunman-ENG-GER/rewolf/cl_dlls/client.dll (HeadlessAnalyzer)  
+WARN  Ignoring leading '_' chars on no-return name '___raise_securityfailure' specified in file: /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn (NoReturnFunctionAnalyzer)  
+WARN  Ignoring leading '_' chars on no-return name '___report_rangecheckfailure' specified in file: /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/data/PEFunctionsThatDoNotReturn (NoReturnFunctionAnalyzer)  
+INFO  Skipping PDB processing: missing PDB information in program metadata (PdbUniversalAnalyzer)  
+INFO  Applied data type archive: windows_vs12_32 (ApplyDataArchiveAnalyzer)  
+INFO  Applied data type archive: windows_vs12_32 (ApplyDataArchiveAnalyzer)  
+INFO  -----------------------------------------------------
+    ASCII Strings                              0.309 secs
+    Apply Data Archives                        0.155 secs
+    Call Convention ID                         0.015 secs
+    Call-Fixup Installer                       0.059 secs
+    Create Address Tables                      0.207 secs
+    Create Address Tables - One Time           0.848 secs
+    Create Function                            0.354 secs
+    Data Reference                             0.500 secs
+    Decompiler Parameter ID                    9.801 secs
+    Decompiler Switch Analysis                19.305 secs
+    Demangler Microsoft                        0.431 secs
+    Disassemble                                0.293 secs
+    Disassemble Entry Points                   0.957 secs
+    Disassemble Entry Points - One Time        0.008 secs
+    Embedded Media                             0.006 secs
+    External Entry References                  0.003 secs
+    Function ID                                0.893 secs
+    Function Start Pre Search                  0.008 secs
+    Function Start Search                      0.064 secs
+    Function Start Search After Code           0.026 secs
+    Function Start Search After Data           0.027 secs
+    Function Start Search delayed - One Time   0.001 secs
+    Non-Returning Functions - Discovered       0.155 secs
+    Non-Returning Functions - Known            0.004 secs
+    PDB Universal                              0.000 secs
+    Reference                                  0.917 secs
+    Scalar Operand References                  0.875 secs
+    Shared Return Calls                        0.172 secs
+    Stack                                      2.718 secs
+    Subroutine References                      0.704 secs
+    Subroutine References - One Time           0.003 secs
+    Windows x86 PE Exception Handling          1.904 secs
+    Windows x86 PE RTTI Analyzer               0.057 secs
+    Windows x86 Thread Environment Block (TEB) Analyzer     0.008 secs
+    WindowsResourceReference                   0.255 secs
+    X86 Function Callee Purge                  0.138 secs
+    x86 Constant Reference Analyzer            2.795 secs
+-----------------------------------------------------
+     Total Time   44 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///home/masterbee/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Half-Life/gunman/Half Life Gunman Chronicles/Gunman-ENG-GER/rewolf/cl_dlls/client.dll (HeadlessAnalyzer)  
+INFO  /client.dll: file created (masterbee) (LocalFileSystem)  
+INFO  REPORT: Save succeeded for: /client.dll (GunmanChronicles:/client.dll) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  

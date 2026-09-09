@@ -1,0 +1,41 @@
+======================================================================
+FUNC @ 0x1000d1a0 (?GibSmokeThink@CGib@@QAEXXZ)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall _GibSmokeThink_CGib__QAEXXZ(int param_1)
+
+{
+  undefined4 uVar1;
+  int iVar2;
+  
+                    /* 0xd1a0  164  ?GibSmokeThink@CGib@@QAEXXZ */
+  *(float *)(*(int *)(param_1 + 4) + 0x104) = *pfRam10132554 + (float)_UNK_100e99a0;
+  if (*(float *)(param_1 + 0x27c) < *pfRam10132554) {
+    *(undefined **)(param_1 + 0x10) = &_SUB_StartFadeOut_CBaseEntity__QAEXXZ;
+    return;
+  }
+  if ((*(int *)(param_1 + 0x280) != (int)sRam10141ff6) ||
+     ((*(uint *)(*(int *)(param_1 + 4) + 0x1a4) & 0x200) == 0)) {
+    uVar1 = func_0x100d9378();
+    iVar2 = func_0x100608b0(uVar1);
+    if (iVar2 == 0) {
+      (*pcRam101323d8)(4,0x17,*(int *)(param_1 + 4) + 8,0);
+      (*pcRam101323e0)(0x6e);
+      (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 8));
+      (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0xc));
+      (*pcRam101323f4)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x10));
+      (*pcRam101323f4)(0);
+      (*pcRam101323f4)(0);
+      (*pcRam101323f4)(0x3f800000);
+      (*pcRam101323e8)(*(undefined4 *)(param_1 + 0x280));
+      (*pcRam101323e0)(1);
+      (*pcRam101323e0)(100);
+      (*pcRam101323e0)(0x14);
+      (*pcRam101323dc)();
+    }
+  }
+  return;
+}
+
+

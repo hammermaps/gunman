@@ -1,0 +1,532 @@
+======================================================================
+FUNC @ 0x100d1190 (FUN_100d1190)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_100d1190(int *param_1)
+
+{
+  float fVar1;
+  float10 fVar2;
+  undefined4 uVar3;
+  char *pcVar4;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  *(int *)param_1[1] = (int)s_hologram_beak_1012f7dc - (int)DAT_10132554[0x26];
+  (**(code **)(*param_1 + 4))();
+  if (param_1[0xa4] == 0) {
+    pcVar4 = s_models_beak_mdl_1012d374;
+    uVar3 = *(undefined4 *)(param_1[1] + 0x208);
+  }
+  else if (param_1[0xa4] == 1) {
+    pcVar4 = s_models_tube_mdl_1012e194;
+    uVar3 = *(undefined4 *)(param_1[1] + 0x208);
+  }
+  else {
+    pcVar4 = s_models_raptor_mdl_10125aa4;
+    uVar3 = *(undefined4 *)(param_1[1] + 0x208);
+  }
+  (*DAT_10132328)(uVar3,pcVar4);
+  uStack_18 = 0x41800000;
+  uStack_14 = 0x41800000;
+  *(undefined4 *)(param_1[1] + 0x10c) = 0;
+  uStack_10 = 0x42200000;
+  uStack_c = 0xc1800000;
+  *(undefined4 *)(param_1[1] + 0x108) = 0;
+  uStack_8 = 0xc1800000;
+  uStack_4 = 0;
+  *(undefined4 *)(param_1[1] + 0x16c) = 0;
+  *(undefined4 *)(param_1[1] + 0x118) = 0x80;
+  *(undefined4 *)(param_1[1] + 0x160) = 0x42800000;
+  *(undefined4 *)(param_1[1] + 0xb0) = 0x40a00000;
+  *(undefined4 *)(param_1[1] + 0xac) = *(undefined4 *)(param_1[1] + 0x54);
+  FUN_1005f5d0(param_1[1],&uStack_c,&uStack_18);
+  FUN_10001e30((int)param_1);
+  (**(code **)(*param_1 + 0x100))(0x168);
+  param_1[10] = 0x42960000;
+  param_1[0xb] = 0;
+  param_1[0x9f] = 0;
+  param_1[0xa6] = 1;
+  FUN_10001c50((int)param_1);
+  *(undefined4 *)(param_1[1] + 0x15c) = 0xf;
+  *(undefined4 *)(param_1[1] + 0x14c) = 0x43160000;
+  *(undefined4 *)(param_1[1] + 0x148) = 5;
+  param_1[4] = (int)CHologram::HologramThink;
+  param_1[6] = (int)CHologram::UseToggle;
+  *(float *)(param_1[1] + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  if (param_1[0xa4] == 0) {
+    pcVar4 = s_sleeping_1012f7d0;
+  }
+  else if (param_1[0xa4] == 1) {
+    pcVar4 = &DAT_1011bfec;
+  }
+  else {
+    pcVar4 = s_idlenormal_1012f7c4;
+  }
+  FUN_10029770(param_1,(byte *)pcVar4);
+  FUN_10001c50((int)param_1);
+  fVar2 = (float10)(*DAT_1013248c)(0x40a00000,0x41200000);
+  fVar1 = *DAT_10132554;
+  param_1[0x9d] = 0;
+  param_1[0x9e] = 0;
+  param_1[0xa1] = 0;
+  param_1[0xa3] = 0;
+  param_1[0x9c] = (int)(float)(fVar2 + (float10)fVar1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1520 (FUN_100d1520)
+
+void __fastcall FUN_100d1520(int param_1)
+
+{
+  undefined4 uVar1;
+  
+  (*DAT_10132320)(s_models_beak_mdl_1012d374);
+  uVar1 = (*DAT_10132320)(s_sprites_white_spr_10124c48);
+  *(undefined4 *)(param_1 + 0x288) = uVar1;
+  (*DAT_10132320)(s_models_tube_mdl_1012e194);
+  (*DAT_10132324)(s_ambience_holowarpin_wav_1012f808);
+  (*DAT_10132320)(s_models_raptor_mdl_10125aa4);
+  (*DAT_10132324)(s_ambience_holodisplay_wav_1012f7ec);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1570 (FUN_100d1570)
+
+void __thiscall FUN_100d1570(void *this,int param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  undefined4 uVar4;
+  void *this_00;
+  char *pcVar6;
+  bool bVar7;
+  undefined3 uVar5;
+  
+  pcVar6 = s_creaturetype_1012f82c;
+  pbVar2 = *(byte **)(param_1 + 4);
+  this_00 = this;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100d15a5:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100d15aa;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100d15a5;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100d15aa:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x290) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_targetfail_1012f820;
+  do {
+    bVar1 = *pbVar2;
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100d15f3:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100d15f8;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100d15f3;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100d15f8:
+  if (iVar3 == 0) {
+    uVar4 = (*DAT_1013242c)(*(undefined4 *)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x294) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    return;
+  }
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1130 (FUN_100d1130)
+
+void __thiscall FUN_100d1130(void *this,void *param_1)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10008340(this,param_1);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_1,(byte *)s_CHologram_1012f7b8,(int)this,0x1012f528,0xd);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1160 (FUN_100d1160)
+
+void __thiscall FUN_100d1160(void *this,void *param_1)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10008380(this,param_1);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_1,(byte *)s_CHologram_1012f7b8,(int)this,&DAT_1012f528,0xd);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1110 (FUN_100d1110)
+
+undefined4 FUN_100d1110(void)
+
+{
+  return 0xb;
+}
+
+
+======================================================================
+FUNC @ 0x100d17a0 (FUN_100d17a0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 __fastcall FUN_100d17a0(void *param_1)
+
+{
+  void *this;
+  int iVar1;
+  int iVar2;
+  longlong lVar3;
+  
+  if (*(int *)((int)param_1 + 0x278) == 0) {
+    iVar1 = (*DAT_10132358)(0,s_targetname_101141ac,
+                            *(int *)(*(int *)((int)param_1 + 4) + 0x1c8) + (int)DAT_10132554[0x26]);
+    if (iVar1 != 0) {
+      iVar2 = (*DAT_10132438)(iVar1);
+      if (iVar2 != 0) {
+        this = *(void **)(iVar1 + 0x7c);
+        *(void **)((int)param_1 + 0x280) = this;
+        lVar3 = __ftol();
+        iVar1 = *(int *)((int)param_1 + 0x27c) + (int)lVar3;
+        *(int *)((int)param_1 + 0x27c) = iVar1;
+        if (this != (void *)0x0) {
+          FUN_100d0f80(this,iVar1);
+        }
+        *(float *)((int)param_1 + 0x284) = *DAT_10132554 + (float)_DAT_100eb598;
+      }
+    }
+    if (*(float *)((int)param_1 + 0x274) < *DAT_10132554) {
+      *(float *)((int)param_1 + 0x274) = *DAT_10132554 + (float)_DAT_100ed738;
+      FUN_100d1d50(param_1);
+      *(float *)((int)param_1 + 0x270) = *DAT_10132554;
+    }
+  }
+  return 1;
+}
+
+
+======================================================================
+FUNC @ 0x100d1120 (FUN_100d1120)
+
+undefined4 FUN_100d1120(void)
+
+{
+  return 0xffffffff;
+}
+
+
+======================================================================
+FUNC @ 0x100d1100 (FUN_100d1100)
+
+undefined4 FUN_100d1100(void)
+
+{
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x100d1390 (CHologram::SpawnThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CHologram::SpawnThink(void) */
+
+void __thiscall CHologram::SpawnThink(CHologram *this)
+
+{
+  int iVar1;
+  undefined4 *puVar2;
+  int local_38;
+  undefined4 uStack_34;
+  undefined4 uStack_30;
+  float local_2c;
+  undefined4 local_28;
+  float local_24;
+  float local_20;
+  undefined4 local_1c;
+  float local_18;
+  float local_14;
+  undefined4 local_10;
+  undefined1 local_c [12];
+  
+                    /* 0xd1390  323  ?SpawnThink@CHologram@@QAEXXZ */
+  iVar1 = *(int *)(this + 4);
+  local_18 = *(float *)(iVar1 + 8) - _DAT_100f0a1c;
+  local_14 = *(float *)(iVar1 + 0xc) - _DAT_100f0a1c;
+  local_10 = *(undefined4 *)(iVar1 + 0x10);
+  local_24 = *(float *)(iVar1 + 8) + _DAT_100f0a1c;
+  local_2c = *(float *)(iVar1 + 0xc) + _DAT_100f0a1c;
+  local_28 = *(undefined4 *)(iVar1 + 0x10);
+  local_20 = local_2c;
+  local_1c = local_28;
+  iVar1 = FUN_1005e5d0(&local_38,2,&local_18,&local_24,0x28);
+  if (iVar1 != 0) {
+    *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100ea858;
+    return;
+  }
+  *(undefined4 *)(*(int *)(this + 4) + 0x118) = 0;
+  *(undefined4 *)(*(int *)(this + 4) + 0x10c) = 2;
+  *(undefined4 *)(*(int *)(this + 4) + 0x16c) = 0x40000000;
+  *(undefined4 *)(this + 0x28c) = 1;
+  puVar2 = (undefined4 *)(**(code **)(*(int *)this + 0xcc))(local_c);
+  uStack_34 = *puVar2;
+  uStack_30 = puVar2[1];
+  local_2c = (float)puVar2[2];
+  (*DAT_101323d8)(4,0x17,&uStack_34,0);
+  (*DAT_101323e0)(0xe);
+  (*DAT_101323f4)(uStack_34);
+  (*DAT_101323f4)(uStack_30);
+  (*DAT_101323f4)(local_2c);
+  (*DAT_101323e0)(0x32);
+  (*DAT_101323e0)(100);
+  (*DAT_101323e0)(10);
+  (*DAT_101323dc)();
+  *(code **)(this + 0x10) = HologramThink;
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  FUN_1005f600(*(int *)(this + 4),*(int *)(this + 4) + 8);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1630 (CHologram::HologramThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CHologram::HologramThink(void) */
+
+void __thiscall CHologram::HologramThink(CHologram *this)
+
+{
+  float10 fVar1;
+  
+                    /* 0xd1630  171  ?HologramThink@CHologram@@QAEXXZ */
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  if (*(float *)(this + 0x29c) < *DAT_10132554) {
+    FUN_10050a80(*(void **)(*(int *)(this + 4) + 0x208),*(void **)(*(int *)(this + 4) + 0x208),6,
+                 s_ambience_holodisplay_wav_1012f7ec,0x3e99999a,0x3f4ccccd,0,100);
+    *(float *)(this + 0x29c) = *DAT_10132554 + (float)_DAT_101080e0;
+  }
+  if (*(float *)(this + 0x28) == (float)_DAT_100e93b8) {
+    *(undefined4 *)(*(int *)(this + 4) + 0x128) = 0;
+    FUN_10001c50((int)this);
+  }
+  else {
+    FUN_10001a30((int)this,0.0);
+  }
+  if ((*(float *)(this + 0x284) != _DAT_100e9384) && (*(float *)(this + 0x284) < *DAT_10132554)) {
+    *(code **)(this + 0x10) = DieThink;
+    *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554;
+  }
+  if (*(int *)(this + 0x34) != 0) {
+    if (*(float *)(this + 0x270) < *DAT_10132554) {
+      FUN_100d1bf0(this);
+      fVar1 = (float10)(*DAT_1013248c)(0x40400000,0x41400000);
+      *(float *)(this + 0x270) = (float)(fVar1 + (float10)*DAT_10132554);
+      return;
+    }
+    if ((*(int *)(this + 0x34) != 0) && (*(int *)(this + 0x38) == 0)) {
+      *(float *)(*(int *)(this + 4) + 0x134) = *DAT_10132554;
+      *(undefined4 *)(*(int *)(this + 4) + 0x138) = 0x3f800000;
+      *(undefined4 *)(this + 0x34) = 0;
+      *(float *)(this + 0x30) = *DAT_10132554;
+      *(undefined4 *)(*(int *)(this + 4) + 0x130) = 0;
+    }
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1880 (CHologram::DieThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CHologram::DieThink(void) */
+
+void __thiscall CHologram::DieThink(CHologram *this)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  int iVar4;
+  int iVar5;
+  undefined4 *puVar6;
+  undefined1 local_c [12];
+  
+                    /* 0xd1880  108  ?DieThink@CHologram@@QAEXXZ */
+  if (*(int *)(this + 0x278) == 0) {
+    iVar4 = *(int *)(this + 0x280);
+    if ((iVar4 == 0) || (*(int *)(iVar4 + 0x274) <= *(int *)(this + 0x27c))) {
+      *(undefined4 *)(this + 0x298) = 0;
+    }
+    else {
+      *(undefined4 *)(this + 0x298) = 1;
+    }
+    if ((iVar4 != 0) && (*(int *)(iVar4 + 0x278) != 0)) {
+      *(undefined4 *)(this + 0x298) = 0;
+    }
+    if (*(int *)(this + 0x298) != 0) {
+      if ((*(int *)(this + 0x2a0) == 0) && (*(int *)(this + 0x294) != 0)) {
+        iVar4 = (*DAT_10132358)(0,s_targetname_101141ac,
+                                (int)DAT_10132554[0x26] + *(int *)(this + 0x294));
+        if (iVar4 != 0) {
+          iVar5 = (*DAT_10132438)(iVar4);
+          if (iVar5 != 0) {
+            *(undefined4 *)(this + 0x2a0) = *(undefined4 *)(iVar4 + 0x7c);
+          }
+        }
+      }
+      if (*(int **)(this + 0x2a0) != (int *)0x0) {
+        (**(code **)(**(int **)(this + 0x2a0) + 0xb8))(this,this,1,0);
+      }
+      *(undefined4 *)(this + 0x298) = 0;
+    }
+    *(undefined4 *)(this + 0x278) = 1;
+    FUN_100d1e00(this);
+  }
+  *(uint *)(*(int *)(this + 4) + 0x15c) = *(uint *)(*(int *)(this + 4) + 0x15c) & 0xfffffff0;
+  *(float *)(*(int *)(this + 4) + 0x14c) = *(float *)(*(int *)(this + 4) + 0x14c) - _DAT_100f1940;
+  if (*(float *)(*(int *)(this + 4) + 0x14c) <= _DAT_100e9384) {
+    puVar6 = (undefined4 *)(**(code **)(*(int *)this + 0xcc))(local_c);
+    uVar1 = *puVar6;
+    uVar2 = puVar6[1];
+    uVar3 = puVar6[2];
+    (*DAT_101323d8)(4,0x17,&stack0xffffffe4,0);
+    (*DAT_101323e0)(0xe);
+    (*DAT_101323f4)(uVar1);
+    (*DAT_101323f4)(uVar2);
+    (*DAT_101323f4)(uVar3);
+    (*DAT_101323e0)(100);
+    (*DAT_101323e0)(100);
+    (*DAT_101323e0)(0x14);
+    (*DAT_101323dc)();
+    *(undefined4 *)(*(int *)(this + 4) + 0x14c) = 0;
+    *(code **)(this + 0x10) = RespawnHologram;
+    *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100eae40;
+    return;
+  }
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1a60 (CHologram::RespawnHologram)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CHologram::RespawnHologram(void) */
+
+void __thiscall CHologram::RespawnHologram(CHologram *this)
+
+{
+  float fVar1;
+  float10 fVar2;
+  
+                    /* 0xd1a60  269  ?RespawnHologram@CHologram@@QAEXXZ */
+  *(undefined4 *)(*(int *)(this + 4) + 0x15c) = 0xf;
+  *(uint *)(*(int *)(this + 4) + 0x118) = *(uint *)(*(int *)(this + 4) + 0x118) | 0x20;
+  FUN_100d1bf0(this);
+  FUN_10001c50((int)this);
+  fVar2 = (float10)(*DAT_1013248c)(0x40a00000,0x41200000);
+  fVar1 = *DAT_10132554;
+  *(undefined4 *)(this + 0x274) = 0;
+  *(undefined4 *)(this + 0x278) = 0;
+  *(float *)(this + 0x270) = (float)(fVar2 + (float10)fVar1);
+  *(undefined4 *)(*(int *)(this + 4) + 0x160) = 0x42700000;
+  *(undefined4 *)(*(int *)(this + 4) + 0x14c) = 0x43160000;
+  *(code **)(this + 0x10) = HologramThink;
+  *(undefined4 *)(this + 0x27c) = 0;
+  *(undefined4 *)(this + 0x284) = 0;
+  if (*(void **)(this + 0x280) != (void *)0x0) {
+    FUN_100d0f80(*(void **)(this + 0x280),0);
+  }
+  FUN_10050a80(*(void **)(this + 4),*(undefined4 *)((int)*(void **)(this + 4) + 0x208),6,
+               s_ambience_holodisplay_wav_1012f7ec,0x3e99999a,0x3f4ccccd,0,100);
+  *(float *)(this + 0x29c) = *DAT_10132554 + (float)_DAT_101080e0;
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1b50 (CHologram::UseToggle)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CHologram::UseToggle(class CBaseEntity *,class CBaseEntity *,enum
+   USE_TYPE,float) */
+
+void __thiscall
+CHologram::UseToggle
+          (CHologram *this,CBaseEntity *param_1,CBaseEntity *param_2,USE_TYPE param_3,float param_4)
+
+{
+                    /* 0xd1b50  404  ?UseToggle@CHologram@@QAEXPAVCBaseEntity@@0W4USE_TYPE@@M@Z */
+  if (*(int *)(this + 0x28c) == 0) {
+    *(code **)(this + 0x10) = SpawnThink;
+    *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+    FUN_1005f600(*(int *)(this + 4),*(int *)(this + 4) + 8);
+    return;
+  }
+  *(undefined4 *)(*(int *)(this + 4) + 0x10c) = 0;
+  *(undefined4 *)(*(int *)(this + 4) + 0x16c) = 0;
+  *(undefined4 *)(*(int *)(this + 4) + 0x118) = 0x80;
+  *(undefined4 *)(this + 0x28c) = 0;
+  FUN_10050a80(*(void **)(*(int *)(this + 4) + 0x208),*(void **)(*(int *)(this + 4) + 0x208),6,
+               s_ambience_holodisplay_wav_1012f7ec,0x3e99999a,0x3f4ccccd,0,100);
+  FUN_1005f600(*(int *)(this + 4),*(int *)(this + 4) + 8);
+  return;
+}
+
+

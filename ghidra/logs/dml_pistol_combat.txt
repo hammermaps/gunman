@@ -1,0 +1,277 @@
+======================================================================
+FUNC @ 0x100901f0 (FUN_100901f0)
+
+void __fastcall FUN_100901f0(int *param_1)
+
+{
+  *(int *)param_1[1] = (int)s_weapon_gausspistol_10116c50 - *(int *)(DAT_10132554 + 0x98);
+  (**(code **)(*param_1 + 4))();
+  param_1[0x1b] = 0x1e;
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_w_gauss_mdl_101284e4);
+  param_1[0x2f] = 0;
+  param_1[0x27] = 0x23;
+  FUN_100624f0((int)param_1);
+  param_1[0x30] = 1;
+  param_1[0x37] = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10090270 (FUN_10090270)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_10090270(int param_1)
+
+{
+  undefined2 uVar1;
+  undefined4 uVar2;
+  
+  _DAT_10142ca0 = (*DAT_10132320)(s_sprites_gaussbig_spr_10128468);
+  DAT_10142c9c = (*DAT_10132320)(s_sprites_gausspark_spr_101284a4);
+  DAT_10142c98 = (*DAT_10132320)(s_sprites_gaussbeam2_spr_10128444);
+  _DAT_10142c90 = (*DAT_10132320)(s_sprites_gaussfade_spr_10128630);
+  _DAT_10142c8c = (*DAT_10132320)(s_sprites_gausspoof_spr_10128364);
+  (*DAT_10132320)(s_sprites_gausspuff_spr_10128618);
+  (*DAT_10132320)(s_sprites_gaussbeam2_spr_10128444);
+  (*DAT_10132320)(s_models_w_gauss_mdl_101284e4);
+  (*DAT_10132320)(s_models_v_guasspistol_mdl_101285fc);
+  (*DAT_10132320)(s_models_p_357_mdl_101285e8);
+  (*DAT_10132324)(s_items_9mmclip1_wav_10122ec8);
+  FUN_10060720(0x101283ac);
+  FUN_10060720(0x101285dc);
+  FUN_10060720(0x1012845c);
+  FUN_10060720(0x101285d0);
+  (*DAT_10132324)(s_weapons_gauss_charge_wav_101285b4);
+  (*DAT_10132324)(s_weapons_gauss_fire1_wav_1012859c);
+  (*DAT_10132324)(s_weapons_gauss_fire2_wav_10128584);
+  (*DAT_10132324)(s_weapons_gauss_fire3_wav_101283bc);
+  (*DAT_10132324)(s_weapons_gauss_fire4_wav_1012856c);
+  uVar2 = (*DAT_10132320)(s_sprites_white_spr_10124c48);
+  *(undefined4 *)(param_1 + 0xac) = uVar2;
+  (*DAT_10132324)(s_weapons_gsnipe_zoom_wav_10128554);
+  (*DAT_10132324)(s_weapons_sniperzoom_wav_1012853c);
+  (*DAT_10132324)(s_weapons_sniperunzoom_wav_10128520);
+  DAT_10142c94 = (*DAT_10132508)(1,s_events_gauss_sc_10128510);
+  uVar1 = (*DAT_10132508)(1,s_events_snipershot_sc_101284f8);
+  *(undefined2 *)(param_1 + 0xe0) = uVar1;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10090480 (FUN_10090480)
+
+undefined4 __thiscall FUN_10090480(int param_1,undefined4 *param_2)
+
+{
+  int iVar1;
+  int iVar2;
+  longlong lVar3;
+  
+  iVar1 = **(int **)(param_1 + 4);
+  iVar2 = *(int *)(DAT_10132554 + 0x98);
+  param_2[2] = s_uranium_10128648;
+  param_2[6] = iVar1 + iVar2;
+  lVar3 = __ftol();
+  param_2[3] = (int)lVar3;
+  param_2[4] = 0;
+  param_2[5] = 0xffffffff;
+  param_2[7] = 0xffffffff;
+  *param_2 = 1;
+  param_2[1] = 0;
+  *(undefined4 *)(param_1 + 0x6c) = 0x1e;
+  param_2[8] = 0x1e;
+  param_2[9] = 0;
+  param_2[10] = 0xffffffff;
+  param_2[0xb] = 0;
+  param_2[0xd] = 0;
+  param_2[0xc] = 0;
+  param_2[0xe] = 0;
+  return 1;
+}
+
+
+======================================================================
+FUNC @ 0x100903d0 (FUN_100903d0)
+
+undefined4 __thiscall FUN_100903d0(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10062d50(param_1,(int)param_2);
+  if (iVar1 != 0) {
+    if (DAT_10134d18 == 0) {
+      (*DAT_101323d8)(1,DAT_10134d88,0,*(undefined4 *)(*(int *)((int)param_2 + 4) + 0x208));
+      (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0x6c));
+      (*DAT_101323dc)();
+    }
+    FUN_10040a20(param_2,0x10122d28);
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0x1f);
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0xc0));
+    (*DAT_101323dc)();
+    return 1;
+  }
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x100905b0 (FUN_100905b0)
+
+void __fastcall FUN_100905b0(int param_1)
+
+{
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0x1f);
+  (*DAT_101323e0)(*(undefined4 *)(param_1 + 0xc0));
+  (*DAT_101323dc)();
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10082380 (FUN_10082380)
+
+void __fastcall FUN_10082380(int *param_1)
+
+{
+  longlong lVar1;
+  
+  *(int *)param_1[1] = (int)s_weapon_dml_10116c64 - *(int *)(DAT_10132554 + 0x98);
+  (**(code **)(*param_1 + 4))();
+  param_1[0x1b] = 0x10;
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_w_dml_mdl_1012763c);
+  lVar1 = __ftol();
+  param_1[0x27] = (int)lVar1;
+  FUN_100624f0((int)param_1);
+  param_1[0x2b] = 0x3fcccccd;
+  param_1[0x28] = -1;
+  param_1[0x29] = -1;
+  param_1[0x2c] = 0x42960000;
+  param_1[0x31] = 1;
+  param_1[0x33] = 1;
+  param_1[0x34] = 1;
+  param_1[0x32] = 1;
+  param_1[0x2d] = 1;
+  param_1[0x37] = 0;
+  param_1[0x39] = 1;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10082440 (FUN_10082440)
+
+void FUN_10082440(void)
+
+{
+  (*DAT_10132320)(s_models_w_dml_mdl_1012763c);
+  (*DAT_10132320)(s_models_v_dml_mdl_10127710);
+  (*DAT_10132320)(s_models_p_crossbow_mdl_101276f8);
+  (*DAT_10132320)(s_sprites_dmllock_spr_101276e4);
+  (*DAT_10132324)(s_weapons_dml_fire_wav_101276cc);
+  (*DAT_10132324)(s_weapons_dml_reload_wav_101276b4);
+  (*DAT_10132324)(s_weapons_dml_dualreload_wav_10127698);
+  (*DAT_10132324)(s_weapons_dml_customize_wav_1012767c);
+  (*DAT_10132324)(s_weapons_dryfire_wav_10127668);
+  (*DAT_10132324)(s_weapons_dml_lock_wav_10127650);
+  FUN_10060720(0x10117468);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10082720 (FUN_10082720)
+
+undefined4 __thiscall FUN_10082720(int param_1,undefined4 *param_2)
+
+{
+  param_2[6] = **(int **)(param_1 + 4) + *(int *)(DAT_10132554 + 0x98);
+  param_2[2] = s_missiles_10127724;
+  param_2[3] = 6;
+  param_2[4] = 0;
+  param_2[5] = 0xffffffff;
+  param_2[7] = 2;
+  *param_2 = 5;
+  param_2[1] = 0;
+  param_2[8] = 0x10;
+  param_2[9] = 0;
+  param_2[10] = 0xffffffff;
+  return 1;
+}
+
+
+======================================================================
+FUNC @ 0x100825b0 (FUN_100825b0)
+
+undefined4 __thiscall FUN_100825b0(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10062d50(param_1,(int)param_2);
+  if (iVar1 != 0) {
+    (*DAT_101323d8)(1,DAT_10134d88,0,*(undefined4 *)(*(int *)((int)param_2 + 4) + 0x208));
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0x6c));
+    (*DAT_101323dc)();
+    FUN_10040a20(param_2,0x10122db0);
+    FUN_10040a20(param_2,0x10122d9c);
+    FUN_10040a20(param_2,0x10122d88);
+    FUN_10040a20(param_2,0x10122d74);
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(9);
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0xc4));
+    (*DAT_101323dc)();
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(10);
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 200));
+    (*DAT_101323dc)();
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0xb);
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0xcc));
+    (*DAT_101323dc)();
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0xc);
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0xd0));
+    (*DAT_101323dc)();
+    return 1;
+  }
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x100824c0 (FUN_100824c0)
+
+void __fastcall FUN_100824c0(int param_1)
+
+{
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(9);
+  (*DAT_101323e0)(*(undefined4 *)(param_1 + 0xc4));
+  (*DAT_101323dc)();
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(10);
+  (*DAT_101323e0)(*(undefined4 *)(param_1 + 200));
+  (*DAT_101323dc)();
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0xb);
+  (*DAT_101323e0)(*(undefined4 *)(param_1 + 0xcc));
+  (*DAT_101323dc)();
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0xc);
+  (*DAT_101323e0)(*(undefined4 *)(param_1 + 0xd0));
+  (*DAT_101323dc)();
+  return;
+}
+
+

@@ -1,0 +1,521 @@
+======================================================================
+FUNC @ 0x10067fb0 (FUN_10067fb0)
+
+void __thiscall FUN_10067fb0(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10008340(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CSpriteGod_101247cc,(int)param_1,0x10124700,8);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10067fe0 (FUN_10067fe0)
+
+void __thiscall FUN_10067fe0(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10008380(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CSpriteGod_101247cc,(int)param_1,&DAT_10124700,8);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068090 (FUN_10068090)
+
+void __fastcall FUN_10068090(int param_1)
+
+{
+  undefined4 uVar1;
+  
+  (*DAT_10132320)(s_models_null_mdl_10124674);
+  if (*(int *)(param_1 + 0x20) != 0) {
+    uVar1 = (*DAT_10132320)(*(int *)(DAT_10132554 + 0x98) + *(int *)(param_1 + 0x20));
+    *(undefined4 *)(param_1 + 0x28) = uVar1;
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100680d0 (FUN_100680d0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_100680d0(int *param_1)
+
+{
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  (**(code **)(*param_1 + 4))();
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_null_mdl_10124674);
+  *(undefined4 *)(param_1[1] + 0x16c) = 0;
+  *(uint *)(param_1[1] + 0x118) = *(uint *)(param_1[1] + 0x118) | 0x80;
+  *(undefined4 *)(param_1[1] + 0x108) = 0;
+  *(undefined4 *)(param_1[1] + 0x10c) = 0;
+  FUN_1005f600(param_1[1],param_1[1] + 8);
+  uStack_18 = 0;
+  uStack_14 = 0;
+  uStack_10 = 0;
+  uStack_c = 0;
+  uStack_8 = 0;
+  uStack_4 = 0;
+  FUN_1005f5d0(param_1[1],&uStack_c,&uStack_18);
+  param_1[5] = 0;
+  param_1[6] = (int)CSpriteGod::UseToggle;
+  param_1[4] = (int)CSpriteGod::SpewEvent;
+  *(float *)(param_1[1] + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068190 (FUN_10068190)
+
+void __thiscall FUN_10068190(void *this,int param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  undefined4 uVar4;
+  undefined *this_00;
+  undefined *extraout_ECX;
+  undefined *extraout_ECX_00;
+  undefined *extraout_ECX_01;
+  undefined *extraout_ECX_02;
+  undefined *extraout_ECX_03;
+  undefined *extraout_ECX_04;
+  undefined *extraout_ECX_05;
+  undefined *extraout_ECX_06;
+  char *pcVar6;
+  bool bVar7;
+  float10 fVar8;
+  undefined3 uVar5;
+  
+  pcVar6 = s_spritename_1012484c;
+  pbVar2 = *(byte **)(param_1 + 4);
+  this_00 = this;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100681ca:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100681cf;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100681ca;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100681cf:
+  if (iVar3 == 0) {
+    uVar4 = (*DAT_1013242c)(*(undefined4 *)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x20) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_spritenoise_10124840;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_10068217:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_1006821c;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_10068217;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_1006821c:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x2c) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX_00;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_spritespeed_10124834;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_1006825e:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_10068263;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_1006825e;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_10068263:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x30) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX_01;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_spritestartstate_10124820;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100682a5:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100682aa;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100682a5;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100682aa:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x34) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX_02;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_spritecount_10124814;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100682ec:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100682f1;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100682ec;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100682f1:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x38) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX_03;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_spritefreq_10124808;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_10068333:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_10068338;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_10068333;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_10068338:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x3c) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX_04;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_spritex_10124800;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_1006837a:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_1006837f;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_1006837a;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_1006837f:
+  if (iVar3 == 0) {
+    fVar8 = FUN_100d939f(this_00,*(byte **)(param_1 + 8));
+    *(float *)((int)this + 0x40) = (float)fVar8;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX_05;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_spritey_101247f8;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100683c1:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100683c6;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100683c1;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100683c6:
+  if (iVar3 == 0) {
+    fVar8 = FUN_100d939f(this_00,*(byte **)(param_1 + 8));
+    *(float *)((int)this + 0x44) = (float)fVar8;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX_06;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_spritex_10124800;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_10068408:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_1006840d;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (undefined *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_10068408;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_1006840d:
+  if (iVar3 == 0) {
+    fVar8 = FUN_100d939f(this_00,*(byte **)(param_1 + 8));
+    *(float *)((int)this + 0x48) = (float)fVar8;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_targetent_101247ec;
+  do {
+    bVar1 = *pbVar2;
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_1006844f:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_10068454;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_1006844f;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_10068454:
+  if (iVar3 == 0) {
+    uVar4 = (*DAT_1013242c)(*(undefined4 *)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x24) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    return;
+  }
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068480 (CSpriteGod::UseToggle)
+
+/* public: void __thiscall CSpriteGod::UseToggle(class CBaseEntity *,class CBaseEntity *,enum
+   USE_TYPE,float) */
+
+void __thiscall
+CSpriteGod::UseToggle
+          (CSpriteGod *this,CBaseEntity *param_1,CBaseEntity *param_2,USE_TYPE param_3,float param_4
+          )
+
+{
+                    /* 0x68480  407  ?UseToggle@CSpriteGod@@QAEXPAVCBaseEntity@@0W4USE_TYPE@@M@Z */
+  if (*(int *)(this + 0x34) == 0) {
+    *(undefined4 *)(this + 0x34) = 1;
+    *(code **)(this + 0x10) = SpewEvent;
+    *(float *)(*(int *)(this + 4) + 0x104) = (float)(*(int *)(this + 0x3c) / 10) + *DAT_10132554;
+    return;
+  }
+  *(undefined4 *)(this + 0x34) = 0;
+  *(undefined4 *)(this + 0x10) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100684e0 (CSpriteGod::SpewEvent)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CSpriteGod::SpewEvent(void) */
+
+void __thiscall CSpriteGod::SpewEvent(CSpriteGod *this)
+
+{
+  int iVar1;
+  undefined4 *puVar2;
+  int iVar3;
+  undefined4 uVar4;
+  float fVar5;
+  float fVar6;
+  float fVar7;
+  float fVar8;
+  undefined4 local_24;
+  float local_20;
+  float local_1c;
+  undefined4 local_18;
+  float local_14;
+  float local_10;
+  undefined4 local_c [3];
+  
+                    /* 0x684e0  325  ?SpewEvent@CSpriteGod@@QAEXXZ */
+  if (*(int *)(this + 0x34) != 0) {
+    if (*(int *)(this + 0x24) == 0) {
+      iVar3 = *(int *)(this + 4);
+      fVar6 = *(float *)(this + 0x40) - *(float *)(iVar3 + 8);
+      local_20 = *(float *)(this + 0x44) - *(float *)(iVar3 + 0xc);
+      local_1c = *(float *)(this + 0x48) - *(float *)(iVar3 + 0x10);
+      fVar5 = SQRT(fVar6 * fVar6 + local_20 * local_20 + local_1c * local_1c);
+      if (fVar5 == _DAT_100e9384) {
+        local_18 = 0;
+        local_14 = 0.0;
+        local_10 = 1.0;
+        puVar2 = &local_18;
+      }
+      else {
+        fVar5 = _DAT_100e9390 / fVar5;
+        puVar2 = (undefined4 *)FUN_10001350(local_c,fVar6 * fVar5,local_20 * fVar5,local_1c * fVar5)
+        ;
+      }
+      FUN_10001370(&local_24,puVar2);
+      fVar6 = local_1c;
+      uVar4 = local_24;
+      fVar5 = local_20;
+    }
+    else {
+      iVar3 = FUN_1005e910(0,(int)DAT_10132554[0x26] + *(int *)(this + 0x24));
+      fVar6 = local_10;
+      uVar4 = local_18;
+      fVar5 = local_14;
+      if (iVar3 != 0) {
+        iVar3 = *(int *)(iVar3 + 4);
+        iVar1 = *(int *)(this + 4);
+        fVar6 = *(float *)(iVar3 + 8) - *(float *)(iVar1 + 8);
+        local_20 = *(float *)(iVar3 + 0xc) - *(float *)(iVar1 + 0xc);
+        local_1c = *(float *)(iVar3 + 0x10) - *(float *)(iVar1 + 0x10);
+        fVar5 = SQRT(fVar6 * fVar6 + local_20 * local_20 + local_1c * local_1c);
+        if (fVar5 == _DAT_100e9384) {
+          fVar8 = 1.0;
+          fVar7 = 0.0;
+          fVar6 = 0.0;
+          puVar2 = local_c;
+        }
+        else {
+          fVar5 = _DAT_100e9390 / fVar5;
+          fVar8 = local_1c * fVar5;
+          fVar7 = local_20 * fVar5;
+          fVar6 = fVar6 * fVar5;
+          puVar2 = &local_18;
+        }
+        puVar2 = (undefined4 *)FUN_10001350(puVar2,fVar6,fVar7,fVar8);
+        FUN_10001370(&local_24,puVar2);
+        fVar6 = local_1c;
+        uVar4 = local_24;
+        fVar5 = local_20;
+      }
+    }
+    (*DAT_101323d8)(4,0x17,*(int *)(this + 4) + 8,0);
+    (*DAT_101323e0)(0x6e);
+    (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 8));
+    (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 0xc));
+    (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 0x10));
+    (*DAT_101323f4)(uVar4);
+    (*DAT_101323f4)(fVar5);
+    (*DAT_101323f4)(fVar6);
+    (*DAT_101323e8)(*(undefined4 *)(this + 0x28));
+    (*DAT_101323e0)(*(undefined4 *)(this + 0x38));
+    (*DAT_101323e0)(*(undefined4 *)(this + 0x30));
+    (*DAT_101323e0)(*(undefined4 *)(this + 0x2c));
+    (*DAT_101323dc)();
+    *(float *)(*(int *)(this + 4) + 0x104) = (float)(*(int *)(this + 0x3c) / 10) + *DAT_10132554;
+    return;
+  }
+  *(undefined4 *)(this + 0x10) = 0;
+  return;
+}
+
+

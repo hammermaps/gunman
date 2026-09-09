@@ -1,0 +1,47 @@
+======================================================================
+FUNC @ 0x100ce880 (FUN_100ce880)
+
+void __thiscall FUN_100ce880(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_100279d0(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CSpaceDebris_1012f394,(int)param_1,0x1012edc0,4);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100ce8b0 (FUN_100ce8b0)
+
+void __thiscall FUN_100ce8b0(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10027a00(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CSpaceDebris_1012f394,(int)param_1,&DAT_1012edc0,4);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100ce9d0 (FUN_100ce9d0)
+
+void __fastcall FUN_100ce9d0(int param_1)
+
+{
+  if (*(int *)(param_1 + 0x27c) != 0) {
+    (*DAT_10132320)(*(int *)(DAT_10132554 + 0x98) + *(int *)(param_1 + 0x27c));
+  }
+  return;
+}
+
+

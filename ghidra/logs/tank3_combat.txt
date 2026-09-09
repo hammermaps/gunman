@@ -1,0 +1,96 @@
+======================================================================
+FUNC @ 0x1009fb50 (FUN_1009fb50)
+
+void __fastcall FUN_1009fb50(int param_1)
+
+{
+  int iVar1;
+  
+  **(int **)(param_1 + 4) = (int)s_trigger_tank_10129574 - *(int *)(DAT_10132554 + 0x98);
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x10c) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x108) = 7;
+  *(uint *)(*(int *)(param_1 + 4) + 0x118) = *(uint *)(*(int *)(param_1 + 4) + 0x118) | 0x80;
+  (*DAT_10132328)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x208),
+                  *(int *)(*(int *)(param_1 + 4) + 0xb8) + *(int *)(DAT_10132554 + 0x98));
+  iVar1 = *(int *)(param_1 + 4);
+  FUN_1005f5d0(iVar1,iVar1 + 0xdc,iVar1 + 0xe8);
+  FUN_1005f600(*(int *)(param_1 + 4),*(int *)(param_1 + 4) + 8);
+  *(code **)(param_1 + 0x14) = CVehicleTriggerTank::TouchTank;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1009fb40 (FUN_1009fb40)
+
+undefined4 FUN_1009fb40(void)
+
+{
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x1009fd00 (FUN_1009fd00)
+
+void __fastcall FUN_1009fd00(int param_1)
+
+{
+  int iVar1;
+  
+  **(int **)(param_1 + 4) = (int)s_trigger_tankoutofgas_10129584 - *(int *)(DAT_10132554 + 0x98);
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x10c) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x108) = 7;
+  *(uint *)(*(int *)(param_1 + 4) + 0x118) = *(uint *)(*(int *)(param_1 + 4) + 0x118) | 0x80;
+  (*DAT_10132328)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x208),
+                  *(int *)(*(int *)(param_1 + 4) + 0xb8) + *(int *)(DAT_10132554 + 0x98));
+  iVar1 = *(int *)(param_1 + 4);
+  FUN_1005f5d0(iVar1,iVar1 + 0xdc,iVar1 + 0xe8);
+  FUN_1005f600(*(int *)(param_1 + 4),*(int *)(param_1 + 4) + 8);
+  *(code **)(param_1 + 0x14) = CVehicleTriggerTankGas::TouchTank;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1009fcf0 (FUN_1009fcf0)
+
+undefined4 FUN_1009fcf0(void)
+
+{
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x1009f940 (FUN_1009f940)
+
+void __fastcall FUN_1009f940(int param_1)
+
+{
+  int iVar1;
+  
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x10c) = 1;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x108) = 7;
+  *(uint *)(*(int *)(param_1 + 4) + 0x118) = *(uint *)(*(int *)(param_1 + 4) + 0x118) | 0x80;
+  **(int **)(param_1 + 4) = (int)s_trigger_tankshell_10129560 - *(int *)(DAT_10132554 + 0x98);
+  (*DAT_10132328)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x208),
+                  *(int *)(*(int *)(param_1 + 4) + 0xb8) + *(int *)(DAT_10132554 + 0x98));
+  iVar1 = *(int *)(param_1 + 4);
+  FUN_1005f5d0(iVar1,iVar1 + 0xdc,iVar1 + 0xe8);
+  FUN_1005f600(*(int *)(param_1 + 4),*(int *)(param_1 + 4) + 8);
+  *(code **)(param_1 + 0x14) = CVehicleTriggerTankShell::TouchShell;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x1009f930 (FUN_1009f930)
+
+undefined4 FUN_1009f930(void)
+
+{
+  return 0;
+}
+
+

@@ -1,0 +1,173 @@
+======================================================================
+FUNC @ 0x100ceb50 (CSpaceDebris::UseToggle)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CSpaceDebris::UseToggle(class CBaseEntity *,class CBaseEntity *,enum
+   USE_TYPE,float) */
+
+void __thiscall
+CSpaceDebris::UseToggle
+          (CSpaceDebris *this,CBaseEntity *param_1,CBaseEntity *param_2,USE_TYPE param_3,
+          float param_4)
+
+{
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  float fVar4;
+  int iVar5;
+  int iVar6;
+  undefined4 *puVar7;
+  float10 fVar8;
+  float fStack_30;
+  float fStack_2c;
+  float fStack_28;
+  undefined4 uStack_24;
+  undefined4 uStack_20;
+  undefined4 uStack_1c;
+  undefined4 uStack_18;
+  float fStack_14;
+  float fStack_10;
+  undefined1 auStack_c [12];
+  
+                    /* 0xceb50  405  ?UseToggle@CSpaceDebris@@QAEXPAVCBaseEntity@@0W4USE_TYPE@@M@Z
+                        */
+  iVar5 = (*DAT_10132358)(0,s_targetname_101141ac,
+                          (int)DAT_10132554[0x26] + *(int *)(*(int *)(this + 4) + 0x1c8));
+  if (iVar5 != 0) {
+    iVar6 = (*DAT_10132438)(iVar5);
+    if ((iVar6 != 0) && (*(int *)(iVar5 + 0x7c) != 0)) {
+      iVar5 = *(int *)(*(int *)(iVar5 + 0x7c) + 4);
+      *(undefined4 *)(this + 0x280) = *(undefined4 *)(iVar5 + 8);
+      *(undefined4 *)(this + 0x284) = *(undefined4 *)(iVar5 + 0xc);
+      *(undefined4 *)(this + 0x288) = *(undefined4 *)(iVar5 + 0x10);
+    }
+  }
+  *(undefined4 *)(*(int *)(this + 4) + 0x10c) = 0;
+  *(undefined4 *)(*(int *)(this + 4) + 0x108) = 10;
+  *(undefined4 *)(*(int *)(this + 4) + 0x118) = 0;
+  *(undefined4 *)(*(int *)(this + 4) + 0x11c) = 0x3a83126f;
+  iVar5 = *(int *)(this + 4);
+  fVar3 = *(float *)(this + 0x280) - *(float *)(iVar5 + 8);
+  fVar1 = *(float *)(this + 0x284) - *(float *)(iVar5 + 0xc);
+  fVar2 = *(float *)(this + 0x288) - *(float *)(iVar5 + 0x10);
+  fVar4 = SQRT(fVar3 * fVar3 + fVar2 * fVar2 + fVar1 * fVar1);
+  if (fVar4 == _DAT_100e9384) {
+    puVar7 = &uStack_24;
+    uStack_24 = 0;
+    uStack_20 = 0;
+    uStack_1c = 0x3f800000;
+  }
+  else {
+    fVar4 = _DAT_100e9390 / fVar4;
+    puVar7 = (undefined4 *)FUN_10001350(auStack_c,fVar4 * fVar3,fVar1 * fVar4,fVar4 * fVar2);
+  }
+  FUN_10001370(&fStack_30,puVar7);
+  fVar1 = *(float *)(this + 0x270);
+  fStack_14 = fStack_2c * fVar1;
+  iVar5 = *(int *)(this + 4);
+  fStack_10 = fStack_28 * fVar1;
+  *(float *)(iVar5 + 0x20) = fStack_30 * fVar1;
+  *(float *)(iVar5 + 0x24) = fStack_14;
+  *(float *)(iVar5 + 0x28) = fStack_10;
+  fVar8 = (float10)(*DAT_1013248c)(-*(float *)(this + 0x274),*(undefined4 *)(this + 0x274));
+  *(float *)(*(int *)(this + 4) + 0x5c) = (float)fVar8;
+  fVar8 = (float10)(*DAT_1013248c)(-*(float *)(this + 0x274),*(undefined4 *)(this + 0x274));
+  *(float *)(*(int *)(this + 4) + 0x60) = (float)fVar8;
+  fVar8 = (float10)(*DAT_1013248c)(-*(float *)(this + 0x274),*(undefined4 *)(this + 0x274));
+  *(float *)(*(int *)(this + 4) + 100) = (float)fVar8;
+  uStack_18 = 0;
+  fStack_14 = 0.0;
+  fStack_10 = 0.0;
+  uStack_24 = 0;
+  uStack_20 = 0;
+  uStack_1c = 0;
+  FUN_1005f5d0(*(int *)(this + 4),&uStack_24,&uStack_18);
+  *(code **)(this + 0x10) = DebrisRemoveThink;
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100ea858;
+  *(code **)(this + 0x14) = DebrisTouch;
+  FUN_1005f600(*(int *)(this + 4),*(int *)(this + 4) + 8);
+  iVar5 = *(int *)(this + 4);
+  *(undefined4 *)(this + 0x28c) = *(undefined4 *)(iVar5 + 8);
+  *(undefined4 *)(this + 0x290) = *(undefined4 *)(iVar5 + 0xc);
+  *(undefined4 *)(this + 0x294) = *(undefined4 *)(iVar5 + 0x10);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100cede0 (CSpaceDebris::DebrisRemoveThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CSpaceDebris::DebrisRemoveThink(void) */
+
+void __thiscall CSpaceDebris::DebrisRemoveThink(CSpaceDebris *this)
+
+{
+  int iVar1;
+  float fVar2;
+  
+                    /* 0xcede0  92  ?DebrisRemoveThink@CSpaceDebris@@QAEXXZ */
+  *(undefined4 *)(*(int *)(this + 4) + 0x10c) = 0;
+  iVar1 = *(int *)(this + 4);
+  *(float *)(this + 0x278) = *(float *)(this + 0x278) - (float)_DAT_100e99a0;
+  if (((*(float *)(this + 0x28c) == *(float *)(iVar1 + 8)) &&
+      (*(float *)(this + 0x290) == *(float *)(iVar1 + 0xc))) &&
+     (*(float *)(this + 0x294) == *(float *)(iVar1 + 0x10))) {
+    FUN_100606b0((int)this);
+    return;
+  }
+  *(float *)(iVar1 + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  fVar2 = _DAT_100e9384;
+  iVar1 = *(int *)(this + 4);
+  *(undefined4 *)(this + 0x28c) = *(undefined4 *)(iVar1 + 8);
+  *(undefined4 *)(this + 0x290) = *(undefined4 *)(iVar1 + 0xc);
+  *(undefined4 *)(this + 0x294) = *(undefined4 *)(iVar1 + 0x10);
+  if (*(float *)(this + 0x278) <= fVar2) {
+    FUN_100606b0((int)this);
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100cee90 (CSpaceDebris::DebrisTouch)
+
+/* public: void __thiscall CSpaceDebris::DebrisTouch(class CBaseEntity *) */
+
+void __thiscall CSpaceDebris::DebrisTouch(CSpaceDebris *this,CBaseEntity *param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  byte *pbVar4;
+  bool bVar5;
+  
+                    /* 0xcee90  93  ?DebrisTouch@CSpaceDebris@@QAEXPAVCBaseEntity@@@Z */
+  pbVar4 = (byte *)(**(int **)(param_1 + 4) + *(int *)(DAT_10132554 + 0x98));
+  pbVar2 = (byte *)(**(int **)(this + 4) + *(int *)(DAT_10132554 + 0x98));
+  do {
+    bVar1 = *pbVar2;
+    bVar5 = bVar1 < *pbVar4;
+    if (bVar1 != *pbVar4) {
+LAB_100ceed8:
+      iVar3 = (1 - (uint)bVar5) - (uint)(bVar5 != 0);
+      goto LAB_100ceedd;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    bVar5 = bVar1 < pbVar4[1];
+    if (bVar1 != pbVar4[1]) goto LAB_100ceed8;
+    pbVar2 = pbVar2 + 2;
+    pbVar4 = pbVar4 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100ceedd:
+  if (iVar3 == 0) {
+    (*(int **)(this + 4))[0x43] = 0;
+  }
+  return;
+}
+
+

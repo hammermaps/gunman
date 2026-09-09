@@ -1,0 +1,127 @@
+======================================================================
+FUNC @ 0x10068480 (CSpriteGod::UseToggle)
+
+/* public: void __thiscall CSpriteGod::UseToggle(class CBaseEntity *,class CBaseEntity *,enum
+   USE_TYPE,float) */
+
+void __thiscall
+CSpriteGod::UseToggle
+          (CSpriteGod *this,CBaseEntity *param_1,CBaseEntity *param_2,USE_TYPE param_3,float param_4
+          )
+
+{
+                    /* 0x68480  407  ?UseToggle@CSpriteGod@@QAEXPAVCBaseEntity@@0W4USE_TYPE@@M@Z */
+  if (*(int *)(this + 0x34) == 0) {
+    *(undefined4 *)(this + 0x34) = 1;
+    *(code **)(this + 0x10) = SpewEvent;
+    *(float *)(*(int *)(this + 4) + 0x104) = (float)(*(int *)(this + 0x3c) / 10) + *DAT_10132554;
+    return;
+  }
+  *(undefined4 *)(this + 0x34) = 0;
+  *(undefined4 *)(this + 0x10) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100684e0 (CSpriteGod::SpewEvent)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CSpriteGod::SpewEvent(void) */
+
+void __thiscall CSpriteGod::SpewEvent(CSpriteGod *this)
+
+{
+  int iVar1;
+  undefined4 *puVar2;
+  int iVar3;
+  undefined4 uVar4;
+  float fVar5;
+  float fVar6;
+  float fVar7;
+  float fVar8;
+  undefined4 local_24;
+  float local_20;
+  float local_1c;
+  undefined4 local_18;
+  float local_14;
+  float local_10;
+  undefined4 local_c [3];
+  
+                    /* 0x684e0  325  ?SpewEvent@CSpriteGod@@QAEXXZ */
+  if (*(int *)(this + 0x34) != 0) {
+    if (*(int *)(this + 0x24) == 0) {
+      iVar3 = *(int *)(this + 4);
+      fVar6 = *(float *)(this + 0x40) - *(float *)(iVar3 + 8);
+      local_20 = *(float *)(this + 0x44) - *(float *)(iVar3 + 0xc);
+      local_1c = *(float *)(this + 0x48) - *(float *)(iVar3 + 0x10);
+      fVar5 = SQRT(fVar6 * fVar6 + local_20 * local_20 + local_1c * local_1c);
+      if (fVar5 == _DAT_100e9384) {
+        local_18 = 0;
+        local_14 = 0.0;
+        local_10 = 1.0;
+        puVar2 = &local_18;
+      }
+      else {
+        fVar5 = _DAT_100e9390 / fVar5;
+        puVar2 = (undefined4 *)FUN_10001350(local_c,fVar6 * fVar5,local_20 * fVar5,local_1c * fVar5)
+        ;
+      }
+      FUN_10001370(&local_24,puVar2);
+      fVar6 = local_1c;
+      uVar4 = local_24;
+      fVar5 = local_20;
+    }
+    else {
+      iVar3 = FUN_1005e910(0,(int)DAT_10132554[0x26] + *(int *)(this + 0x24));
+      fVar6 = local_10;
+      uVar4 = local_18;
+      fVar5 = local_14;
+      if (iVar3 != 0) {
+        iVar3 = *(int *)(iVar3 + 4);
+        iVar1 = *(int *)(this + 4);
+        fVar6 = *(float *)(iVar3 + 8) - *(float *)(iVar1 + 8);
+        local_20 = *(float *)(iVar3 + 0xc) - *(float *)(iVar1 + 0xc);
+        local_1c = *(float *)(iVar3 + 0x10) - *(float *)(iVar1 + 0x10);
+        fVar5 = SQRT(fVar6 * fVar6 + local_20 * local_20 + local_1c * local_1c);
+        if (fVar5 == _DAT_100e9384) {
+          fVar8 = 1.0;
+          fVar7 = 0.0;
+          fVar6 = 0.0;
+          puVar2 = local_c;
+        }
+        else {
+          fVar5 = _DAT_100e9390 / fVar5;
+          fVar8 = local_1c * fVar5;
+          fVar7 = local_20 * fVar5;
+          fVar6 = fVar6 * fVar5;
+          puVar2 = &local_18;
+        }
+        puVar2 = (undefined4 *)FUN_10001350(puVar2,fVar6,fVar7,fVar8);
+        FUN_10001370(&local_24,puVar2);
+        fVar6 = local_1c;
+        uVar4 = local_24;
+        fVar5 = local_20;
+      }
+    }
+    (*DAT_101323d8)(4,0x17,*(int *)(this + 4) + 8,0);
+    (*DAT_101323e0)(0x6e);
+    (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 8));
+    (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 0xc));
+    (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 0x10));
+    (*DAT_101323f4)(uVar4);
+    (*DAT_101323f4)(fVar5);
+    (*DAT_101323f4)(fVar6);
+    (*DAT_101323e8)(*(undefined4 *)(this + 0x28));
+    (*DAT_101323e0)(*(undefined4 *)(this + 0x38));
+    (*DAT_101323e0)(*(undefined4 *)(this + 0x30));
+    (*DAT_101323e0)(*(undefined4 *)(this + 0x2c));
+    (*DAT_101323dc)();
+    *(float *)(*(int *)(this + 4) + 0x104) = (float)(*(int *)(this + 0x3c) / 10) + *DAT_10132554;
+    return;
+  }
+  *(undefined4 *)(this + 0x10) = 0;
+  return;
+}
+
+

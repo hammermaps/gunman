@@ -1,0 +1,181 @@
+======================================================================
+FUNC @ 0x10096070 (FUN_10096070)
+
+void __fastcall FUN_10096070(int *param_1)
+
+{
+  longlong lVar1;
+  
+  (**(code **)(*param_1 + 4))();
+  param_1[0x1b] = 0x11;
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_w_shotgun_mdl_10128cf8);
+  lVar1 = __ftol();
+  param_1[0x27] = (int)lVar1;
+  param_1[0x2d] = 0x3db280f1;
+  param_1[0x2e] = 0x3db280f1;
+  param_1[0x2f] = 0x3db280f1;
+  param_1[0x30] = 2;
+  param_1[0x32] = 2;
+  FUN_100624f0((int)param_1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10096180 (FUN_10096180)
+
+void __fastcall FUN_10096180(int param_1)
+
+{
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0x14);
+  (*DAT_101323e0)(*(undefined4 *)(param_1 + 0xc0));
+  (*DAT_101323dc)();
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0x20);
+  (*DAT_101323e0)(*(undefined4 *)(param_1 + 200));
+  (*DAT_101323dc)();
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10096200 (FUN_10096200)
+
+undefined4 __thiscall FUN_10096200(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10062d50(param_1,(int)param_2);
+  if (iVar1 != 0) {
+    if (DAT_10134d18 == 0) {
+      (*DAT_101323d8)(1,DAT_10134d88,0,*(undefined4 *)(*(int *)((int)param_2 + 4) + 0x208));
+      (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0x6c));
+      (*DAT_101323dc)();
+    }
+    FUN_10040a20(param_2,0x10122e70);
+    FUN_10040a20(param_2,0x10122e5c);
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0x14);
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0xc0));
+    (*DAT_101323dc)();
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0x20);
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 200));
+    (*DAT_101323dc)();
+    return 1;
+  }
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x10097070 (FUN_10097070)
+
+void __fastcall FUN_10097070(int *param_1)
+
+{
+  *(int *)param_1[1] = (int)s_weapon_SPchemicalgun_10116c90 - *(int *)(DAT_10132554 + 0x98);
+  (**(code **)(*param_1 + 4))();
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_w_chemgun_mdl_10128e90);
+  param_1[0x2d] = 0x3d32aae3;
+  param_1[0x2e] = 0x3d32aae3;
+  param_1[0x1b] = 0x13;
+  param_1[0x2b] = 0x44548000;
+  param_1[0x2f] = 0x3d32aae3;
+  param_1[0x28] = 3;
+  param_1[0x30] = 4;
+  param_1[0x31] = 3;
+  param_1[0x32] = 2;
+  param_1[0x38] = 0;
+  param_1[0x39] = 0;
+  param_1[0x37] = 0;
+  param_1[0x35] = 0;
+  param_1[0x33] = 0;
+  param_1[0x34] = 0;
+  param_1[0x2a] = 0;
+  param_1[0x27] = 10;
+  FUN_100624f0((int)param_1);
+  param_1[0x3a] = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10097250 (FUN_10097250)
+
+void __fastcall FUN_10097250(int param_1)
+
+{
+  longlong lVar1;
+  
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0x1b);
+  lVar1 = __ftol();
+  (*DAT_101323e0)((int)lVar1);
+  (*DAT_101323dc)();
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0x18);
+  (*DAT_101323e0)(*(int *)(param_1 + 0xc0) + 1);
+  (*DAT_101323dc)();
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0x1a);
+  (*DAT_101323e0)(*(int *)(param_1 + 0xc4) + 1);
+  (*DAT_101323dc)();
+  (*DAT_101323d8)(1,DAT_10134dbc,0,*(undefined4 *)(*(int *)(*(int *)(param_1 + 100) + 4) + 0x208));
+  (*DAT_101323e0)(0x19);
+  (*DAT_101323e0)(*(int *)(param_1 + 200) + 1);
+  (*DAT_101323dc)();
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10097360 (FUN_10097360)
+
+undefined4 __thiscall FUN_10097360(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  longlong lVar2;
+  
+  iVar1 = FUN_10062d50(param_1,(int)param_2);
+  if (iVar1 != 0) {
+    (*DAT_101323d8)(1,DAT_10134d88,0,*(undefined4 *)(*(int *)((int)param_2 + 4) + 0x208));
+    (*DAT_101323e0)(*(undefined4 *)((int)param_1 + 0x6c));
+    (*DAT_101323dc)();
+    *(void **)((int)param_1 + 100) = param_2;
+    FUN_10040a20(param_2,0x10122e40);
+    FUN_10040a20(param_2,0x10122e30);
+    FUN_10040a20(param_2,0x10122e20);
+    FUN_10040a20(param_2,0x10122e10);
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0x1b);
+    lVar2 = __ftol();
+    (*DAT_101323e0)((int)lVar2);
+    (*DAT_101323dc)();
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0x18);
+    (*DAT_101323e0)(*(int *)((int)param_1 + 0xc0) + 1);
+    (*DAT_101323dc)();
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0x1a);
+    (*DAT_101323e0)(*(int *)((int)param_1 + 0xc4) + 1);
+    (*DAT_101323dc)();
+    (*DAT_101323d8)(1,DAT_10134dbc,0,
+                    *(undefined4 *)(*(int *)(*(int *)((int)param_1 + 100) + 4) + 0x208));
+    (*DAT_101323e0)(0x19);
+    (*DAT_101323e0)(*(int *)((int)param_1 + 200) + 1);
+    (*DAT_101323dc)();
+    return 1;
+  }
+  return 0;
+}
+
+

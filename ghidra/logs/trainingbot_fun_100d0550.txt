@@ -1,0 +1,115 @@
+======================================================================
+FUNC @ 0x100d0550 (FUN_100d0550)
+
+void __fastcall FUN_100d0550(int param_1)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  uint uVar4;
+  uint uVar5;
+  undefined4 uVar6;
+  
+  FUN_100d0a60(param_1);
+  puVar3 = FUN_10012be0(0x101174d0,0x28);
+  *(undefined4 **)(param_1 + 0x280) = puVar3;
+  puVar3 = FUN_10012be0(0x101174d0,0x28);
+  *(undefined4 **)(param_1 + 0x284) = puVar3;
+  puVar3 = FUN_10012be0(0x101174d0,0x28);
+  *(undefined4 **)(param_1 + 0x288) = puVar3;
+  uVar6 = *(undefined4 *)(*(int *)(param_1 + 4) + 0x208);
+  uVar4 = (*DAT_1013243c)(uVar6);
+  uVar5 = (*DAT_1013243c)(uVar6);
+  FUN_10012ea0(*(void **)(param_1 + 0x280),uVar4,uVar5);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x280) + 4);
+  *(uint *)(iVar1 + 0x148) = *(uint *)(iVar1 + 0x148) & 0xf | 0x10;
+  iVar1 = *(int *)(*(int *)(param_1 + 0x280) + 4);
+  *(uint *)(iVar1 + 0x148) = (uint)((byte)*(undefined4 *)(iVar1 + 0x148) & 0xf | 0x80);
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 4) + 0x134) = 0x40a00000;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 4) + 0x114) = 0x32;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 4) + 0x14c) = 0x437f0000;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x280) + 4) + 0x144) = 0x41c80000;
+  iVar1 = *(int *)(param_1 + 0x280);
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x150) = 0x42a00000;
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x154) = 0x42f00000;
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x158) = 0x437f0000;
+  iVar1 = *(int *)(*(int *)(param_1 + 0x280) + 4);
+  *(uint *)(iVar1 + 0x110) = (uint)((ushort)*(undefined4 *)(iVar1 + 0x110) & 0xfff | 0x1000);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x280) + 4);
+  *(uint *)(iVar1 + 0x128) = (uint)((ushort)*(undefined4 *)(iVar1 + 0x128) & 0xfff | 0x2000);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x280) + 4);
+  *(uint *)(iVar1 + 0x1a0) = *(uint *)(iVar1 + 0x1a0) | 0x8000;
+  uVar6 = *(undefined4 *)(*(int *)(param_1 + 4) + 0x208);
+  uVar4 = (*DAT_1013243c)(uVar6);
+  uVar5 = (*DAT_1013243c)(uVar6);
+  FUN_10012ea0(*(void **)(param_1 + 0x284),uVar4,uVar5);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x284) + 4);
+  *(uint *)(iVar1 + 0x148) = *(uint *)(iVar1 + 0x148) & 0xf | 0x10;
+  iVar1 = *(int *)(*(int *)(param_1 + 0x284) + 4);
+  *(uint *)(iVar1 + 0x148) = (uint)((byte)*(undefined4 *)(iVar1 + 0x148) & 0xf | 0x80);
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x284) + 4) + 0x134) = 0x40a00000;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x284) + 4) + 0x114) = 0x32;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x284) + 4) + 0x14c) = 0x437f0000;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x284) + 4) + 0x144) = 0x41c80000;
+  iVar1 = *(int *)(param_1 + 0x284);
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x150) = 0x42a00000;
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x154) = 0x42f00000;
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x158) = 0x437f0000;
+  iVar1 = *(int *)(*(int *)(param_1 + 0x284) + 4);
+  *(uint *)(iVar1 + 0x110) = (uint)((ushort)*(undefined4 *)(iVar1 + 0x110) & 0xfff | 0x1000);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x284) + 4);
+  *(uint *)(iVar1 + 0x128) = (uint)((ushort)*(undefined4 *)(iVar1 + 0x128) & 0xfff | 0x3000);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x284) + 4);
+  *(uint *)(iVar1 + 0x1a0) = *(uint *)(iVar1 + 0x1a0) | 0x8000;
+  uVar6 = *(undefined4 *)(*(int *)(param_1 + 4) + 0x208);
+  uVar4 = (*DAT_1013243c)(uVar6);
+  uVar5 = (*DAT_1013243c)(uVar6);
+  FUN_10012ea0(*(void **)(param_1 + 0x288),uVar4,uVar5);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x288) + 4);
+  *(uint *)(iVar1 + 0x148) = *(uint *)(iVar1 + 0x148) & 0xf | 0x10;
+  iVar1 = *(int *)(*(int *)(param_1 + 0x288) + 4);
+  *(uint *)(iVar1 + 0x148) = (uint)((byte)*(undefined4 *)(iVar1 + 0x148) & 0xf | 0x80);
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 4) + 0x134) = 0x40a00000;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 4) + 0x114) = 0x32;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 4) + 0x14c) = 0x437f0000;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x288) + 4) + 0x144) = 0x41c80000;
+  iVar1 = *(int *)(param_1 + 0x288);
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x150) = 0x42a00000;
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x154) = 0x42f00000;
+  *(undefined4 *)(*(int *)(iVar1 + 4) + 0x158) = 0x437f0000;
+  iVar1 = *(int *)(*(int *)(param_1 + 0x288) + 4);
+  *(uint *)(iVar1 + 0x110) = (uint)((ushort)*(undefined4 *)(iVar1 + 0x110) & 0xfff | 0x1000);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x288) + 4);
+  *(uint *)(iVar1 + 0x128) = (uint)((ushort)*(undefined4 *)(iVar1 + 0x128) & 0xfff | 0x4000);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x288) + 4);
+  *(uint *)(iVar1 + 0x1a0) = *(uint *)(iVar1 + 0x1a0) | 0x8000;
+  puVar3 = FUN_10015400(0x1012f4a0,(undefined4 *)(*(int *)(param_1 + 4) + 8),1);
+  *(undefined4 **)(param_1 + 0x28c) = puVar3;
+  *(undefined4 *)(puVar3[1] + 0x148) = 5;
+  *(undefined4 *)(puVar3[1] + 0x150) = 0x437f0000;
+  *(undefined4 *)(puVar3[1] + 0x154) = 0x437f0000;
+  *(undefined4 *)(puVar3[1] + 0x158) = 0x437f0000;
+  *(undefined4 *)(puVar3[1] + 0x14c) = 0x437f0000;
+  *(undefined4 *)(puVar3[1] + 0x15c) = 0xe;
+  iVar1 = *(int *)(param_1 + 0x28c);
+  iVar2 = *(int *)(*(int *)(param_1 + 4) + 0x208);
+  if (iVar2 != 0) {
+    uVar6 = (*DAT_1013243c)(iVar2);
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x110) = uVar6;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x114) = 1;
+    *(int *)(*(int *)(iVar1 + 4) + 0x194) = iVar2;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x108) = 0xc;
+  }
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 4) + 0x144) = 0x3e4ccccd;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 4) + 0x138) = 0x41200000;
+  *(undefined4 *)(*(int *)(*(int *)(param_1 + 0x28c) + 4) + 0x130) = 0;
+  FUN_10015680(*(int *)(param_1 + 0x28c));
+  iVar1 = *(int *)(*(int *)(param_1 + 0x28c) + 4);
+  FUN_1005f600(iVar1,iVar1 + 8);
+  iVar1 = *(int *)(*(int *)(param_1 + 0x28c) + 4);
+  *(uint *)(iVar1 + 0x1a0) = *(uint *)(iVar1 + 0x1a0) | 0x8000;
+  return;
+}
+
+

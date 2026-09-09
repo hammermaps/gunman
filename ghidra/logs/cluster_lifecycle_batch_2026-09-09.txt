@@ -1,0 +1,292 @@
+======================================================================
+FUNC @ 0x100819a0 (FUN_100819a0)
+
+void __fastcall FUN_100819a0(int *param_1)
+
+{
+  (**(code **)(*param_1 + 4))();
+  *(undefined4 *)(param_1[1] + 0x108) = 0;
+  *(undefined4 *)(param_1[1] + 0x10c) = 0;
+  *(undefined4 *)(param_1[1] + 0x148) = 3;
+  *(undefined4 *)(param_1[1] + 0x15c) = 0xe;
+  *(undefined4 *)(param_1[1] + 0x14c) = 0x437f0000;
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_sprites_laserdot_spr_10122be4);
+  FUN_1005f600(param_1[1],param_1[1] + 8);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10081ae0 (FUN_10081ae0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_10081ae0(int *param_1)
+
+{
+  float10 fVar1;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  fVar1 = (float10)(*DAT_1013248c)(0x3f4ccccd,0x40800000);
+  *(float *)(param_1[1] + 0x1e0) = DAT_10136fe4 * (float)_DAT_100faee0;
+  (**(code **)(*param_1 + 4))();
+  *(undefined4 *)(param_1[1] + 0x108) = 10;
+  *(undefined4 *)(param_1[1] + 0x16c) = 0;
+  *(undefined4 *)(param_1[1] + 0x10c) = 2;
+  *(undefined4 *)(param_1[1] + 0x11c) = 0x3f000000;
+  *(undefined4 *)(param_1[1] + 0x120) = 0x3f19999a;
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_dmlcluster_mdl_101275d4);
+  FUN_1005f600(param_1[1],param_1[1] + 8);
+  uStack_18 = 0;
+  uStack_14 = 0;
+  uStack_10 = 0;
+  uStack_c = 0;
+  uStack_8 = 0;
+  uStack_4 = 0;
+  FUN_1005f5d0(param_1[1],&uStack_c,&uStack_18);
+  param_1[5] = (int)CGrenade::BounceTouch;
+  param_1[4] = (int)CClusterGrenade::TumbleClusterThink;
+  *(float *)(param_1[1] + 0x1e4) = (float)fVar1 + *DAT_10132554;
+  *(float *)(param_1[1] + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  *(undefined4 *)(param_1[1] + 0x138) = 0x3f800000;
+  param_1[0xa1] = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10081c20 (FUN_10081c20)
+
+void __fastcall FUN_10081c20(int param_1)
+
+{
+  undefined2 uVar1;
+  undefined4 uVar2;
+  
+  (*DAT_10132320)(s_models_dmlcluster_mdl_101275d4);
+  uVar2 = (*DAT_10132320)(s_sprites_smoke_spr_10127378);
+  *(undefined4 *)(param_1 + 0x278) = uVar2;
+  uVar1 = (*DAT_10132320)(s_sprites_kaboom_spr_10127620);
+  *(undefined2 *)(param_1 + 0x274) = uVar1;
+  uVar1 = (*DAT_10132508)(1,s_events_ClusterExplosion_sc_10127604);
+  *(undefined2 *)(param_1 + 0x28c) = uVar1;
+  uVar2 = (*DAT_10132320)(s_sprites_clustershock_spr_10124658);
+  *(undefined4 *)(param_1 + 0x27c) = uVar2;
+  (*DAT_10132320)(s_sprites_smokering_spr_101275ec);
+  (*DAT_10132324)(s_manta_carpetbomb1_wav_10124d30);
+  (*DAT_10132324)(s_manta_carpetbomb2_wav_10124d18);
+  (*DAT_10132324)(s_manta_carpetbomb3_wav_10124d00);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10081cb0 (CClusterGrenade::ClusterDetonate)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CClusterGrenade::ClusterDetonate(void) */
+
+void __thiscall CClusterGrenade::ClusterDetonate(CClusterGrenade *this)
+
+{
+  int iVar1;
+  undefined4 local_50;
+  undefined4 local_4c;
+  float local_48;
+  undefined4 local_44;
+  undefined4 local_40;
+  float local_3c;
+  undefined1 local_38 [56];
+  
+                    /* 0x81cb0  77  ?ClusterDetonate@CClusterGrenade@@QAEXXZ */
+  iVar1 = *(int *)(this + 4);
+  local_50 = *(undefined4 *)(iVar1 + 8);
+  local_4c = *(undefined4 *)(iVar1 + 0xc);
+  local_3c = *(float *)(iVar1 + 0x10) + _DAT_100ea87c;
+  local_48 = local_3c - _DAT_100ebf20;
+  local_44 = local_50;
+  local_40 = local_4c;
+  FUN_1005f470(&local_44,&local_50,1,*(undefined4 *)(iVar1 + 0x208),local_38);
+  FUN_10081f40(this,(int)local_38,0x40);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10081d60 (CClusterGrenade::TumbleClusterThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CClusterGrenade::TumbleClusterThink(void) */
+
+void __thiscall CClusterGrenade::TumbleClusterThink(CClusterGrenade *this)
+
+{
+  float fVar1;
+  float fVar2;
+  int iVar3;
+  undefined4 uVar4;
+  float fStack_c;
+  float fStack_8;
+  float fStack_4;
+  
+                    /* 0x81d60  390  ?TumbleClusterThink@CClusterGrenade@@QAEXXZ */
+  iVar3 = (**(code **)(*(int *)this + 0x98))();
+  if (iVar3 == 0) {
+    FUN_100606b0((int)this);
+    return;
+  }
+  if (*(int *)(this + 0x284) == 0) {
+    (*DAT_101323d8)(0,0x17,0,0);
+    (*DAT_101323e0)(0x16);
+    uVar4 = (*DAT_1013243c)(*(undefined4 *)(*(int *)(this + 4) + 0x208));
+    (*DAT_101323e8)(uVar4);
+    (*DAT_101323e8)(*(undefined4 *)(this + 0x278));
+    (*DAT_101323e0)(0x14);
+    (*DAT_101323e0)(5);
+    (*DAT_101323e0)(0xe0);
+    (*DAT_101323e0)(0xe0);
+    (*DAT_101323e0)(0xff);
+    (*DAT_101323e0)(0xff);
+    (*DAT_101323dc)();
+    *(undefined4 *)(this + 0x284) = 1;
+  }
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  iVar3 = *(int *)(this + 4);
+  if (*(float *)(iVar3 + 0x1e4) - _DAT_100e9390 < *DAT_10132554) {
+    fVar1 = *(float *)(iVar3 + 0x1e4) - *DAT_10132554;
+    fStack_c = fVar1 * *(float *)(iVar3 + 0x20) + *(float *)(iVar3 + 8);
+    fStack_8 = fVar1 * *(float *)(iVar3 + 0x24) + *(float *)(iVar3 + 0xc);
+    fStack_4 = fVar1 * *(float *)(iVar3 + 0x28) + *(float *)(iVar3 + 0x10);
+    FUN_10051b60(0x20,&fStack_c,400,0.1);
+  }
+  iVar3 = *(int *)(this + 4);
+  if (*(float *)(iVar3 + 0x1e4) <= *DAT_10132554) {
+    *(code **)(this + 0x10) = ClusterDetonate;
+  }
+  if (*(int *)(iVar3 + 0x1c0) != 0) {
+    fVar1 = *(float *)(iVar3 + 0x24) * _DAT_100e9388;
+    fVar2 = *(float *)(iVar3 + 0x28) * _DAT_100e9388;
+    *(float *)(iVar3 + 0x20) = *(float *)(iVar3 + 0x20) * _DAT_100e9388;
+    *(float *)(iVar3 + 0x24) = fVar1;
+    *(float *)(iVar3 + 0x28) = fVar2;
+    *(undefined4 *)(*(int *)(this + 4) + 0x138) = 0x3e4ccccd;
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10081f40 (FUN_10081f40)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_10081f40(void *this,int param_1,undefined4 param_2)
+
+{
+  bool bVar1;
+  undefined3 extraout_var;
+  int iVar2;
+  int iVar3;
+  
+  *(undefined4 *)(*(int *)((int)this + 4) + 0xb8) = 0;
+  iVar3 = *(int *)((int)this + 4);
+  *(undefined4 *)(iVar3 + 0x10c) = 0;
+  *(undefined4 *)(*(int *)((int)this + 4) + 0x16c) = 0;
+  (*DAT_1013250c)(0,*(undefined4 *)(*(int *)((int)this + 4) + 0x208),
+                  CONCAT22((short)((uint)iVar3 >> 0x10),*(undefined2 *)((int)this + 0x28c)),0,
+                  &DAT_101322f0,&DAT_101322f0,0,0,0,0,*(undefined4 *)((int)this + 0x288),0);
+  (*DAT_101323d8)(5,0x17,*(int *)((int)this + 4) + 8,0);
+  (*DAT_101323e0)(0x15);
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)((int)this + 4) + 8));
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)((int)this + 4) + 0xc));
+  (*DAT_101323f4)(*(float *)(*(int *)((int)this + 4) + 0x10) + _DAT_100ea87c);
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)((int)this + 4) + 8));
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)((int)this + 4) + 0xc));
+  (*DAT_101323f4)(*(float *)(*(int *)((int)this + 4) + 0x10) + _DAT_100ea87c + (float)_DAT_100faee8)
+  ;
+  (*DAT_101323e8)(*(undefined4 *)((int)this + 0x27c));
+  (*DAT_101323e0)(0);
+  (*DAT_101323e0)(0);
+  (*DAT_101323e0)(6);
+  (*DAT_101323e0)(0x10);
+  (*DAT_101323e0)(0);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323e0)(0);
+  (*DAT_101323dc)();
+  FUN_10051b60(1,(undefined4 *)(*(int *)((int)this + 4) + 8),0x400,3.0);
+  iVar3 = *(int *)((int)this + 4);
+  if (*(int *)(iVar3 + 0x198) == 0) {
+    iVar2 = 0;
+  }
+  else {
+    iVar2 = *(int *)(iVar3 + 0x198) + 0x80;
+  }
+  FUN_1000e4d0(this,iVar3,iVar2,*(float *)(iVar3 + 0x1e0),0,param_2);
+  bVar1 = FUN_100608b0(0x32);
+  if (CONCAT31(extraout_var,bVar1) == 0) {
+    iVar3 = 0xc;
+  }
+  else {
+    iVar3 = 0xb;
+  }
+  FUN_1005fc50(param_1,iVar3);
+  *(uint *)(*(int *)((int)this + 4) + 0x118) = *(uint *)(*(int *)((int)this + 4) + 0x118) | 0x80;
+  iVar3 = *(int *)((int)this + 4);
+  *(undefined4 *)(iVar3 + 0x20) = DAT_101322f0;
+  *(undefined4 *)(iVar3 + 0x24) = DAT_101322f4;
+  *(undefined4 *)(iVar3 + 0x28) = DAT_101322f8;
+  *(undefined4 *)(*(int *)((int)this + 4) + 0x104) = *DAT_10132554;
+  *(code **)((int)this + 0x10) = CClusterGrenade::ClusterSmokeThink;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10082160 (CClusterGrenade::ClusterSmokeThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CClusterGrenade::ClusterSmokeThink(void) */
+
+void __thiscall CClusterGrenade::ClusterSmokeThink(CClusterGrenade *this)
+
+{
+  int iVar1;
+  undefined4 *puVar2;
+  
+                    /* 0x82160  79  ?ClusterSmokeThink@CClusterGrenade@@QAEXXZ */
+  if (*(int *)(this + 0x280) == 0) {
+    puVar2 = FUN_10015400(0x101275ec,(undefined4 *)(*(int *)(this + 4) + 8),0);
+    *(undefined4 **)(this + 0x280) = puVar2;
+    *(undefined4 *)(puVar2[1] + 0x144) = 0x3e4ccccd;
+    iVar1 = *(int *)(this + 0x280);
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x148) = 4;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x150) = 0x437f0000;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x154) = 0x437f0000;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x158) = 0x437f0000;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x14c) = 0x437f0000;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x15c) = 0xe;
+    *(undefined4 *)(*(int *)(*(int *)(this + 0x280) + 4) + 0x130) = 0;
+    FUN_1005f600(*(int *)(*(int *)(this + 0x280) + 4),*(int *)(this + 4) + 8);
+  }
+  else {
+    iVar1 = *(int *)(*(int *)(this + 0x280) + 4);
+    *(float *)(iVar1 + 0x144) = *(float *)(iVar1 + 0x144) + (float)_DAT_100fa4e0;
+  }
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  if ((float)_DAT_100faef0 < *(float *)(*(int *)(*(int *)(this + 0x280) + 4) + 0x144)) {
+    FUN_100606b0(*(int *)(this + 0x280));
+    *(undefined4 *)(this + 0x280) = 0;
+    FUN_100606b0((int)this);
+  }
+  return;
+}
+
+

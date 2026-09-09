@@ -1,0 +1,134 @@
+======================================================================
+FUNC @ 0x100245a0 (FUN_100245a0)
+
+void FUN_100245a0(void)
+
+{
+  (*DAT_10132320)(s_models_w_armor_mdl_1011ae34);
+  (*DAT_10132324)(s_items_gunpickup2_wav_1011ae10);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100245d0 -> CreateFunctionCmd fehlgeschlagen (ok=False)
+
+======================================================================
+FUNC @ 0x10024600 (FUN_10024600)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 __fastcall FUN_10024600(int param_1)
+
+{
+  float fVar1;
+  int iVar2;
+  void *unaff_ESI;
+  int *unaff_EDI;
+  float10 in_ST0;
+  
+  fVar1 = _DAT_100ea130;
+  if (in_ST0 < (float10)_DAT_100ea130) {
+    fVar1 = *(float *)(param_1 + 0x1bc);
+  }
+  *(float *)(param_1 + 0x1bc) = fVar1;
+  iVar2 = (**(code **)(*unaff_EDI + 0xec))();
+  if (iVar2 != 0) {
+    FUN_10050a80(*(void **)((int)unaff_ESI + 4),
+                 *(undefined4 *)((int)*(void **)((int)unaff_ESI + 4) + 0x208),3,
+                 s_items_gunpickup2_wav_1011ae10,0x3f800000,0x3f4ccccd,0,100);
+  }
+  (*DAT_101323d8)(1,DAT_10134d8c,0,*(undefined4 *)(*(int *)((int)unaff_ESI + 4) + 0x208));
+  (*DAT_101323f8)(*(int *)unaff_EDI[1] + *(int *)(DAT_10132554 + 0x98));
+  (*DAT_101323dc)();
+  __ftol();
+  FUN_100d9546(&stack0x00000008,(byte *)s__HEV__1dP_1011ae28);
+  iVar2 = (**(code **)(*unaff_EDI + 0xec))();
+  if (iVar2 != 0) {
+    FUN_1003f360(unaff_ESI,&stack0x00000008,0,0x1e);
+  }
+  return 1;
+}
+
+
+======================================================================
+FUNC @ 0x10024630 -> CreateFunctionCmd fehlgeschlagen (ok=False)
+
+======================================================================
+FUNC @ 0x10024660 -> CreateFunctionCmd fehlgeschlagen (ok=False)
+
+======================================================================
+FUNC @ 0x10024690 -> CreateFunctionCmd fehlgeschlagen (ok=False)
+
+======================================================================
+FUNC @ 0x100247b0 (FUN_100247b0)
+
+void FUN_100247b0(void)
+
+{
+  (*DAT_10132320)(s_models_gastank_mdl_1011ae48);
+  (*DAT_10132324)(s_tank_gaspickup_wav_1011ae5c);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100247d0 (FUN_100247d0)
+
+undefined4 __thiscall FUN_100247d0(void *this,int param_1)
+
+{
+  int iVar1;
+  
+  if (*(char *)(param_1 + 0x278) != '\0') {
+    return 0;
+  }
+  *(undefined1 *)(param_1 + 0x278) = 1;
+  *(undefined1 *)(param_1 + 0x279) = 1;
+  (*DAT_101323d8)(1,DAT_10134dc4,0,*(undefined4 *)(*(int *)(param_1 + 4) + 0x208));
+  (*DAT_101323e8)(3);
+  (*DAT_101323dc)();
+  iVar1 = (**(code **)(*(int *)this + 0xec))();
+  if (iVar1 != 0) {
+    FUN_10050a80(*(void **)(param_1 + 4),*(undefined4 *)((int)*(void **)(param_1 + 4) + 0x208),3,
+                 s_tank_gaspickup_wav_1011ae5c,0x3f800000,0x3f4ccccd,0,100);
+  }
+  (*DAT_101323d8)(1,DAT_10134d8c,0,*(undefined4 *)(*(int *)(param_1 + 4) + 0x208));
+  (*DAT_101323f8)(**(int **)((int)this + 4) + *(int *)(DAT_10132554 + 0x98));
+  (*DAT_101323dc)();
+  return 1;
+}
+
+
+======================================================================
+FUNC @ 0x10024800 (FUN_10024800)
+
+undefined4 __fastcall FUN_10024800(undefined4 param_1,undefined4 param_2)
+
+{
+  int in_EAX;
+  int iVar1;
+  int unaff_ESI;
+  int *unaff_EDI;
+  
+  (*DAT_101323d8)(1,param_2,0,*(undefined4 *)(in_EAX + 0x208));
+  (*DAT_101323e8)(3);
+  (*DAT_101323dc)();
+  iVar1 = (**(code **)(*unaff_EDI + 0xec))();
+  if (iVar1 != 0) {
+    FUN_10050a80(*(void **)(unaff_ESI + 4),*(undefined4 *)((int)*(void **)(unaff_ESI + 4) + 0x208),3
+                 ,s_tank_gaspickup_wav_1011ae5c,0x3f800000,0x3f4ccccd,0,100);
+  }
+  (*DAT_101323d8)(1,DAT_10134d8c,0,*(undefined4 *)(*(int *)(unaff_ESI + 4) + 0x208));
+  (*DAT_101323f8)(*(int *)unaff_EDI[1] + *(int *)(DAT_10132554 + 0x98));
+  (*DAT_101323dc)();
+  return 1;
+}
+
+
+======================================================================
+FUNC @ 0x10024830 -> CreateFunctionCmd fehlgeschlagen (ok=False)
+
+======================================================================
+FUNC @ 0x10024860 -> CreateFunctionCmd fehlgeschlagen (ok=False)
+

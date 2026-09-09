@@ -1,0 +1,155 @@
+======================================================================
+FUNC @ 0x10068740 (entity_volcanospew)
+
+void __cdecl entity_volcanospew(int param_1)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  
+                    /* 0x68740  516  entity_volcanospew */
+  if ((param_1 == 0) && (iVar2 = (*DAT_10132374)(), iVar2 != 0)) {
+    param_1 = iVar2 + 0x80;
+  }
+  iVar2 = *(int *)(param_1 + 0x208);
+  if (((iVar2 == 0) || (iVar1 = iRam00000004, *(int *)(iVar2 + 0x7c) == 0)) &&
+     (puVar3 = (undefined4 *)(*DAT_1013241c)(iVar2,0x278), iVar1 = param_1,
+     puVar3 != (undefined4 *)0x0)) {
+    *puVar3 = &PTR_LAB_100f6a94;
+    puVar3[1] = param_1;
+    return;
+  }
+  iRam00000004 = iVar1;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068840 (FUN_10068840)
+
+void __fastcall FUN_10068840(int param_1)
+
+{
+  undefined4 uVar1;
+  
+  (*DAT_10132320)(s_models_null_mdl_10124674);
+  uVar1 = (*DAT_10132320)(s_sprites_lavaslop_spr_10124858);
+  *(undefined4 *)(param_1 + 0x270) = uVar1;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068870 (CVolcanoSpew::SprayLava)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CVolcanoSpew::SprayLava(void) */
+
+void __thiscall CVolcanoSpew::SprayLava(CVolcanoSpew *this)
+
+{
+                    /* 0x68870  332  ?SprayLava@CVolcanoSpew@@QAEXXZ */
+  *(int *)(this + 0x274) = *(int *)(this + 0x274) + 1;
+  (*DAT_101323d8)(4,0x17,*(int *)(this + 4) + 8,0);
+  (*DAT_101323e0)(0x6e);
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 8));
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 0xc));
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 0x10));
+  (*DAT_101323f4)(0);
+  (*DAT_101323f4)(0);
+  (*DAT_101323f4)(0x3f800000);
+  (*DAT_101323e8)(*(undefined4 *)(this + 0x270));
+  (*DAT_101323e0)(10);
+  (*DAT_101323e0)(100);
+  (*DAT_101323e0)(0x96);
+  (*DAT_101323dc)();
+  if (5 < *(int *)(this + 0x274)) {
+    *(code **)(this + 0x10) = CBaseEntity::SUB_Remove;
+  }
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068940 (FUN_10068940)
+
+void __thiscall FUN_10068940(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_100279d0(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CBaseBird_10124980,(int)param_1,0x10124870,9);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10068970 (FUN_10068970)
+
+void __thiscall FUN_10068970(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10027a00(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CBaseBird_10124980,(int)param_1,&DAT_10124870,9);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100689a0 (FUN_100689a0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_100689a0(int *param_1)
+
+{
+  float fVar1;
+  int iVar2;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  (**(code **)(*param_1 + 4))();
+  uStack_18 = 0x42000000;
+  *(undefined4 *)(param_1[1] + 0x108) = 5;
+  uStack_14 = 0x42000000;
+  *(undefined4 *)(param_1[1] + 0x10c) = 2;
+  uStack_10 = 0x41800000;
+  uStack_c = 0xc2000000;
+  uStack_8 = 0xc2000000;
+  uStack_4 = 0xc1800000;
+  FUN_1005f5d0(param_1[1],&uStack_c,&uStack_18);
+  FUN_1005f600(param_1[1],param_1[1] + 8);
+  *(uint *)(param_1[1] + 0x1a4) = *(uint *)(param_1[1] + 0x1a4) | 0x20;
+  *(undefined4 *)(param_1[1] + 0x16c) = 0x40000000;
+  *(undefined4 *)(param_1[1] + 0x160) = 0x41200000;
+  param_1[0x49] = -0x40cccccd;
+  *(undefined4 *)(param_1[1] + 0x128) = 0;
+  FUN_10001c50((int)param_1);
+  iVar2 = (*DAT_10132488)(0,0xff);
+  *(float *)(param_1[1] + 0x130) = (float)iVar2;
+  FUN_10001e30((int)param_1);
+  param_1[4] = (int)CBaseBird::HuntThink;
+  param_1[5] = (int)CBaseBird::FlyTouch;
+  *(float *)(param_1[1] + 0x104) = *DAT_10132554 + (float)_DAT_100e93e0;
+  fVar1 = *DAT_10132554;
+  param_1[0xad] = (int)fVar1;
+  param_1[0xac] = (int)fVar1;
+  return;
+}
+
+

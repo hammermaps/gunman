@@ -1,0 +1,260 @@
+======================================================================
+FUNC @ 0x100d0b40 (FUN_100d0b40)
+
+void __fastcall FUN_100d0b40(int param_1)
+
+{
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  **(int **)(param_1 + 4) = (int)s_entity_digit_1012f780 - *(int *)(DAT_10132554 + 0x98);
+  (*DAT_10132320)(s_models_digits_mdl_1012f76c);
+  (*DAT_10132328)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x208),s_models_digits_mdl_1012f76c);
+  uStack_18 = 0;
+  uStack_14 = 0;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x10c) = 0;
+  uStack_10 = 0;
+  uStack_c = 0;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x108) = 0;
+  uStack_8 = 0;
+  uStack_4 = 0;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x16c) = 0;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x118) = 0;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x160) = 0x42700000;
+  FUN_1005f5d0(*(int *)(param_1 + 4),&uStack_c,&uStack_18);
+  *(undefined4 *)(param_1 + 0x10) = 0;
+  *(undefined4 *)(param_1 + 0x14) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d0c50 (FUN_100d0c50)
+
+undefined4 FUN_100d0c50(void)
+
+{
+  return 0xffffffff;
+}
+
+
+======================================================================
+FUNC @ 0x100d0c60 (FUN_100d0c60)
+
+void __thiscall FUN_100d0c60(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10008340(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CDigitGod_1012f790,(int)param_1,0x1012f4c8,6);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d0c90 (FUN_100d0c90)
+
+void __thiscall FUN_100d0c90(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10008380(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CDigitGod_1012f790,(int)param_1,&DAT_1012f4c8,6);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d0cc0 (FUN_100d0cc0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_100d0cc0(void *param_1)
+
+{
+  int iVar1;
+  undefined4 uStack_18;
+  float fStack_14;
+  float fStack_10;
+  float fStack_c;
+  float fStack_8;
+  float fStack_4;
+  
+  **(int **)((int)param_1 + 4) = (int)s_entity_digitgod_1012f79c - DAT_10132554[0x26];
+  (*DAT_10132328)(*(undefined4 *)(*(int *)((int)param_1 + 4) + 0x208),s_models_null_mdl_10124674);
+  uStack_18 = 0;
+  fStack_14 = 0.0;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x10c) = 0;
+  fStack_10 = 0.0;
+  fStack_c = 0.0;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x108) = 0;
+  fStack_8 = 0.0;
+  fStack_4 = 0.0;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x16c) = 0;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x118) = 0x80;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x160) = 0x42700000;
+  FUN_1005f5d0(*(int *)((int)param_1 + 4),&fStack_c,&uStack_18);
+  *(undefined4 *)((int)param_1 + 0x28) = 0;
+  *(undefined4 *)((int)param_1 + 0x2c) = 0;
+  *(undefined4 *)((int)param_1 + 0x278) = 0;
+  FUN_1005ea10(*(int *)((int)param_1 + 4) + 0x50);
+  iVar1 = *(int *)((int)param_1 + 4);
+  fStack_c = (float)DAT_10132554[0x10] * _DAT_100ea830 + *(float *)(iVar1 + 8);
+  fStack_14 = (float)DAT_10132554[0x11] * _DAT_100ea830 + *(float *)(iVar1 + 0xc);
+  fStack_10 = (float)DAT_10132554[0x12] * _DAT_100ea830 + *(float *)(iVar1 + 0x10);
+  fStack_8 = fStack_14;
+  fStack_4 = fStack_10;
+  iVar1 = FUN_100088a0(0x1012f780,&fStack_c,(undefined4 *)(iVar1 + 0x50),
+                       *(undefined4 *)(iVar1 + 0x208));
+  *(int *)((int)param_1 + 0x27c) = iVar1;
+  iVar1 = *(int *)((int)param_1 + 4);
+  iVar1 = FUN_100088a0(0x1012f780,(undefined4 *)(iVar1 + 8),(undefined4 *)(iVar1 + 0x50),
+                       *(undefined4 *)(iVar1 + 0x208));
+  *(int *)((int)param_1 + 0x280) = iVar1;
+  iVar1 = *(int *)((int)param_1 + 4);
+  fStack_c = (float)DAT_10132554[0x10] * _DAT_100fe428 + *(float *)(iVar1 + 8);
+  fStack_14 = (float)DAT_10132554[0x11] * _DAT_100fe428 + *(float *)(iVar1 + 0xc);
+  fStack_10 = (float)DAT_10132554[0x12] * _DAT_100fe428 + *(float *)(iVar1 + 0x10);
+  fStack_8 = fStack_14;
+  fStack_4 = fStack_10;
+  iVar1 = FUN_100088a0(0x1012f780,&fStack_c,(undefined4 *)(iVar1 + 0x50),
+                       *(undefined4 *)(iVar1 + 0x208));
+  *(int *)((int)param_1 + 0x284) = iVar1;
+  *(code **)((int)param_1 + 0x10) = CDigitGod::OutputThink;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x104) = *DAT_10132554;
+  *(undefined4 *)((int)param_1 + 0x270) = 0;
+  FUN_100d0f80(param_1,0);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d0ec0 (FUN_100d0ec0)
+
+void FUN_100d0ec0(void)
+
+{
+  (*DAT_10132320)(s_models_null_mdl_10124674);
+  FUN_10060720(0x1012f780);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d0ee0 (FUN_100d0ee0)
+
+void __thiscall FUN_100d0ee0(void *this,int param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  undefined4 uVar4;
+  void *this_00;
+  char *pcVar6;
+  bool bVar7;
+  undefined3 uVar5;
+  
+  pcVar6 = s_maxdamage_1012f7ac;
+  pbVar2 = *(byte **)(param_1 + 4);
+  this_00 = this;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100d0f1a:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100d0f1f;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100d0f1a;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100d0f1f:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x274) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    return;
+  }
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d0f60 (CDigitGod::OutputThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CDigitGod::OutputThink(void) */
+
+void __thiscall CDigitGod::OutputThink(CDigitGod *this)
+
+{
+                    /* 0xd0f60  245  ?OutputThink@CDigitGod@@QAEXXZ */
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e9410;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d0f80 (FUN_100d0f80)
+
+void __thiscall FUN_100d0f80(void *this,int param_1)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  int iVar4;
+  
+  iVar1 = *(int *)((int)this + 0x27c);
+  if (((iVar1 != 0) && (*(int *)((int)this + 0x280) != 0)) && (*(int *)((int)this + 0x284) != 0)) {
+    *(int *)((int)this + 0x270) = param_1;
+    if (999 < param_1) {
+      *(undefined4 *)((int)this + 0x270) = 999;
+    }
+    iVar2 = *(int *)((int)this + 0x270);
+    if (iVar2 < 10) {
+      *(undefined4 *)(*(int *)(iVar1 + 4) + 0x110) = 0;
+      *(undefined4 *)(*(int *)(*(int *)((int)this + 0x280) + 4) + 0x110) = 0;
+      *(int *)(*(int *)(*(int *)((int)this + 0x284) + 4) + 0x110) = iVar2;
+      return;
+    }
+    iVar3 = iVar2 - iVar2 % 10;
+    iVar4 = iVar3 / 10;
+    if (9 < iVar4) {
+      iVar4 = iVar4 % 10;
+    }
+    *(int *)(*(int *)(iVar1 + 4) + 0x110) = (iVar3 + iVar4 * -10) / 100;
+    *(int *)(*(int *)(*(int *)((int)this + 0x280) + 4) + 0x110) = iVar4;
+    *(int *)(*(int *)(*(int *)((int)this + 0x284) + 4) + 0x110) = iVar2 % 10;
+    if ((*(int *)((int)this + 0x274) <= *(int *)((int)this + 0x270)) &&
+       (*(int *)((int)this + 0x278) == 0)) {
+      FUN_100532f0(this,this,1,0);
+      *(undefined4 *)((int)this + 0x278) = 1;
+    }
+  }
+  return;
+}
+
+

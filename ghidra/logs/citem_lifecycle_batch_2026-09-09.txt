@@ -1,0 +1,268 @@
+======================================================================
+FUNC @ 0x10023f50 (FUN_10023f50)
+
+void __thiscall FUN_10023f50(void *this,int param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  undefined4 uVar4;
+  void *this_00;
+  char *pcVar6;
+  bool bVar7;
+  undefined3 uVar5;
+  
+  pcVar6 = s_nopickupsound_1011adc0;
+  pbVar2 = *(byte **)(param_1 + 4);
+  this_00 = this;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_10023f8a:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_10023f8f;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_10023f8a;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_10023f8f:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x20) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    return;
+  }
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10023fc0 (FUN_10023fc0)
+
+void __fastcall FUN_10023fc0(int param_1)
+
+{
+  int *piVar1;
+  int iVar2;
+  undefined4 local_18;
+  undefined4 local_14;
+  undefined4 local_10;
+  undefined4 local_c;
+  undefined4 local_8;
+  undefined4 local_4;
+  
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x108) = 6;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x10c) = 1;
+  FUN_1005f600(*(int *)(param_1 + 4),*(int *)(param_1 + 4) + 8);
+  local_18 = 0x41800000;
+  local_14 = 0x41800000;
+  local_10 = 0x41800000;
+  local_c = 0xc1800000;
+  local_8 = 0xc1800000;
+  local_4 = 0;
+  FUN_1005f5d0(*(int *)(param_1 + 4),&local_c,&local_18);
+  *(code **)(param_1 + 0x14) = CItem::ItemTouch;
+  iVar2 = (*DAT_10132388)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x208));
+  if (iVar2 == 0) {
+    piVar1 = *(int **)(param_1 + 4);
+    (*DAT_10132414)(4,s_Item__s_fell_out_of_level_at__f__1011add0,DAT_10132554[0x26] + *piVar1,
+                    (double)(float)piVar1[2],(double)(float)piVar1[3],(double)(float)piVar1[4]);
+    FUN_100606b0(param_1);
+    return;
+  }
+  *(code **)(param_1 + 0x10) = CItem::GlowThink;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x104) = *DAT_10132554;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100240c0 (CItem::GlowThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CItem::GlowThink(void) */
+
+void __thiscall CItem::GlowThink(CItem *this)
+
+{
+  int iVar1;
+  
+                    /* 0x240c0  166  ?GlowThink@CItem@@QAEXXZ */
+  iVar1 = *(int *)(this + 4);
+  if ((*(uint *)(iVar1 + 0x118) & 0x80) != 0) {
+    *(undefined4 *)(this + 0x10) = 0;
+    return;
+  }
+  if (*(int *)(iVar1 + 0x15c) != 0x13) {
+    *(uint *)(iVar1 + 0x118) = *(uint *)(iVar1 + 0x118) | 2;
+    *(undefined4 *)(*(int *)(this + 4) + 0x15c) = 0x13;
+    *(undefined4 *)(*(int *)(this + 4) + 0x14c) = 0x41f00000;
+    *(undefined4 *)(*(int *)(this + 4) + 0x150) = 0;
+    *(undefined4 *)(*(int *)(this + 4) + 0x154) = 0x42c80000;
+    *(undefined4 *)(*(int *)(this + 4) + 0x158) = 0x42480000;
+    *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100ef938;
+    return;
+  }
+  *(undefined4 *)(iVar1 + 0x15c) = 0;
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100ea140;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10024170 (CItem::ItemTouch)
+
+/* public: void __thiscall CItem::ItemTouch(class CBaseEntity *) */
+
+void __thiscall CItem::ItemTouch(CItem *this,CBaseEntity *param_1)
+
+{
+  int iVar1;
+  
+                    /* 0x24170  188  ?ItemTouch@CItem@@QAEXPAVCBaseEntity@@@Z */
+  iVar1 = (**(code **)(*(int *)param_1 + 0x9c))();
+  if ((iVar1 != 0) && (iVar1 = (**(code **)(*DAT_101322d8 + 0x8c))(param_1,this), iVar1 != 0)) {
+    iVar1 = (**(code **)(*(int *)this + 0xe8))(param_1);
+    if (iVar1 == 0) {
+      if (DAT_10134d18 == 0) {
+        return;
+      }
+    }
+    else {
+      FUN_100531b0(this,param_1,3,0);
+      *(undefined4 *)(this + 0x14) = 0;
+      (**(code **)(*DAT_101322d8 + 0x90))(param_1,this);
+      iVar1 = (**(code **)(*DAT_101322d8 + 0x94))(this);
+      if (iVar1 == 5) {
+        (**(code **)(*(int *)this + 0xc0))();
+        return;
+      }
+    }
+    FUN_100606b0((int)this);
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10024280 (CItem::Materialize)
+
+/* public: void __thiscall CItem::Materialize(void) */
+
+void __thiscall CItem::Materialize(CItem *this)
+
+{
+                    /* 0x24280  218  ?Materialize@CItem@@QAEXXZ */
+  if ((*(byte *)(*(int *)(this + 4) + 0x118) & 0x80) != 0) {
+    FUN_10050a80(this,*(undefined4 *)(*(int *)(this + 4) + 0x208),1,
+                 s_items_suitchargeok1_wav_1011a970,0x3f800000,0x3f4ccccd,0,0x96);
+    *(uint *)(*(int *)(this + 4) + 0x118) = *(uint *)(*(int *)(this + 4) + 0x118) & 0xffffff7f;
+    *(uint *)(*(int *)(this + 4) + 0x118) = *(uint *)(*(int *)(this + 4) + 0x118) | 2;
+    *(code **)(this + 0x10) = GlowThink;
+    *(undefined4 *)(*(int *)(this + 4) + 0x104) = *DAT_10132554;
+  }
+  *(code **)(this + 0x14) = ItemTouch;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10024570 (FUN_10024570)
+
+void __fastcall FUN_10024570(int *param_1)
+
+{
+  (**(code **)(*param_1 + 4))();
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_w_armor_mdl_1011ae34);
+  FUN_10023fc0((int)param_1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10024780 (FUN_10024780)
+
+void __fastcall FUN_10024780(int *param_1)
+
+{
+  (**(code **)(*param_1 + 4))();
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_gastank_mdl_1011ae48);
+  FUN_10023fc0((int)param_1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10063460 (CBasePlayerAmmo::GlowThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CBasePlayerAmmo::GlowThink(void) */
+
+void __thiscall CBasePlayerAmmo::GlowThink(CBasePlayerAmmo *this)
+
+{
+  int iVar1;
+  
+                    /* 0x63460  165  ?GlowThink@CBasePlayerAmmo@@QAEXXZ */
+  iVar1 = *(int *)(this + 4);
+  if ((*(uint *)(iVar1 + 0x118) & 0x80) != 0) {
+    *(undefined4 *)(this + 0x10) = 0;
+    return;
+  }
+  if (*(int *)(iVar1 + 0x15c) != 0x13) {
+    *(uint *)(iVar1 + 0x118) = *(uint *)(iVar1 + 0x118) | 2;
+    *(undefined4 *)(*(int *)(this + 4) + 0x15c) = 0x13;
+    *(undefined4 *)(*(int *)(this + 4) + 0x14c) = 0x41f00000;
+    *(undefined4 *)(*(int *)(this + 4) + 0x150) = 0;
+    *(undefined4 *)(*(int *)(this + 4) + 0x154) = 0x42c80000;
+    *(undefined4 *)(*(int *)(this + 4) + 0x158) = 0x42480000;
+    *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100ef938;
+    return;
+  }
+  *(undefined4 *)(iVar1 + 0x15c) = 0;
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100ea140;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100633c0 (FUN_100633c0)
+
+void __fastcall FUN_100633c0(int param_1)
+
+{
+  undefined4 local_18;
+  undefined4 local_14;
+  undefined4 local_10;
+  undefined4 local_c;
+  undefined4 local_8;
+  undefined4 local_4;
+  
+  local_18 = 0x41800000;
+  local_14 = 0x41800000;
+  local_10 = 0x41800000;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x108) = 6;
+  local_c = 0xc1800000;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x10c) = 1;
+  local_8 = 0xc1800000;
+  local_4 = 0;
+  FUN_1005f5d0(*(int *)(param_1 + 4),&local_c,&local_18);
+  FUN_1005f600(*(int *)(param_1 + 4),*(int *)(param_1 + 4) + 8);
+  *(code **)(param_1 + 0x10) = CBasePlayerAmmo::GlowThink;
+  *(code **)(param_1 + 0x14) = CBasePlayerAmmo::DefaultTouch;
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x104) = *DAT_10132554;
+  return;
+}
+
+

@@ -1,0 +1,4 @@
+[ 0] type=FIELD_STRING           name=m_Sound                  offset=0x020 (32) size=1 flags=0
+[ 1] type=FIELD_FLOAT            name=m_fVolume                offset=0x02c (44) size=1 flags=0
+[ 2] type=FIELD_FLOAT            name=m_fMaxAddTime            offset=0x028 (40) size=1 flags=0
+[ 3] type=FIELD_FLOAT            name=m_fBaseTime              offset=0x024 (36) size=1 flags=0

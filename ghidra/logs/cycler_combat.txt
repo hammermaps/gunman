@@ -1,0 +1,321 @@
+======================================================================
+FUNC @ 0x10022660 (FUN_10022660)
+
+/* WARNING: Removing unreachable block (ram,0x100226fa) */
+
+void __fastcall FUN_10022660(void *param_1)
+
+{
+  undefined4 *puVar1;
+  undefined1 auStack_18 [12];
+  undefined1 auStack_c [12];
+  
+  FUN_10001350(auStack_18,0x41800000,0x41800000,0x42900000);
+  puVar1 = (undefined4 *)FUN_10001350(auStack_c,0xc1800000,0xc1800000,0);
+  FUN_10001370(&stack0xffffffcc,puVar1);
+  FUN_100228d0(param_1,(char *)(*(int *)(*(int *)((int)param_1 + 4) + 0xb8) +
+                               *(int *)(DAT_10132554 + 0x98)));
+  if (*(int *)((int)param_1 + 0x274) < 1) {
+    *(undefined4 *)((int)param_1 + 0x274) = 1;
+  }
+  if (*(int *)((int)param_1 + 0x278) < 1) {
+    *(undefined4 *)((int)param_1 + 0x278) = 1;
+  }
+  FUN_10001f90(param_1,1,*(int *)((int)param_1 + 0x274) + -1);
+  FUN_10001f90(param_1,2,*(int *)((int)param_1 + 0x278) + -1);
+  FUN_10001f90(param_1,3,*(int *)((int)param_1 + 0x27c) + -1);
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x10c) = 0;
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x16c) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10022550 (FUN_10022550)
+
+void __thiscall FUN_10022550(void *this,int param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  undefined4 uVar4;
+  void *this_00;
+  void *extraout_ECX;
+  void *extraout_ECX_00;
+  char *pcVar6;
+  bool bVar7;
+  undefined3 uVar5;
+  
+  pcVar6 = s_cyc_submodel1_1011ab94;
+  pbVar2 = *(byte **)(param_1 + 4);
+  this_00 = this;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_10022585:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_1002258a;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_10022585;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_1002258a:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x274) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_cyc_submodel2_1011ab84;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_100225d3:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_100225d8;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_100225d3;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_100225d8:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x278) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    this_00 = extraout_ECX_00;
+  }
+  pbVar2 = *(byte **)(param_1 + 4);
+  pcVar6 = s_cyc_submodel3_1011ab74;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)*pcVar6;
+    if (bVar1 != *pcVar6) {
+LAB_10022621:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_10022626;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < (byte)pcVar6[1];
+    if (bVar1 != pcVar6[1]) goto LAB_10022621;
+    pbVar2 = pbVar2 + 2;
+    pcVar6 = pcVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_10022626:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x27c) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    return;
+  }
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10022770 (FUN_10022770)
+
+void __thiscall FUN_10022770(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_10022370(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CGunmanCycler_1011aba4,(int)param_1,0x1011aab0,3);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100227a0 (FUN_100227a0)
+
+void __thiscall FUN_100227a0(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_100223a0(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CGunmanCycler_1011aba4,(int)param_1,&DAT_1011aab0,3);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10022420 (FUN_10022420)
+
+undefined4 FUN_10022420(void)
+
+{
+  return 10;
+}
+
+
+======================================================================
+FUNC @ 0x10022b20 (FUN_10022b20)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 __fastcall FUN_10022b20(int param_1)
+
+{
+  if (*(int *)(param_1 + 0x270) != 0) {
+    *(int *)(*(int *)(param_1 + 4) + 0x128) = *(int *)(*(int *)(param_1 + 4) + 0x128) + 1;
+    FUN_10001c50(param_1);
+    if (*(float *)(param_1 + 0x28) == (float)_DAT_100e93b8) {
+      *(undefined4 *)(*(int *)(param_1 + 4) + 0x128) = 0;
+      FUN_10001c50(param_1);
+    }
+    *(undefined4 *)(*(int *)(param_1 + 4) + 0x130) = 0;
+    return 0;
+  }
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x138) = 0x3f800000;
+  FUN_10001a30(param_1,0.1);
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x138) = 0;
+  (*DAT_10132414)(1,s_sequence___d__frame___0f_1011abfc,
+                  *(undefined4 *)(*(int *)(param_1 + 4) + 0x128),
+                  (double)*(float *)(*(int *)(param_1 + 4) + 0x130));
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x1000c950 (FUN_1000c950)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_1000c950(void *this,undefined4 param_1,int param_2)
+
+{
+  int iVar1;
+  
+  if ((*(uint *)((int)this + 0x208) & 0x80) != 0) {
+    iVar1 = FUN_1000c7f0(this,param_2);
+    if (iVar1 == 0) {
+      return;
+    }
+    FUN_1000c820(this);
+    return;
+  }
+  *(uint *)((int)this + 0x208) = *(uint *)((int)this + 0x208) | 0x80;
+  FUN_10050a80(*(void **)((int)this + 4),*(undefined4 *)((int)*(void **)((int)this + 4) + 0x208),1,
+               s_common_null_wav_10113ad8,0x3f800000,0x3f4ccccd,0,100);
+  *(undefined4 *)((int)this + 0x144) = 8;
+  *(uint *)((int)this + 0xbc) = *(uint *)((int)this + 0xbc) | 0x100;
+  iVar1 = *(int *)(*(int *)((int)this + 4) + 0x198);
+  if (((iVar1 != 0) || (iVar1 = (*DAT_10132434)(0), iVar1 != 0)) &&
+     (*(int **)(iVar1 + 0x7c) != (int *)0x0)) {
+    (**(code **)(**(int **)(iVar1 + 0x7c) + 0x24))(*(undefined4 *)((int)this + 4));
+  }
+  iVar1 = FUN_1000c7f0(this,param_2);
+  if (iVar1 == 0) {
+    if ((*(byte *)(*(int *)((int)this + 4) + 0x1a4) & 0x20) != 0) {
+      *(undefined4 *)((int)this + 0x14) = 0;
+      (**(code **)(*(int *)this + 0x114))();
+    }
+    if (*(float *)(*(int *)((int)this + 4) + 0x160) < _DAT_100ea854) {
+      *(undefined4 *)(*(int *)((int)this + 4) + 0x160) = 0;
+    }
+    *(undefined4 *)((int)this + 0x144) = 8;
+    return;
+  }
+  FUN_1000c820(this);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10022760 (FUN_10022760)
+
+undefined4 FUN_10022760(void)
+
+{
+  return 0xffffffff;
+}
+
+
+======================================================================
+FUNC @ 0x10022430 (FUN_10022430)
+
+undefined4 FUN_10022430(void)
+
+{
+  return 0;
+}
+
+
+======================================================================
+FUNC @ 0x10022a50 (FUN_10022a50)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_10022a50(int param_1)
+
+{
+  *(float *)(*(int *)(param_1 + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  if (*(int *)(param_1 + 0x270) != 0) {
+    FUN_10001a30(param_1,0.0);
+  }
+  if ((*(int *)(param_1 + 0x34) != 0) && (*(int *)(param_1 + 0x38) == 0)) {
+    *(float *)(*(int *)(param_1 + 4) + 0x134) = *DAT_10132554;
+    *(undefined4 *)(*(int *)(param_1 + 4) + 0x138) = 0x3f800000;
+    *(undefined4 *)(param_1 + 0x34) = 0;
+    *(float *)(param_1 + 0x30) = *DAT_10132554;
+    *(undefined4 *)(*(int *)(param_1 + 4) + 0x130) = 0;
+    if (*(int *)(param_1 + 0x270) == 0) {
+      *(undefined4 *)(*(int *)(param_1 + 4) + 0x138) = 0;
+    }
+  }
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10022ae0 (FUN_10022ae0)
+
+void __fastcall FUN_10022ae0(int param_1)
+
+{
+  uint uVar1;
+  
+  uVar1 = (uint)(*(int *)(param_1 + 0x270) == 0);
+  *(uint *)(param_1 + 0x270) = uVar1;
+  if (uVar1 != 0) {
+    *(undefined4 *)(*(int *)(param_1 + 4) + 0x138) = 0x3f800000;
+    return;
+  }
+  *(undefined4 *)(*(int *)(param_1 + 4) + 0x138) = 0;
+  return;
+}
+
+

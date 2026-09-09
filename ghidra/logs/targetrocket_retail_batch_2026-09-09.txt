@@ -1,0 +1,408 @@
+======================================================================
+FUNC @ 0x100a3c70 (FUN_100a3c70)
+
+void __fastcall FUN_100a3c70(int param_1)
+
+{
+  undefined4 uVar1;
+  
+  (*DAT_10132320)(s_models_rocket_mdl_101293c0);
+  uVar1 = (*DAT_10132320)(s_sprites_firebeam_spr_10126af0);
+  *(undefined4 *)(param_1 + 0x274) = uVar1;
+  (*DAT_10132320)(s_sprites_flame_spr_10126a5c);
+  (*DAT_10132324)(s_weapons_rocket1_wav_10127c10);
+  (*DAT_10132324)(s_gunner_gunner_boom1_wav_10129878);
+  (*DAT_10132324)(s_gunner_gunner_boom2_wav_10129860);
+  (*DAT_10132324)(s_gunner_gunner_boom3_wav_10129848);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a3cd0 (FUN_100a3cd0)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_100a3cd0(int *param_1)
+
+{
+  float *pfVar1;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  (**(code **)(*param_1 + 4))();
+  *(undefined4 *)(param_1[1] + 0x108) = 5;
+  *(undefined4 *)(param_1[1] + 0x10c) = 2;
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_rocket_mdl_101293c0);
+  uStack_18 = 0;
+  uStack_14 = 0;
+  uStack_10 = 0;
+  uStack_c = 0;
+  uStack_8 = 0;
+  uStack_4 = 0;
+  FUN_1005f5d0(param_1[1],&uStack_c,&uStack_18);
+  FUN_1005f600(param_1[1],param_1[1] + 8);
+  param_1[4] = (int)CTargetRocket::IgniteThink;
+  param_1[5] = (int)CTargetRocket::RocketExplodeTouch;
+  FUN_1005ea20((float *)(param_1[1] + 0x50));
+  pfVar1 = DAT_10132554;
+  param_1[0x9e] = (int)DAT_10132554[10];
+  param_1[0x9f] = (int)pfVar1[0xb];
+  param_1[0xa0] = (int)pfVar1[0xc];
+  *(undefined4 *)(param_1[1] + 0x11c) = 0x40000000;
+  *(undefined4 *)(param_1[1] + 0x1e0) = 0x42a00000;
+  *(float *)(param_1[1] + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a3dd0 (CTargetRocket::RocketExplodeTouch)
+
+/* public: void __thiscall CTargetRocket::RocketExplodeTouch(class CBaseEntity *) */
+
+void __thiscall CTargetRocket::RocketExplodeTouch(CTargetRocket *this,CBaseEntity *param_1)
+
+{
+  int iVar1;
+  void *extraout_ECX;
+  void *this_00;
+  void *pvVar2;
+  char *pcVar3;
+  
+                    /* 0xa3dd0  275  ?RocketExplodeTouch@CTargetRocket@@QAEXPAVCBaseEntity@@@Z */
+  if (*(int *)(this + 0x284) != 0) {
+    FUN_100606b0(*(int *)(this + 0x284));
+  }
+  iVar1 = (*DAT_10132488)(0,2);
+  if (iVar1 == 1) {
+    this_00 = *(void **)(this + 4);
+    pvVar2 = *(void **)((int)this_00 + 0x208);
+    pcVar3 = s_gunner_gunner_boom1_wav_10129878;
+  }
+  else if (iVar1 == 2) {
+    pvVar2 = *(void **)(*(int *)(this + 4) + 0x208);
+    pcVar3 = s_gunner_gunner_boom2_wav_10129860;
+    this_00 = extraout_ECX;
+  }
+  else {
+    if (iVar1 != 3) goto LAB_100a3e65;
+    this_00 = *(void **)(*(int *)(this + 4) + 0x208);
+    pcVar3 = s_gunner_gunner_boom3_wav_10129848;
+    pvVar2 = this_00;
+  }
+  FUN_10050a80(this_00,pvVar2,1,pcVar3,0x3f800000,0x3f4ccccd,0,100);
+LAB_100a3e65:
+  CGrenade::ExplodeTouch((CGrenade *)this,param_1);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a3e80 (CTargetRocket::IgniteThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CTargetRocket::IgniteThink(void) */
+
+void __thiscall CTargetRocket::IgniteThink(CTargetRocket *this)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  undefined4 uVar4;
+  
+                    /* 0xa3e80  186  ?IgniteThink@CTargetRocket@@QAEXXZ */
+  puVar3 = FUN_10015400(0x10126a5c,(undefined4 *)(*(int *)(this + 4) + 8),1);
+  *(undefined4 **)(this + 0x284) = puVar3;
+  *(undefined4 *)(puVar3[1] + 0x148) = 5;
+  *(undefined4 *)(puVar3[1] + 0x150) = 0x437f0000;
+  *(undefined4 *)(puVar3[1] + 0x154) = 0x437f0000;
+  *(undefined4 *)(puVar3[1] + 0x158) = 0x437f0000;
+  *(undefined4 *)(puVar3[1] + 0x14c) = 0x437f0000;
+  *(undefined4 *)(puVar3[1] + 0x15c) = 0;
+  iVar1 = *(int *)(this + 0x284);
+  iVar2 = *(int *)(*(int *)(this + 4) + 0x208);
+  if (iVar2 != 0) {
+    uVar4 = (*DAT_1013243c)(iVar2);
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x110) = uVar4;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x114) = 1;
+    *(int *)(*(int *)(iVar1 + 4) + 0x194) = iVar2;
+    *(undefined4 *)(*(int *)(iVar1 + 4) + 0x108) = 0xc;
+  }
+  FUN_10015680(*(int *)(this + 0x284));
+  FUN_10050a80(*(void **)(*(int *)(this + 4) + 0x208),*(void **)(*(int *)(this + 4) + 0x208),2,
+               s_weapons_rocket1_wav_10127c10,0x3f000000,0x3f000000,0,100);
+  (*DAT_101323d8)(0,0x17,0,0);
+  (*DAT_101323e0)(0x16);
+  uVar4 = (*DAT_1013243c)(*(undefined4 *)(*(int *)(this + 4) + 0x208));
+  (*DAT_101323e8)(uVar4);
+  (*DAT_101323e8)(*(undefined4 *)(this + 0x274));
+  (*DAT_101323e0)(0xf);
+  (*DAT_101323e0)(5);
+  (*DAT_101323e0)(0xe0);
+  (*DAT_101323e0)(0xe0);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323e0)(0xff);
+  (*DAT_101323dc)();
+  *(code **)(this + 0x10) = AccelerateThink;
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a4000 (CTargetRocket::AccelerateThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CTargetRocket::AccelerateThink(void) */
+
+void __thiscall CTargetRocket::AccelerateThink(CTargetRocket *this)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  float fVar4;
+  float local_3c;
+  float local_38;
+  float local_34;
+  float local_30;
+  float local_2c;
+  float local_28;
+  float local_24;
+  float local_20;
+  float local_1c;
+  undefined1 local_18 [12];
+  undefined4 local_c [3];
+  
+                    /* 0xa4000  25  ?AccelerateThink@CTargetRocket@@QAEXXZ */
+  iVar1 = *(int *)(this + 4);
+  if ((((_DAT_100ea158 <= *(float *)(iVar1 + 8)) && (*(float *)(iVar1 + 8) <= _DAT_100ea15c)) &&
+      (_DAT_100ea158 <= *(float *)(iVar1 + 0xc))) &&
+     (((*(float *)(iVar1 + 0xc) <= _DAT_100ea15c && (_DAT_100ea158 <= *(float *)(iVar1 + 0x10))) &&
+      (*(float *)(iVar1 + 0x10) <= _DAT_100ea15c)))) {
+    if (*(int *)(this + 0x288) != 0) {
+      iVar2 = *(int *)(*(int *)(this + 0x288) + 4);
+      local_24 = *(float *)(iVar1 + 0x20);
+      local_30 = *(float *)(iVar2 + 8) - *(float *)(iVar1 + 8);
+      local_20 = *(float *)(iVar1 + 0x24);
+      local_2c = *(float *)(iVar2 + 0xc) - *(float *)(iVar1 + 0xc);
+      local_1c = *(float *)(iVar1 + 0x28);
+      local_28 = *(float *)(iVar2 + 0x10) - *(float *)(iVar1 + 0x10);
+      FUN_10001370(&local_3c,&local_30);
+      local_28 = local_34;
+      local_30 = local_3c;
+      local_2c = local_38;
+      fVar4 = SQRT(local_34 * local_34 + local_38 * local_38 + local_3c * local_3c);
+      if (fVar4 == _DAT_100e9384) {
+        local_34 = 1.0;
+        local_38 = 0.0;
+        fVar4 = 0.0;
+      }
+      else {
+        fVar4 = _DAT_100e9390 / fVar4;
+        local_34 = local_34 * fVar4;
+        local_38 = local_38 * fVar4;
+        fVar4 = local_3c * fVar4;
+      }
+      puVar3 = (undefined4 *)FUN_10001350(local_c,fVar4,local_38,local_34);
+      FUN_10001370(local_18,puVar3);
+      local_2c = local_2c * (float)_DAT_100ec130;
+      iVar1 = *(int *)(this + 4);
+      local_24 = local_3c * (float)_DAT_100ec130 + local_24;
+      local_38 = local_2c + local_20;
+      local_34 = local_28 + local_1c;
+      *(float *)(iVar1 + 0x20) = local_24;
+      *(float *)(iVar1 + 0x24) = local_38;
+      *(float *)(iVar1 + 0x28) = local_34;
+      local_20 = local_38;
+      local_1c = local_34;
+    }
+    iVar1 = *(int *)(this + 4);
+    if (SQRT(*(float *)(iVar1 + 0x28) * *(float *)(iVar1 + 0x28) +
+             *(float *)(iVar1 + 0x24) * *(float *)(iVar1 + 0x24) +
+             *(float *)(iVar1 + 0x20) * *(float *)(iVar1 + 0x20)) < _DAT_100fe42c) {
+      local_24 = *(float *)(this + 0x278) * _DAT_100ebce4 + *(float *)(iVar1 + 0x20);
+      local_2c = *(float *)(this + 0x27c) * _DAT_100ebce4 + *(float *)(iVar1 + 0x24);
+      local_28 = *(float *)(this + 0x280) * _DAT_100ebce4 + *(float *)(iVar1 + 0x28);
+      *(float *)(iVar1 + 0x20) = local_24;
+      *(float *)(iVar1 + 0x24) = local_2c;
+      *(float *)(iVar1 + 0x28) = local_28;
+      local_20 = local_2c;
+      local_1c = local_28;
+    }
+    puVar3 = (undefined4 *)FUN_1005e560(local_c,*(int *)(this + 4) + 0x20);
+    iVar1 = *(int *)(this + 4);
+    *(undefined4 *)(iVar1 + 0x50) = *puVar3;
+    *(undefined4 *)(iVar1 + 0x54) = puVar3[1];
+    *(undefined4 *)(iVar1 + 0x58) = puVar3[2];
+    *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + (float)_DAT_100e99a0;
+    return;
+  }
+  if (*(int *)(this + 0x284) != 0) {
+    FUN_100606b0(*(int *)(this + 0x284));
+  }
+  FUN_100606b0((int)this);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a42d0 (monster_targetrocket)
+
+void __cdecl monster_targetrocket(int param_1)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  
+                    /* 0xa42d0  687  monster_targetrocket */
+  if ((param_1 == 0) && (iVar2 = (*DAT_10132374)(), iVar2 != 0)) {
+    param_1 = iVar2 + 0x80;
+  }
+  iVar2 = *(int *)(param_1 + 0x208);
+  if (((iVar2 == 0) || (iVar1 = iRam00000004, *(int *)(iVar2 + 0x7c) == 0)) &&
+     (puVar3 = (undefined4 *)(*DAT_1013241c)(iVar2,0x274), iVar1 = param_1,
+     puVar3 != (undefined4 *)0x0)) {
+    *puVar3 = &PTR_FUN_100ff718;
+    puVar3[1] = param_1;
+    return;
+  }
+  iRam00000004 = iVar1;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a4380 (FUN_100a4380)
+
+void FUN_100a4380(void)
+
+{
+  FUN_10060720(0x101298a8);
+  (*DAT_10132320)(s_models_null_mdl_10124674);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a43a0 (FUN_100a43a0)
+
+void __fastcall FUN_100a43a0(int *param_1)
+
+{
+  (**(code **)(*param_1 + 4))();
+  (*DAT_10132328)(*(undefined4 *)(param_1[1] + 0x208),s_models_null_mdl_10124674);
+  FUN_1005f5d0(param_1[1],&DAT_101322f0,&DAT_101322f0);
+  *(undefined4 *)(param_1[1] + 0x10c) = 0;
+  *(undefined4 *)(param_1[1] + 0x108) = 0;
+  *(uint *)(param_1[1] + 0x118) = *(uint *)(param_1[1] + 0x118) | 0x80;
+  param_1[6] = (int)CTargetRocketLauncher::OnUse;
+  param_1[4] = (int)CTargetRocketLauncher::RocketShootThink;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a4410 (CTargetRocketLauncher::OnUse)
+
+/* public: void __thiscall CTargetRocketLauncher::OnUse(class CBaseEntity *,class CBaseEntity *,enum
+   USE_TYPE,float) */
+
+void __thiscall
+CTargetRocketLauncher::OnUse
+          (CTargetRocketLauncher *this,CBaseEntity *param_1,CBaseEntity *param_2,USE_TYPE param_3,
+          float param_4)
+
+{
+                    /* 0xa4410  243
+                       ?OnUse@CTargetRocketLauncher@@QAEXPAVCBaseEntity@@0W4USE_TYPE@@M@Z */
+  *(undefined4 *)(*(int *)(this + 4) + 0x104) = *DAT_10132554;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100a4430 (CTargetRocketLauncher::RocketShootThink)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+/* public: void __thiscall CTargetRocketLauncher::RocketShootThink(void) */
+
+void __thiscall CTargetRocketLauncher::RocketShootThink(CTargetRocketLauncher *this)
+
+{
+  float fVar1;
+  float fVar2;
+  int iVar3;
+  float fVar4;
+  float fVar5;
+  int iVar6;
+  int iVar7;
+  undefined4 *puVar8;
+  
+                    /* 0xa4430  276  ?RocketShootThink@CTargetRocketLauncher@@QAEXXZ */
+  iVar6 = (*DAT_10132358)(0,s_targetname_101141ac,
+                          (int)DAT_10132554[0x26] + *(int *)(*(int *)(this + 4) + 0x1c8));
+  if (iVar6 == 0) {
+    FUN_100606b0((int)this);
+    return;
+  }
+  FUN_1005ea10(*(int *)(this + 4) + 0x50);
+  iVar7 = (*DAT_10132374)();
+  if (iVar7 == 0) {
+    iVar7 = 0;
+  }
+  else {
+    iVar7 = iVar7 + 0x80;
+  }
+  iVar3 = *(int *)(iVar7 + 0x208);
+  if ((iVar3 == 0) || (puVar8 = *(undefined4 **)(iVar3 + 0x7c), puVar8 == (undefined4 *)0x0)) {
+    puVar8 = (undefined4 *)(*DAT_1013241c)(iVar3,0x28c);
+    if (puVar8 == (undefined4 *)0x0) {
+      puVar8 = (undefined4 *)0x0;
+    }
+    else {
+      FUN_1000ae60(puVar8);
+      *puVar8 = &PTR_FUN_100ff4e8;
+    }
+    puVar8[1] = iVar7;
+  }
+  iVar7 = *(int *)(this + 4);
+  iVar3 = puVar8[1];
+  *(undefined4 *)(iVar3 + 0x50) = *(undefined4 *)(iVar7 + 0x50);
+  *(undefined4 *)(iVar3 + 0x54) = *(undefined4 *)(iVar7 + 0x54);
+  *(undefined4 *)(iVar3 + 0x58) = *(undefined4 *)(iVar7 + 0x58);
+  (**(code **)*puVar8)();
+  *(undefined4 *)(puVar8[1] + 0x1c8) = *(undefined4 *)(*(int *)(this + 4) + 0x1c8);
+  FUN_1005f600(puVar8[1],*(int *)(this + 4) + 8);
+  iVar7 = puVar8[1];
+  fVar4 = DAT_10132554[0xb] * _DAT_100ea130;
+  fVar5 = DAT_10132554[0xc] * _DAT_100ea130;
+  iVar3 = *(int *)(this + 4);
+  fVar1 = *(float *)(iVar3 + 0x24);
+  fVar2 = *(float *)(iVar3 + 0x28);
+  *(float *)(iVar7 + 0x20) = DAT_10132554[10] * _DAT_100ea130 + *(float *)(iVar3 + 0x20);
+  *(float *)(iVar7 + 0x24) = fVar4 + fVar1;
+  *(float *)(iVar7 + 0x28) = fVar5 + fVar2;
+  (*DAT_101323d8)(4,0x17,*(int *)(this + 4) + 8,0);
+  (*DAT_101323e0)(5);
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 8));
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 0xc));
+  (*DAT_101323f4)(*(undefined4 *)(*(int *)(this + 4) + 0x10));
+  (*DAT_101323e8)((int)DAT_10141fe2);
+  (*DAT_101323e0)(0x12);
+  (*DAT_101323e0)(0xc);
+  (*DAT_101323dc)();
+  puVar8[0xa2] = *(undefined4 *)(iVar6 + 0x7c);
+  *(float *)(*(int *)(this + 4) + 0x104) = *DAT_10132554 + _DAT_100e9390;
+  *(code **)(this + 0x10) = CBaseEntity::SUB_Remove;
+  return;
+}
+
+

@@ -1,0 +1,39 @@
+======================================================================
+FUNC @ 0x10062730 (FUN_10062730)
+
+int __fastcall FUN_10062730(int param_1)
+
+{
+  undefined4 *puVar1;
+  int iVar2;
+  float10 fVar3;
+  undefined4 *puVar4;
+  undefined4 auStack_c [3];
+  
+  puVar4 = auStack_c;
+  iVar2 = param_1;
+  puVar1 = (undefined4 *)
+           (**(code **)(*DAT_101322d8 + 0x88))
+                     (puVar4,param_1,*(int *)(param_1 + 4) + 0x50,
+                      *(undefined4 *)(*(int *)(param_1 + 4) + 0x198));
+  iVar2 = FUN_100088a0(*(int *)(DAT_10132554 + 0x98) + **(int **)(param_1 + 4),puVar1,puVar4,iVar2);
+  if (iVar2 != 0) {
+    *(uint *)(*(int *)(iVar2 + 4) + 0x118) = *(uint *)(*(int *)(iVar2 + 4) + 0x118) | 0x80;
+    *(undefined4 *)(iVar2 + 0x14) = 0;
+    *(code **)(iVar2 + 0x10) = CBasePlayerItem::AttemptToMaterialize;
+    (*DAT_10132388)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x208));
+    *(undefined4 *)(*(int *)(iVar2 + 4) + 0x15c) = 0x13;
+    *(undefined4 *)(*(int *)(iVar2 + 4) + 0x14c) = 0x41f00000;
+    *(undefined4 *)(*(int *)(iVar2 + 4) + 0x150) = 0x437f0000;
+    *(undefined4 *)(*(int *)(iVar2 + 4) + 0x154) = 0;
+    *(undefined4 *)(*(int *)(iVar2 + 4) + 0x158) = 0;
+    fVar3 = (float10)(**(code **)(*DAT_101322d8 + 0x80))(param_1);
+    *(float *)(*(int *)(iVar2 + 4) + 0x104) = (float)fVar3;
+    return iVar2;
+  }
+  (*DAT_10132414)(1,s_Respawn_failed_to_create__s__10122ea8,
+                  *(int *)(DAT_10132554 + 0x98) + **(int **)(param_1 + 4));
+  return 0;
+}
+
+

@@ -1,0 +1,66 @@
+======================================================================
+FUNC @ 0x100ce010 (CTubeEmbryo::SpawnSack)
+
+/* private: void __thiscall CTubeEmbryo::SpawnSack(void) */
+
+void __thiscall CTubeEmbryo::SpawnSack(CTubeEmbryo *this)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 *puVar3;
+  undefined4 uStack_18;
+  undefined4 uStack_14;
+  undefined4 uStack_10;
+  undefined4 uStack_c;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+                    /* 0xce010  322  ?SpawnSack@CTubeEmbryo@@AAEXXZ */
+  iVar2 = (*DAT_10132374)();
+  if (iVar2 == 0) {
+    iVar2 = 0;
+  }
+  else {
+    iVar2 = iVar2 + 0x80;
+  }
+  iVar1 = *(int *)(iVar2 + 0x208);
+  if ((iVar1 == 0) || (puVar3 = *(undefined4 **)(iVar1 + 0x7c), puVar3 == (undefined4 *)0x0)) {
+    puVar3 = (undefined4 *)(*DAT_1013241c)(iVar1,0x270);
+    if (puVar3 == (undefined4 *)0x0) {
+      puVar3 = (undefined4 *)0x0;
+    }
+    else {
+      *puVar3 = &PTR_LAB_100ea8b4;
+      FUN_10001320(puVar3 + 0x55,0x10,8,&LAB_1000ff30);
+      *puVar3 = &PTR_FUN_10106d50;
+    }
+    puVar3[1] = iVar2;
+  }
+  *(undefined4 **)(this + 0x270) = puVar3;
+  (**(code **)*puVar3)();
+  iVar2 = *(int *)(this + 4);
+  uStack_18 = 0x41400000;
+  iVar1 = *(int *)(*(int *)(this + 0x270) + 4);
+  uStack_14 = 0x41400000;
+  uStack_10 = 0x41c00000;
+  uStack_c = 0xc1400000;
+  *(undefined4 *)(iVar1 + 8) = *(undefined4 *)(iVar2 + 8);
+  uStack_8 = 0xc1400000;
+  uStack_4 = 0xc1800000;
+  *(undefined4 *)(iVar1 + 0xc) = *(undefined4 *)(iVar2 + 0xc);
+  *(undefined4 *)(iVar1 + 0x10) = *(undefined4 *)(iVar2 + 0x10);
+  iVar2 = *(int *)(this + 4);
+  iVar1 = *(int *)(*(int *)(this + 0x270) + 4);
+  *(undefined4 *)(iVar1 + 0x50) = *(undefined4 *)(iVar2 + 0x50);
+  *(undefined4 *)(iVar1 + 0x54) = *(undefined4 *)(iVar2 + 0x54);
+  *(undefined4 *)(iVar1 + 0x58) = *(undefined4 *)(iVar2 + 0x58);
+  *(undefined4 *)(*(int *)(*(int *)(this + 0x270) + 4) + 0x14c) = 0x43340000;
+  *(undefined4 *)(*(int *)(*(int *)(this + 0x270) + 4) + 0x148) = 2;
+  FUN_1005f5d0(*(int *)(this + 4),&uStack_c,&uStack_18);
+  (**(code **)(*(int *)this + 0x10c))();
+  *(code **)(this + 0x18) = ShockAnim;
+  return;
+}
+
+

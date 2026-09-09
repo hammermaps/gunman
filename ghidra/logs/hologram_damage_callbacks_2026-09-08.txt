@@ -1,0 +1,131 @@
+======================================================================
+FUNC @ 0x100d1d50 (FUN_100d1d50)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_100d1d50(void *param_1)
+
+{
+  int iVar1;
+  char *pcVar2;
+  
+  if (*(int *)((int)param_1 + 0x290) == 0) {
+    iVar1 = (*DAT_10132488)(0,1);
+    if (iVar1 == 0) {
+LAB_100d1d9c:
+      pcVar2 = s_bigflinch_1012f8a4;
+    }
+    else {
+      if (iVar1 != 1) goto LAB_100d1da8;
+      pcVar2 = s_smallflinch_1012f8b8;
+    }
+  }
+  else if (*(int *)((int)param_1 + 0x290) == 1) {
+    pcVar2 = s_flinch_1012f8b0;
+  }
+  else {
+    iVar1 = (*DAT_10132488)(0,1);
+    if (iVar1 == 0) goto LAB_100d1d9c;
+    pcVar2 = s_smallflinch_1012f8b8;
+  }
+  FUN_10029770(param_1,(byte *)pcVar2);
+LAB_100d1da8:
+  FUN_10001c50((int)param_1);
+  if (*(float *)((int)param_1 + 0x28) == (float)_DAT_100e93b8) {
+    *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x128) = 0;
+    FUN_10001c50((int)param_1);
+    *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x130) = 0;
+    return;
+  }
+  *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x130) = 0;
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1e00 (FUN_100d1e00)
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_100d1e00(void *param_1)
+
+{
+  void *this;
+  int iVar1;
+  char *pcVar2;
+  
+  if (*(int *)((int)param_1 + 0x290) == 0) {
+    iVar1 = (*DAT_10132488)(0,1);
+    if (iVar1 == 0) {
+      pcVar2 = s_dietwitch_1012f8d8;
+    }
+    else {
+      pcVar2 = s_diesimple_1012f8e4;
+    }
+  }
+  else if (*(int *)((int)param_1 + 0x290) == 1) {
+    iVar1 = (*DAT_10132488)();
+    if (iVar1 == 0) {
+      pcVar2 = s_dieback_1012f8d0;
+    }
+    else {
+      pcVar2 = s_diesimple_1012f8e4;
+    }
+  }
+  else {
+    iVar1 = (*DAT_10132488)(0,1);
+    if (iVar1 == 0) {
+      pcVar2 = s_diefight_1012f8c4;
+    }
+    else {
+      pcVar2 = s_diesimple_1012f8e4;
+    }
+  }
+  FUN_10029770(param_1,(byte *)pcVar2);
+  FUN_10001c50((int)param_1);
+  if (*(float *)((int)param_1 + 0x28) == (float)_DAT_100e93b8) {
+    *(undefined4 *)(*(int *)((int)param_1 + 4) + 0x128) = 0;
+    FUN_10001c50((int)param_1);
+  }
+  this = *(void **)((int)param_1 + 4);
+  *(undefined4 *)((int)this + 0x130) = 0;
+  FUN_10050a80(this,*(undefined4 *)(*(int *)((int)param_1 + 4) + 0x208),6,
+               s_ambience_holodisplay_wav_1012f7ec,0,0,0x20,100);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1f20 (FUN_100d1f20)
+
+void __thiscall FUN_100d1f20(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_100d1130(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_100610b0(param_2,(byte *)s_CHologramDamage_1012f8f0,(int)param_1,0x1012f5f8,3);
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x100d1f50 (FUN_100d1f50)
+
+void __thiscall FUN_100d1f50(void *param_1,void *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_100d1160(param_1,param_2);
+  if (iVar1 == 0) {
+    return;
+  }
+  FUN_10061840(param_2,(byte *)s_CHologramDamage_1012f8f0,(int)param_1,&DAT_1012f5f8,3);
+  return;
+}
+
+

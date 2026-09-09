@@ -1,0 +1,74 @@
+======================================================================
+FUNC @ 0x10023e40 (FUN_10023e40)
+
+void __fastcall FUN_10023e40(int param_1)
+
+{
+  int iVar1;
+  
+  if (*(int *)(param_1 + 0x20) == 0x2c) {
+    iVar1 = FUN_100088a0(0x10116cd8,(undefined4 *)(*(int *)(param_1 + 4) + 8),
+                         (undefined4 *)(*(int *)(param_1 + 4) + 0x50),0);
+    if (iVar1 != 0) {
+      *(undefined4 *)(*(int *)(iVar1 + 4) + 0x1c8) = *(undefined4 *)(*(int *)(param_1 + 4) + 0x1c8);
+      *(undefined4 *)(*(int *)(iVar1 + 4) + 0x1cc) = *(undefined4 *)(*(int *)(param_1 + 4) + 0x1cc);
+      *(undefined4 *)(*(int *)(iVar1 + 4) + 0x1a0) = *(undefined4 *)(*(int *)(param_1 + 4) + 0x1a0);
+      goto LAB_10023eb3;
+    }
+  }
+  (*DAT_10132414)(1,s_unable_to_create_world_item__d_1011ad98,*(undefined4 *)(param_1 + 0x20));
+LAB_10023eb3:
+  (*DAT_10132378)(*(undefined4 *)(*(int *)(param_1 + 4) + 0x208));
+  return;
+}
+
+
+======================================================================
+FUNC @ 0x10023dd0 (FUN_10023dd0)
+
+void __thiscall FUN_10023dd0(void *this,int param_1)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  undefined4 uVar4;
+  void *this_00;
+  byte *pbVar6;
+  bool bVar7;
+  undefined3 uVar5;
+  
+  pbVar6 = &DAT_1011ad90;
+  pbVar2 = *(byte **)(param_1 + 4);
+  this_00 = this;
+  do {
+    bVar1 = *pbVar2;
+    uVar5 = (undefined3)((uint)this_00 >> 8);
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < *pbVar6;
+    if (bVar1 != *pbVar6) {
+LAB_10023e0a:
+      iVar3 = (1 - (uint)bVar7) - (uint)(bVar7 != 0);
+      goto LAB_10023e0f;
+    }
+    if (bVar1 == 0) break;
+    bVar1 = pbVar2[1];
+    this_00 = (void *)CONCAT31(uVar5,bVar1);
+    bVar7 = bVar1 < pbVar6[1];
+    if (bVar1 != pbVar6[1]) goto LAB_10023e0a;
+    pbVar2 = pbVar2 + 2;
+    pbVar6 = pbVar6 + 2;
+  } while (bVar1 != 0);
+  iVar3 = 0;
+LAB_10023e0f:
+  if (iVar3 == 0) {
+    uVar4 = FUN_100d9481(this_00,*(byte **)(param_1 + 8));
+    *(undefined4 *)((int)this + 0x20) = uVar4;
+    *(undefined4 *)(param_1 + 0xc) = 1;
+    return;
+  }
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  return;
+}
+
+

@@ -1,0 +1,51 @@
+openjdk version "23.0.2" 2025-01-21
+OpenJDK Runtime Environment Zulu23.32+11-CA (build 23.0.2+7)
+OpenJDK 64-Bit Server VM Zulu23.32+11-CA (build 23.0.2+7, mixed mode)
+INFO  Using log config file: jar:file:/home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/masterbee/.config/ghidra/ghidra_12.1.3_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/masterbee/.config/ghidra/ghidra_12.1.3_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1403 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Starting cache cleanup: /var/tmp/masterbee-ghidra/fscache2 (FileCacheMaintenanceDaemon)  
+INFO  Finished cache cleanup, estimated storage used: 0 (FileCacheMaintenanceDaemon)  
+INFO  Headless startup complete (3153 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 59 extension points (20 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/masterbee/Werkzeuge/ghidra_12.1.3_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+ERROR Abort due to Headless analyzer error: Path element starting with '.' is not permitted (HeadlessAnalyzer) java.lang.IllegalArgumentException: Path element starting with '.' is not permitted
+	at ghidra.util.NamingUtilities.checkName(NamingUtilities.java:108)
+	at ghidra.framework.protocol.ghidra.GhidraURL.checkValidProjectPath(GhidraURL.java:440)
+	at ghidra.framework.protocol.ghidra.GhidraURL.checkLocalAbsolutePath(GhidraURL.java:421)
+	at ghidra.framework.model.ProjectLocator.<init>(ProjectLocator.java:75)
+	at ghidra.framework.model.ProjectLocator.<init>(ProjectLocator.java:60)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:420)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:199)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:81)
+	at ghidra.Ghidra.main(Ghidra.java:54)
+ 
